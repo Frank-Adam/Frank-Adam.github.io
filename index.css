@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
+body {
+font-family: Josefin Sans, sans-serif;
+padding: 2px;
+}
+
+.class-links {
+list-style-type: none;
+}
+
+@media screen and (max-width: 600px) {
+h1 {
+font-size: 3em;
+}
+header {
+font-family: 'Shadows Into Light', cursive, sans-serif;
+text-align: center;
+color: darkslateblue;
+text-shadow: 2px 2px #f56a34;
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+justify-content: center;
+height: auto;
+}
+.nav-links {
+display: flex;
+align-content: center;
+justify-content: center;
+text-align: center;
+flex-direction: column;
+justify-content: space-around;
+list-style-type: none;
+width: auto;
+line-height: 2em;
+padding: 15px;
+border: 1px solid darkslateblue;
+text-shadow: 2px 2px lightblue;
+}
+.links {
+padding: 5px;
+list-style-type: none;
+font-size: 2em;
+}
+footer {
+text-align: center;
+color: red;
+border-top: 1px solid darkslateblue;
+border-bottom: 1px solid darkslateblue;
+}
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+h1 {
+font-size: 5em;
+}
+header {
+font-family: 'Shadows Into Light', cursive, sans-serif;
+text-align: center;
+color: darkslateblue;
+text-shadow: 3px 2px #f56a34;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+height: auto;
+}
+.nav-links {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+justify-content: space-around;
+list-style-type: none;
+width: auto;
+padding: 15px;
+border: 1px solid darkslateblue;
+text-shadow: 2px 2px lightblue;
+}
+.links {
+padding: 5px;
+list-style-type: none;
+font-size: 2em;
+}
+footer {
+text-align: center;
+color: red;
+border-top: 1px solid darkslateblue;
+border-bottom: 1px solid darkslateblue;
+}
+}
+
+@media screen and (min-width: 1024px) {
+body {
+margin-top: -175px;
+}
+h1 {
+font-size: 13em;
+}
+header {
+font-family: 'Shadows Into Light', cursive, sans-serif;
+text-align: center;
+color: darkslateblue;
+text-shadow: 10px 2px #f79b10;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+height: auto;
+}
+.nav-links {
+margin-top: -175px;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+justify-content: space-around;
+list-style-type: none;
+width: auto;
+padding: 15px;
+border: 1px solid darkslateblue;
+text-shadow: 2px 2px lightblue;
+}
+.links {
+padding: 5px;
+list-style-type: none;
+font-size: 2em;
+}
+
+.class-links{
+line-height: 30px;
+}
+footer {
+text-align: center;
+color: red;
+border-top: 1px solid darkslateblue;
+border-bottom: 1px solid darkslateblue;
+}
+}
