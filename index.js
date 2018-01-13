@@ -21,4 +21,6 @@ function chngNumbers(userList) {
         }
     }
     document.getElementById("userBox2").innerHTML = userList.toString();
+  
+  userList = [];
 }
