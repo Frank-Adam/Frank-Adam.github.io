@@ -19,8 +19,6 @@ function chngNumbers(userList) {
         if(userList[i] % 2 == 0) {
             userList[i] = userList[i] * i;
         }
-    }
     document.getElementById("userBox2").innerHTML = userList.toString();
-  
-  userList = [];
+    userList = [];
 }
