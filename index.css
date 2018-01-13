@@ -6,12 +6,19 @@ font-family: Josefin Sans, sans-serif;
 padding: 10px;
 }
 main {
-    width: 200px;
-    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: stretch;
+    width: 25%;
+    padding: 20px;
+    overflow-y: auto;
+    height: 500px;
+    margin-top: 10px;
+    word-wrap: break-word;
+    border: 1px solid blue;
 }
-p {
-    width: 65%;
-}
+
 @media screen and (max-width: 600px) {
 }
 
@@ -19,38 +26,30 @@ p {
 }
 
 @media screen and (min-width: 1024px) {
-    h1 {
-        
-        font-size: 5em;
-    }
-   .userBox {
-        display: flex;
-        width: 25%;
-        height: auto;
-        font-family:'Josefin Sans', sans-serif;
-        font-size: 15px;
-    }
-    .userBox2 {
-        display: flex;
-        width: 25%;
-        height: auto;
-        font-family:'Josefin Sans', sans-serif;
-        font-size: 15px;
-    }
-    header {
-        font-family: 'Josefin Sans', sans-serif;
-        text-align: center;
+ 
+    h1 {font-size: 5em;}
+    h2 {
+        font-size: 1em;
         color: blue;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
+        }
+   #userBox {
+        width: 100%;
+        border-top: 1px solid blue;
+        padding-bottom: 40px;
+        }
+    #userBox2 {
+        width: 100%;
+        padding-top: 10px;
+        border-top: 1px solid blue;
+        }
+    legend {padding: 10px;}
+    div {padding: 10px; height: auto;}
+    header {color: blue;}
     footer {
-        margin-top: 75px;
+        margin-top: 200px;
         text-align: center;
         color: red;
         border-top: 1px solid darkslateblue;
         border-bottom: 1px solid darkslateblue;
-    }
+        }
 }
