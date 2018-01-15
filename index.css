@@ -27,19 +27,18 @@ main {
             border: 1px dotted blue;
         }
     h2 {
-            font-size: .5em;
-            color: blue;
+            color: red;
         }
     main {
             color: red;
         }
     #userBox {
-            border-top: 1px solid blue;
+            border-top: 1px solid red;
             padding-bottom: 30px;
         }
     #userBox2 {
             padding-top: 5px;
-            border-top: 1px solid blue;
+            border-top: 1px solid red;
         }
     legend {
             padding: 5px 5px 5px 5px;
@@ -49,7 +48,7 @@ main {
             height: auto;
         }
     header {
-            color: blue;}
+            color: red;}
     footer {
             margin-top: 100px;
             text-align: center;
