@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="index.css" rel="stylesheet">
     <script src = "index.js"></script>
+    <script src = "index-mobile.js"></script>
     <script src = "pg_refresh.js"></script>
 </head>
 <body>
@@ -16,7 +17,8 @@
         </header>
     <h2>Loop example</h2>
     <main>
-        <div><input type = "button" onclick = "getNumbers();" value = "Click To Use An Array"/></div>
+        <div id = "large_div"><input type = "button" onclick = "getNumbers();" value = "Click To Use An Array"/></div>
+        <div id = "mobile_div"><input type = "button" onclick = "getNumbersMobile();" value = "Click To Use An Array"/></div>
             <div></div>
                 <legend>Your List of Numbers: 
                     <div id = "userBox"></div>

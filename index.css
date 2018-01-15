@@ -1,26 +1,62 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
-@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
 
 body {
-font-family: Josefin Sans, sans-serif;
-padding: 10px;
-margin: 0;
-}
+    font-family: Josefin Sans, sans-serif;
+    padding: 10px;
+    margin: 0;
+    }
 main {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: stretch;
-    width: 25%;
     padding: 20px;
     overflow-y: auto;
-    height: 500px;
+    /*height: 500px;*/
     margin-top: 10px;
     word-wrap: break-word;
     border: 1px solid blue;
     }
 
 @media screen and (max-width: 600px) {
+    #large_div {
+            display: none;
+    }
+     h1 {
+            padding: 5px;
+            border: 1px dotted blue;
+        }
+    h2 {
+            font-size: .5em;
+            color: blue;
+        }
+    main {
+            color: red;
+        }
+    #userBox {
+            border-top: 1px solid blue;
+            padding-bottom: 30px;
+        }
+    #userBox2 {
+            padding-top: 5px;
+            border-top: 1px solid blue;
+        }
+    legend {
+            padding: 5px 5px 5px 5px;
+        }
+    div {
+            padding: 5px 5px 5px 5px;
+            height: auto;
+        }
+    header {
+            color: blue;}
+    footer {
+            margin-top: 100px;
+            text-align: center;
+            color: red;
+            border-top: 1px solid darkslateblue;
+            border-bottom: 1px solid darkslateblue;
+        }
 }
 
 @media screen and (min-width: 600px) and (max-width: 1024px) {
@@ -28,16 +64,22 @@ main {
 
 @media screen and (min-width: 1024px) {
  
+    #mobile_div {
+            display: none;
+    }
     h1 {
-        font-size: 5em;
-        padding: 10px;
-        border: 3px dotted blue;
+            font-size: 5em;
+            padding: 10px;
+            border: 3px dotted blue;
         }
     h2 {
             font-size: 1em;
             color: blue;
         }
-   #userBox {
+    main {
+            width: 75%;
+        }
+    #userBox {
             border-top: 1px solid blue;
             padding-bottom: 60px;
         }
