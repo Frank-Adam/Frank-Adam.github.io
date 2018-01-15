@@ -17,7 +17,17 @@ main {
     word-wrap: break-word;
     border: 1px solid blue;
     }
-
+nav > ul{
+    font-size: 3em;
+    display: flex;
+    align-content: stretch;
+    justify-content: space-between;
+    list-style: none;
+    width: 90%;
+    }
+a {
+    text-decoration: none;
+    }
 @media screen and (max-width: 600px) {
     #large_div {
             display: none;
