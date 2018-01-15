@@ -1,0 +1,4 @@
+function getFresh() {
+    location.reload();
+}
+                

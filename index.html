@@ -5,17 +5,18 @@
     <title>Adam's CIT261 Page</title>
     <meta name="description" content="Adam's CIT261 Page">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="/index.css" rel="stylesheet">
-    
-    <script src = "/index.js"></script>
+    <link href="index.css" rel="stylesheet">
+    <script src = "index.js"></script>
+    <script src = "pg_refresh.js"></script>
 </head>
 <body>
         <header>
             <h1>Adam's CIT261 Page</h1>
+            <input type = "button" onclick = "getFresh();" value = "Click To Refresh Page"/>
         </header>
-    <h2>Loops and such</h2>
+    <h2>Loop example</h2>
     <main>
-        <div><input type = "button" onclick = "getNumbers();" name = "ok" value = "Click To Use An Array"/></div>
+        <div><input type = "button" onclick = "getNumbers();" value = "Click To Use An Array"/></div>
             <div></div>
                 <legend>Your List of Numbers: 
                     <div id = "userBox"></div>

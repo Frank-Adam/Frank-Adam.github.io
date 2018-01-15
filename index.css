@@ -4,6 +4,7 @@
 body {
 font-family: Josefin Sans, sans-serif;
 padding: 10px;
+margin: 0;
 }
 main {
     display: flex;
@@ -17,7 +18,7 @@ main {
     margin-top: 10px;
     word-wrap: break-word;
     border: 1px solid blue;
-}
+    }
 
 @media screen and (max-width: 600px) {
 }
@@ -27,29 +28,37 @@ main {
 
 @media screen and (min-width: 1024px) {
  
-    h1 {font-size: 5em;}
+    h1 {
+        font-size: 5em;
+        padding: 10px;
+        border: 3px dotted blue;
+        }
     h2 {
-        font-size: 1em;
-        color: blue;
+            font-size: 1em;
+            color: blue;
         }
    #userBox {
-        width: 100%;
-        border-top: 1px solid blue;
-        padding-bottom: 40px;
+            border-top: 1px solid blue;
+            padding-bottom: 60px;
         }
     #userBox2 {
-        width: 100%;
-        padding-top: 10px;
-        border-top: 1px solid blue;
+            padding-top: 10px;
+            border-top: 1px solid blue;
         }
-    legend {padding: 10px;}
-    div {padding: 10px; height: auto;}
-    header {color: blue;}
+    legend {
+            padding: 10px 10px 10px 10px;
+        }
+    div {
+            padding: 10px 10px 10px 10px;
+            height: auto;
+        }
+    header {
+            color: blue;}
     footer {
-        margin-top: 200px;
-        text-align: center;
-        color: red;
-        border-top: 1px solid darkslateblue;
-        border-bottom: 1px solid darkslateblue;
+            margin-top: 200px;
+            text-align: center;
+            color: red;
+            border-top: 1px solid darkslateblue;
+            border-bottom: 1px solid darkslateblue;
         }
 }
