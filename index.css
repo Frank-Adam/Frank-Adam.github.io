@@ -16,9 +16,7 @@ main {
     word-wrap: break-word;
     border: 1px solid blue;
     }
-a {
-    text-decoration: none;
-    }
+a {text-decoration: none;}
 @media screen and (max-width: 600px) {
     nav > ul{
         display: flex;
@@ -27,22 +25,14 @@ a {
         list-style: none;
         width: 30%;
     }
-    nav {
-        padding: -10px;
-    }
-    #large_div {
-            display: none;
-    }
+    nav {padding: -10px;}
+    #large_div {display: none;}
      h1 {
             padding: 5px;
             border: 1px dotted blue;
         }
-    h2 {
-            color: red;
-        }
-    main {
-            color: red;
-        }
+    h2 {color: red;}
+    main {color: red;}
     #userBox {
             border-top: 1px solid red;
             padding-bottom: 30px;
@@ -51,15 +41,12 @@ a {
             padding-top: 5px;
             border-top: 1px solid red;
         }
-    legend {
-            padding: 5px 5px 5px 5px;
-        }
+    legend {padding: 5px 5px 5px 5px;}
     div {
             padding: 5px 5px 5px 5px;
             height: auto;
         }
-    header {
-            color: red;}
+    header {color: red;}
     footer {
             margin-top: 100px;
             text-align: center;
@@ -80,12 +67,8 @@ a {
     list-style: none;
     width: 90%;
     }
-    nav {
-        padding: 20px;
-    }
-    #mobile_div {
-            display: none;
-    }
+    nav {padding: 20px;}
+    #mobile_div {display: none;}
     h1 {
             font-size: 5em;
             padding: 10px;
@@ -95,9 +78,7 @@ a {
             font-size: 1em;
             color: blue;
         }
-    main {
-            width: 75%;
-        }
+    main {width: 75%;}
     #userBox {
             border-top: 1px solid blue;
             padding-bottom: 60px;
@@ -106,15 +87,12 @@ a {
             padding-top: 10px;
             border-top: 1px solid blue;
         }
-    legend {
-            padding: 10px 10px 10px 10px;
-        }
+    legend {padding: 10px 10px 10px 10px;}
     div {
             padding: 10px 10px 10px 10px;
             height: auto;
         }
-    header {
-            color: blue;}
+    header {color: blue;}
     footer {
             margin-top: 200px;
             text-align: center;
