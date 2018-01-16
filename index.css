@@ -12,7 +12,6 @@ main {
     align-content: stretch;
     padding: 20px;
     overflow-y: auto;
-    /*height: 500px;*/
     margin-top: 10px;
     word-wrap: break-word;
     border: 1px solid blue;
@@ -23,10 +22,13 @@ a {
 @media screen and (max-width: 600px) {
     nav > ul{
         display: flex;
-        align-content: stretch;
+        font-size: 2em;
         justify-content: space-between;
         list-style: none;
-        width: 100%;
+        width: 30%;
+    }
+    nav {
+        padding: -10px;
     }
     #large_div {
             display: none;
@@ -72,12 +74,14 @@ a {
 
 @media screen and (min-width: 1024px) {
     nav > ul{
-        font-size: 3em;
-        display: flex;
-        align-content: stretch;
-        justify-content: space-between;
-        list-style: none;
-        width: 90%;
+    font-size: 3em;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 90%;
+    }
+    nav {
+        padding: 20px;
     }
     #mobile_div {
             display: none;
