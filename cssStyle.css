@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+
+body {
+    font-family: "Comfortaa";
+}
+header {
+    font-size: 3em;
+}
+#div1 {
+    background-color: white;
+    color: red;
+    padding: 10px;
+}
+
+#div2 {
+    font-size: 3em;
+    color: green;
+    border: 1px solid red;
+    padding: 10px;
+}
+#btn_div2 {
+    display: none;
+}
