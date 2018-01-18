@@ -7,22 +7,19 @@
 </head>
 
 <body>
-    <header id = "hdDiv"></header>
+    <header>
+        <div id = "currHdr"><h1>Adam's CIT261 Page</h1></div>
+        <div id = "hdDiv"></div>
+    </header>
     <nav>
         <ul>
-            <li><a href="index.html">&ll;</a></li>
+            <li><a href="loop.html">&ll;</a></li>
             <li><a href="cssJs.html">&gg;</a></li>
         </ul>
     </nav>
     <section></section>
     <script>
         function startHere() {
-            var aDiv = document.createElement("header");
-            var myHdr = document.createTextNode("CSS changes made from jS");
-            aDiv.appendChild(myHdr);
-            var currDiv = document.getElementById("hdDiv"); 
-            document.body.insertBefore(aDiv, currDiv);
-            
             //style cheatsheet link
             //https://www.w3schools.com/jsref/dom_obj_style.asp
             document.getElementById("div1").style.backgroundColor="red";
