@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+body {
+    font-family: "Comfortaa";
+    padding: 10px;
+}
+header {
+    color: blue;
+    border: 1px solid blue;
+}
+main {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+article {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+input {
+    font-size: 8em;
+}
+#day {
+ display: none;
+}
+#box1 {
+    border: 1px solid blue;
+    padding: 5px;
+    color: blue;
+    font-size: 3em;
+}
+#box2 {
+    border: 1px solid blue;
+    padding: 5px;
+    color: blue;
+    font-size: 3em;
+}
+#box3 {
+    border: 1px solid blue;
+    padding: 5px;
+    color: blue;
+    font-size: 3em;
+}
+#box4 {
+    border: 1px solid blue;
+    padding: 5px;
+    color: blue;
+    font-size: 3em;
+}
+#ftr {
+    margin-top: 450px;
+    border-top: 1px solid blue;
+    border-bottom: 1px solid blue;
+    text-align: center;
+    color: blue;
+}
+
+@media screen and (max-width: 600px) {
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+
+}
+
+@media screen and (min-width: 1024px) {
+
+}
