@@ -9,12 +9,96 @@ header {
 }
 main {
     display: flex;
-    justify-content: flex-end;
     padding: 10px;
 }
 article {
     display: flex;
     justify-content: space-between;
+    padding: 10px;
+}
+@media screen and (max-width: 600px) {
+article {
+    flex-direction: column;
+    width: 50%;
+}
+input {
+    font-size: 2em;
+}
+#day {
+ display: none;
+}
+#box1 {
+    border: 1px solid blue;
+    padding: 5px;
+    color: blue;
+}
+#box2 {
+    border: 1px solid blue;
+    padding: 5px;
+    color: blue;
+}
+#box3 {
+    border: 1px solid blue;
+    padding: 5px;
+    color: blue;
+}
+#box4 {
+    border: 1px solid blue;
+    padding: 5px;
+    color: blue;
+}
+#ftr {
+    margin-top: 100px;
+    border-top: 1px solid blue;
+    border-bottom: 1px solid blue;
+    text-align: center;
+    color: blue;
+}
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+article {
+    flex-direction: column;
+    width: 50%;
+}
+input {
+    font-size: 5em;
+}
+#day {
+ display: none;
+}
+#box1 {
+    border: 1px solid blue;
+    padding: 5px;
+    color: blue;
+}
+#box2 {
+    border: 1px solid blue;
+    padding: 5px;
+    color: blue;
+}
+#box3 {
+    border: 1px solid blue;
+    padding: 5px;
+    color: blue;
+}
+#box4 {
+    border: 1px solid blue;
+    padding: 5px;
+    color: blue;
+}
+#ftr {
+    margin-top: 300px;
+    border-top: 1px solid blue;
+    border-bottom: 1px solid blue;
+    text-align: center;
+    color: blue;
+}
+}
+
+@media screen and (min-width: 1024px) {
+main {
+    justify-content: flex-end;
     padding: 10px;
 }
 input {
@@ -54,15 +138,4 @@ input {
     text-align: center;
     color: blue;
 }
-
-@media screen and (max-width: 600px) {
-
-}
-
-@media screen and (min-width: 600px) and (max-width: 1024px) {
-
-}
-
-@media screen and (min-width: 1024px) {
-
 }
