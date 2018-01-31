@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+
+body {
+    font-family: 'Comfortaa', cursive;
+    padding: 5px;
+    margin: 0;
+    }
+h1 {
+    font-size: 3em;
+    color: grey;
+}
+main {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 2px solid grey;
+}
+
+img {
+    width: 30%;
+    height: auto;
+}
+#cart {
+    padding-top: 10px;
+    display: none;
+}
+div > #myTotal {
+    width: 25%;
+    border-top: 6px solid darkgrey;
+    background-color: lightgrey;
+    padding-top: 10px;
+    font-size: 2em;
+}
+
+@media screen and (max-width: 600px) {
+    
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+    
+}
+
+@media screen and (min-width: 1024px) {
+    
+}
