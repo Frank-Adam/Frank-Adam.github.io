@@ -16,31 +16,107 @@ main {
     padding: 10px;
     border-bottom: 2px solid grey;
 }
-
+nav > ul > li{
+    list-style-type: none;
+    color: grey;
+}
+a {
+    text-decoration: none;
+}
 img {
     width: 30%;
     height: auto;
+}
+#allCarts {
+    display: flex;
+    justify-content: space-between;
+    width:70%;
 }
 #cart {
     padding-top: 10px;
     display: none;
 }
-div > #myTotal {
+#elecCart {
+    width: 33.333%;
+    padding-top: 10px;
+    border-bottom: 2px solid grey;
+}
+#grocCart {
+    width: 33.333%;
+    padding-top: 10px;
+    border-bottom: 2px solid grey;
+}
+#oneCart {
+    width: 33.333%;
+    padding-top: 10px;
+    border-bottom: 2px solid grey;
+    width: 70%;
+}
+#myTotal {
     width: 25%;
     border-top: 6px solid darkgrey;
     background-color: lightgrey;
     padding-top: 10px;
     font-size: 2em;
 }
+#myGrocTotal {
+    border-top: 6px solid darkgrey;
+    background-color: lightgrey;
+    padding-top: 10px;
+    font-size: 2em;
+}
+#myElecTotal {
+    border-top: 6px solid darkgrey;
+    background-color: lightgrey;
+    padding-top: 10px;
+    font-size: 2em;
+}
+#totalTotal {
+    border-top: 6px solid darkgrey;
+    background-color: lightgrey;
+    color: red;
+    padding-top: 10px;
+    font-size: 2em;
+}
 
 @media screen and (max-width: 600px) {
-    
+    main {
+        flex-direction: column;
+    }
+    img {
+        width: 40%;
+        height: auto;
+    }
+    #myTotal {
+        font-size: 1em;
+        border-top: 2px solid darkgrey;
+    }
+    #myGrocTotal {
+    border-top: 6px solid darkgrey;
+    font-size: 1em;
+    }
+    #myElecTotal {
+    border-top: 6px solid darkgrey;
+    font-size: 1em;
+    }
+    span.pipe {
+        color: white;
+        display: none;
+    }
+    #allCarts {
+        flex-direction: column;
+        width: 100%;
+    }
 }
 
 @media screen and (min-width: 600px) and (max-width: 1024px) {
-    
+    nav > ul > li{
+        display: inline;
+    }
 }
 
 @media screen and (min-width: 1024px) {
-    
+    nav > ul > li{
+        display: inline;
+    }
 }

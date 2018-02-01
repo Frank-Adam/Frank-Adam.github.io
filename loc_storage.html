@@ -3,10 +3,19 @@
     <head>
         <link href="loc_storage.css" rel="stylesheet">
             <script>
-            function getFresh() {
-                    localStorage.clear();
-                    document.getElementById("cart").style.display="none";
-                    alert("Your cart has been cleared. You have " + localStorage.length + " items in your cart.");
+            function getFreshGroc() {
+                if(parseInt(localStorage.apple) > 0) {
+                    localStorage.removeItem("apple");
+                }
+                if(parseInt(localStorage.carrot) > 0) {
+                    localStorage.removeItem("carrot");
+                }
+                if(parseInt(localStorage.lettuce) > 0) {
+                    localStorage.removeItem("lettuce");
+                }
+                    var emptyCart = 0;
+                    alert("Your cart has been cleared. You have 0 items in your cart.");
+                    viewCart();
                     
                 }
                 
@@ -14,27 +23,27 @@
                     var numCarrot = document.getElementById("numCarr");
                     localStorage.setItem('carrot', numCarrot.value);
                     if(parseInt(localStorage.carrot) > 1) {
-                        alert("You've added " + localStorage.carrot + " carrots to your cart.");
+                        alert("You've added " + localStorage.carrot + " carrots to your cart");
                     } else {
-                        alert("You've added " + localStorage.carrot + " carrot to your cart.");
+                        alert("You've added " + localStorage.carrot + " carrot to your cart");
                     }
                 }
                 function addLettuce() {
                     var numLettuce = document.getElementById("numLett");
                     localStorage.setItem('lettuce', numLettuce.value);
                     if(parseInt(localStorage.lettuce) > 1) {
-                        alert("You've added " + localStorage.lettuce + " lettuce heads to your cart.");
+                        alert("You've added " + localStorage.lettuce + " lettuce heads to your cart");
                     } else {
-                        alert("You've added " + localStorage.lettuce + " lettuce to your cart.");
+                        alert("You've added " + localStorage.lettuce + " lettuce to your cart");
                     }
                 }
                 function addApple() {
                     var numApple = document.getElementById("numApp");
                     localStorage.setItem('apple', numApple.value);
                     if(parseInt(localStorage.apple) > 1) {
-                        alert("You've added " + localStorage.apple + " apples to your cart.");
+                        alert("You've added " + localStorage.apple + " apples to your cart");
                     } else {
-                        alert("You've added " + localStorage.apple + " apple to your cart.");
+                        alert("You've added " + localStorage.apple + " apple to your cart");
                     }
                 }
                 
@@ -54,6 +63,7 @@
                     } else {
                         var cartApples = parseInt(localStorage.apple);    
                     }
+                    //view the grocery cart
                     var cartTotal = ((parseInt(cartCarrots) * 0.15) + (parseInt(cartLettuce) * 0.99) + (parseInt(cartApples) * 0.35)).toFixed(2);
                     
                     document.getElementById("cart").style.display = "initial";
@@ -67,6 +77,15 @@
     </head>
     <body>
         <h1>Adam's Grocery Store</h1>
+        <nav>
+            <ul>
+                <li><a href="loc_storage.html">Grocery</a></li>
+                <li><span class="pipe"> | </span></li>
+                <li><a href="loc_storage_elec.html">Electronics</a></li>
+                <li><span class="pipe"> | </span></li>
+                <li><a href="loc_storage_all.html">Checkout</a></li>
+            </ul>
+        </nav>
         <main>
             <div id="carrot">
                 <img src="carrot.png" alt="veggies">
@@ -115,16 +134,16 @@
             <br>
             <br>
                 <div>
-                    <button id="clearCart" onClick="getFresh()">Clear Cart</button>
+                    <button id="clearCart" onClick="getFreshGroc()">Clear Grocery Cart</button>
                 </div>
             <br>
                 <div>
-                    <button id="vwCart" onClick="viewCart()">View Cart</button>
+                    <button id="vwCart" onClick="viewCart()">View Grocery Cart</button>
                 </div>
             <br>
         </article>
         <div id="cart">
-            <legend>My Cart</legend>
+            <legend>My Cart:</legend>
             <div id="myCarrots"></div>
             <div id="myLettuce"></div>
             <div id="myApples"></div>

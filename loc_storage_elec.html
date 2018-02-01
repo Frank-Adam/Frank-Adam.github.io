@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+    <head>
+        <link href="loc_storage.css" rel="stylesheet">
+            <script>
+            function getFreshElec() {
+                     if(parseInt(localStorage.beats) > 0) {
+                    localStorage.removeItem("beats");
+                }
+                if(parseInt(localStorage.fitBit) > 0) {
+                    localStorage.removeItem("fitBit");
+                }
+                if(parseInt(localStorage.ipod) > 0) {
+                    localStorage.removeItem("ipod");
+                }
+                    var emptyCart = 0;
+                    alert("Your cart has been cleared. You have 0 items in your cart.");
+                    viewCart();
+                }
+                
+                function addIpod() {
+                    var numIpod = document.getElementById("numIpod");
+                    localStorage.setItem('ipod', numIpod.value);
+                    if(parseInt(localStorage.ipod) > 1) {
+                        alert("You've added " + localStorage.ipod + " ipods to your cart");
+                    } else {
+                        alert("You've added " + localStorage.ipod + " ipod to your cart");
+                    }
+                }
+                function addBeats() {
+                    var numBeats = document.getElementById("numBeats");
+                    localStorage.setItem('beats', numBeats.value);
+                    if(parseInt(localStorage.beats) > 1) {
+                        alert("You've added " + localStorage.beats + "Beats Headphones to your cart");
+                    } else {
+                        alert("You've added " + localStorage.beats + " Beats Headphone to your cart");
+                    }
+                }
+                function addFitbit() {
+                    var numFitbit = document.getElementById("numFitbit");
+                    localStorage.setItem('fitBit', numFitbit.value);
+                    if(parseInt(localStorage.fitBit) > 1) {
+                        alert("You've added " + localStorage.fitBit + " FitBits to your cart");
+                    } else {
+                        alert("You've added " + localStorage.fitBit + " FitBit to your cart");
+                    }
+                }
+                
+                function viewCart() {
+                    //electronics
+                     if(isNaN(localStorage.ipod)) {
+                        var cartIpod = 0;
+                    } else {
+                        var cartIpod = parseInt(localStorage.ipod);    
+                    }
+                    if(isNaN(localStorage.beats)) {
+                        var cartBeats = 0;
+                    } else {
+                        var cartBeats = parseInt(localStorage.beats);    
+                    }
+                    if(isNaN(localStorage.fitBit)) {
+                        var cartFitbit = 0;
+                    } else {
+                        var cartFitbit = parseInt(localStorage.fitBit);    
+                    }
+                    //total the cart now
+                    var cartTotal = ((parseInt(cartIpod) * 129) + (parseInt(cartBeats) * 399) + (parseInt(cartFitbit) * 99)).toFixed(0);
+                    //display the cart out
+                    document.getElementById("cart").style.display = "initial";
+                    document.getElementById("myIpod").innerHTML= cartIpod + " iPod(s) totaling: $" + (cartIpod * 129).toFixed(0);
+                    document.getElementById("myBeats").innerHTML= cartBeats + " Beats Headphone(s) totaling: $" + (cartBeats * 399).toFixed(0);
+                    document.getElementById("myFitbit").innerHTML= cartFitbit + " FitBit(s) totaling: $" + (cartFitbit * 99).toFixed(0);
+                    document.getElementById("myTotal").innerHTML= "Cart Total: $" + cartTotal;
+                }
+            </script>
+    </head>
+    <body>
+        <h1>Adam's Grocery Store</h1>
+        <nav>
+            <ul>
+                <li><a href="loc_storage.html">Grocery</a></li>
+                <li> | </li>
+                <li><a href="loc_storage_elec.html">Electronics</a></li>
+                <li> | </li>
+                <li><a href="loc_storage_all.html">Checkout</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div id="iPod">
+                <img src="ipod.png" alt="electrics">
+                <br>Ipod Price: $129 ea<br>
+                <select id="numIpod">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <br>
+                <button id="add_Ipod" onClick="addIpod()">Add To Cart</button>
+            </div>
+            <br>
+            <div id="beats">
+                <img src="beats.png" alt="electrics">
+                <br>Beats Headphones Price: $399 ea<br>
+                <select id ="numBeats">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <br>
+                <button id="add_beats" onClick="addBeats()">Add To Cart</button>
+            </div>
+            <br>
+            <div id="fitBit">
+                <img src="fitbit.png" alt="electrics">
+                <br>FitBit Price: $99 ea<br>
+                <select id="numFitbit">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <br>
+                <button id="add_fitbit" onClick="addFitbit()">Add To Cart</button>
+            </div><br><br>
+        </main>
+        <article>
+            <br>
+            <br>
+            <br>
+                <div>
+                    <button id="clearCart" onClick="getFreshElec()">Clear Electronics Cart</button>
+                </div>
+            <br>
+                <div>
+                    <button id="vwCart" onClick="viewCart()">View Electronics Cart</button>
+                </div>
+            <br>
+        </article>
+        <div id="cart">
+            <legend>My Cart:</legend>
+            <div id="myIpod"></div>
+            <div id="myBeats"></div>
+            <div id="myFitbit"></div>
+            <div id="myTotal"></div>
+        </div>
+        
+    </body>
+</html>

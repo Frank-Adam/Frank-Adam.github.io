@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+    <head>
+        <link href="loc_storage.css" rel="stylesheet">
+            <script>
+            function viewCart() {
+            //electronics
+                if(isNaN(localStorage.ipod)) {
+                    var cartIpod = 0;
+                } else {
+                    var cartIpod = parseInt(localStorage.ipod);    
+                }
+                if(isNaN(localStorage.beats)) {
+                    var cartBeats = 0;
+                } else {
+                    var cartBeats = parseInt(localStorage.beats);    
+                }
+                if(isNaN(localStorage.fitBit)) {
+                    var cartFitbit = 0;
+                } else {
+                    var cartFitbit = parseInt(localStorage.apple);    
+                }
+            //grocery
+                if(isNaN(localStorage.carrot)) {
+                        var cartCarrots = 0;
+                    } else {
+                        var cartCarrots = parseInt(localStorage.carrot);    
+                    }
+                    if(isNaN(localStorage.lettuce)) {
+                        var cartLettuce = 0;
+                    } else {
+                        var cartLettuce = parseInt(localStorage.lettuce);    
+                    }
+                    if(isNaN(localStorage.apple)) {
+                        var cartApples = 0;
+                    } else {
+                        var cartApples = parseInt(localStorage.apple);    
+                    }
+            //total the electrics cart now
+                var cartTotalElec = ((parseInt(cartIpod) * 129) + (parseInt(cartBeats) * 399) + (parseInt(cartFitbit) * 99)).toFixed(0);
+                //display the cart out
+                document.getElementById("elecCart").style.display = "initial";
+                document.getElementById("myIpod").innerHTML= cartIpod + " iPod(s) totaling: $" + (cartIpod * 129).toFixed(0);
+                document.getElementById("myBeats").innerHTML= cartBeats + " Beats Headphone(s) totaling: $" + (cartBeats * 399).toFixed(0);
+                document.getElementById("myFitbit").innerHTML= cartFitbit + " FitBit(s) totaling: $" + (cartFitbit * 99).toFixed(0);
+                document.getElementById("myElecTotal").innerHTML= "Cart Total: $" + cartTotalElec;
+            
+            //view the grocery cart
+                var cartTotalGroc = ((parseInt(cartCarrots) * 0.15) + (parseInt(cartLettuce) * 0.99) + (parseInt(cartApples) * 0.35)).toFixed(2);
+                    
+                document.getElementById("grocCart").style.display = "initial";
+                document.getElementById("myCarrots").innerHTML= cartCarrots + " carrot(s) totaling: $" + (cartCarrots * 0.15).toFixed(2) + ".";
+                document.getElementById("myLettuce").innerHTML= cartLettuce + " lettuce head(s) totaling: $" + (cartLettuce * 0.99).toFixed(2) + ".";
+                document.getElementById("myApples").innerHTML= cartApples + " apple(s) totaling: $" + (cartApples * 0.35).toFixed(2) + ".";
+                document.getElementById("myGrocTotal").innerHTML= "Cart Total: $" + cartTotalGroc;
+                
+                //view the total of both carts
+                var cartTotalTotal = ((parseInt(cartCarrots) * 0.15) + (parseInt(cartLettuce) * 0.99) + (parseInt(cartApples) * 0.35) + (parseInt(cartIpod) * 129) + (parseInt(cartBeats) * 399) + (parseInt(cartFitbit) * 99)).toFixed(2);
+                    
+                document.getElementById("oneCart").style.display = "initial";
+                document.getElementById("totalTotal").innerHTML= "Checkout Total: $" + cartTotalTotal;
+            }
+            </script>
+    </head>
+    <body>
+        <h1>Adam's Grocery Store</h1>
+        <nav>
+            <ul>
+                <li><a href="loc_storage.html">Grocery</a></li>
+                <li><span class="pipe"> | </span></li>
+                <li><a href="loc_storage_elec.html">Electronics</a></li>
+                <li><span class="pipe"> | </span></li>
+                <li><a href="loc_storage_all.html">Checkout</a></li>
+            </ul>
+        </nav>
+        <aside>
+            <button id="vwCart" onClick="viewCart()">View All Carts</button>
+            <br>
+        </aside>
+        <div id="allCarts">
+            <div id="grocCart">
+                <legend>My Grocery Cart:</legend>
+                <div id="myCarrots"></div>
+                <div id="myLettuce"></div>
+                <div id="myApples"></div>
+                <div id="myGrocTotal"></div>
+            </div>
+            <div id="elecCart">
+                <legend>My Electronics Cart:</legend>
+                <div id="myIpod"></div>
+                <div id="myBeats"></div>
+                <div id="myFitbit"></div>
+                <div id="myElecTotal"></div>
+            </div>
+        </div>
+        <br>
+            <div id="oneCart">
+                <legend>Checkout Total:</legend>
+                <div id="totalTotal"></div>
+            </div>
+    </body>
+</html>
