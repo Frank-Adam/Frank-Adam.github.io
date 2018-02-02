@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="animation.css" rel="stylesheet">
+    <script>
+        function showSmile() {
+            var x = document.getElementById("smile");
+            var y = document.getElementById("frown");
+            x.style.display="block";
+            y.style.display="none";
+            var x2 = document.getElementById("smile2");
+            var y2 = document.getElementById("frown2");
+            x2.style.display="block";
+            y2.style.display="none";
+        }
+        function showFrown() {
+            var x = document.getElementById("smile");
+            var y = document.getElementById("frown");
+            x.style.display="none";
+            y.style.display="inital";
+            var x2 = document.getElementById("smile2");
+            var y2 = document.getElementById("frown2");
+            x2.style.display="none";
+            y2.style.display="inital";
+        }
+    </script>
+</head>
+<body>
+        <header>
+            <h1>Animation Using CSS</h1>
+        </header>
+<br>
+    <main>
+        <div id="trigger" onmouseover="showSmile();">
+            <img id="smile" src="smile.png">
+        <div id="box" onmouseout="showFrown();">
+            <img id="frown" src="frown.png"></div>
+        </div>
+    </main>
+    <br>
+    <div id="frown2">Hover over me!</div>
+    <div id="smile2">Stop hovering mom!</div>
+</body>
+</html>
