@@ -35,10 +35,11 @@ h1 {
 }
 #box {
     display: inline-block;
+    z-index:2;
     width: 100px;
     height: 100px;
     background-color: pink;
-    transition: transform 300ms ease-in-out;
+    transition: transform 200ms ease-in-out;
 }
 
 #trigger:hover #box {
