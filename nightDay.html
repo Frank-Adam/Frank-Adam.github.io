@@ -7,49 +7,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="nightDay.css" rel="stylesheet">
      <script>
-        function startHere() {
+        function nightMan() {
             //style cheatsheet link
-            //https://www.w3schools.com/jsref/dom_obj_style.asp
+            //www.w3schools.com/jsref/dom_obj_style.asp
+            document.body.style.backgroundColor="black";
             document.getElementById("night").style.display="none";
             document.getElementById("day").style.display="initial";
-            document.body.style.backgroundColor="black";
             document.getElementById("hdr").style.borderColor="white";
             document.getElementById("hdr").style.color="white";
             document.getElementById("box1").style.color="white"
             document.getElementById("box2").style.color="white"
-            document.getElementById("box3").style.color="white"
-            document.getElementById("box4").style.color="white"
             document.getElementById("box1").style.borderColor="white";
             document.getElementById("box2").style.borderColor="white";
-            document.getElementById("box3").style.borderColor="white";
-            document.getElementById("box4").style.borderColor="white";
             document.getElementById("ftr").style.borderTopColor="white";
             document.getElementById("ftr").style.borderBottomColor="white";
             document.getElementById("ftr").style.color="white";
         }
+        //refreshes the page to switch back to "day mode"
         function getFresh() {
             location.reload();
         }
     </script>
 </head>
 <body>
-        <header id="hdr">
+        <header id ="hdr">
             <h1>Adam Frank CIT261 Page</h1>
         </header>
        
     <nav></nav>
     <main>
-        <div id="day"><input type = "button" onclick = "getFresh();" value = "Day Mode"/></div>
-        <div id="night"><input type = "button" onclick = "startHere();" value = "Night Mode"/></div>
+        <div id="night"><input type = "button" onclick = "nightMan();" value = "Switch To Night Mode"/></div>
+        <div id="day"><input type = "button" onclick = "getFresh();" value = "Switch To Day Mode"/></div>
     </main>
     <article>
-        <div id="box1">this is box 1</div>
-        <div id="box2">this is box 2</div>
-        <div id="box3">this is box 3</div>
-        <div id="box4">this is box 4</div>
+        <div id="box1">this is a flex box.</div>
+        <div id="box2">this is another flex box.</div>
     </article>
     <footer>
-        <div id="ftr"<small>&copy;2018 Adam Frank</small></div>
+        <div id="ftr"><small>&copy;2018 Adam Frank</small></div>
     </footer>
 </body>
 </html>
