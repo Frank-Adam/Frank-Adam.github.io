@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css_animation.css" rel="stylesheet">
+    <script>
+       function doStuff() {
+            var choice = document.getElementById("selector").value;
+            var box = document.getElementById("b" + choice);
+            var x = Math.floor(Math.random() * 800) + 1;
+            var y = Math.floor(Math.random() * 500) + 1;
+            
+            box.style.borderRadius="50%";
+            box.style.backgroundColor="red";
+            box.style.transition="all .8s ease-in-out 100ms";
+            box.style.transform="translate(" + x + "px, " + y + "px)";
+            document.getElementById("selector").style.display="none";
+            document.getElementById("btn").style.display="none";
+            document.getElementById("btn1").style.display="block";
+       }
+       function getFresh() {
+           location.reload();
+       }
+    </script>
+</head>
+<body>
+        <header>
+            <h1>Animation Using CSS</h1>
+        </header>
+
+    <div id="b1"></div>
+    <div id="b2"></div>
+    <div id="b3"></div>
+    <div id="b4"></div>
+    <br>
+    <div>Choose a number:</div>
+    <div>
+        <select id="selector">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+        </select>
+    </div>
+    <button id="btn" onclick="doStuff();">Click Here</button>
+    <button id="btn1" onclick="getFresh();">Start Over</button>
+</body>
+</html>
