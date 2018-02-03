@@ -14,27 +14,36 @@ h1 {
     width: 100px;
     height: 100px;
     background-color: grey;
+
 }
 #b2 {
     display: inline-block;
     width: 100px;
     height: 100px;
     background-color: grey;
+
 }
 #b3 {
     display: inline-block;
     width: 100px;
     height: 100px;
     background-color: grey;
+
 }
 #b4 {
     display: inline-block;
     width: 100px;
     height: 100px;
     background-color: grey;
+
 }
 #btn1 {
     display: none;
+}
+/* Keyframes */
+@keyframes bounce {
+    from{transform: translateX(0)}
+    to{transform: translateX(500px)}
 }
 
 @media screen and (max-width: 600px) {
