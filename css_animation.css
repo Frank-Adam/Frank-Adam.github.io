@@ -38,7 +38,9 @@ h1 {
 }
 
 @media screen and (max-width: 600px) {
-
+    #btn {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 600px) and (max-width: 1024px) {
@@ -49,5 +51,7 @@ h1 {
  h1 {
      font-size: 3em;    
  }
-
+#btnMobile {
+    display: none;
+}
 }

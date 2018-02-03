@@ -7,7 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css_animation.css" rel="stylesheet">
     <script>
-       function doStuff() {
+        function getCoords() {
+            var choice = document.getElementById("selector").value;
+            var box = document.getElementById("b" + choice);
+        }
+        
+        function doStuff() {
             var choice = document.getElementById("selector").value;
             var box = document.getElementById("b" + choice);
             var x = Math.floor(Math.random() * 800) + 1;
@@ -20,10 +25,24 @@
             document.getElementById("selector").style.display="none";
             document.getElementById("btn").style.display="none";
             document.getElementById("btn1").style.display="block";
-       }
-       function getFresh() {
-           location.reload();
-       }
+        }
+        function doStuffMobile() {
+            var choice = document.getElementById("selector").value;
+            var box = document.getElementById("b" + choice);
+            var x = Math.floor(Math.random() * 75) + 1;
+            var y = Math.floor(Math.random() * 25) + 1;
+            
+            box.style.borderRadius="50%";
+            box.style.backgroundColor="red";
+            box.style.transition="all .8s ease-in-out 100ms";
+            box.style.transform="translate(" + x + "px, " + y + "px)";
+            document.getElementById("selector").style.display="none";
+            document.getElementById("btnMobile").style.display="none";
+            document.getElementById("btn1").style.display="block";
+        }
+        function getFresh() {
+            location.reload();
+        }
     </script>
 </head>
 <body>
@@ -46,6 +65,7 @@
         </select>
     </div>
     <button id="btn" onclick="doStuff();">Click Here</button>
+    <button id="btnMobile" onclick="doStuffMobile();">Click Here</button>
     <button id="btn1" onclick="getFresh();">Start Over</button>
 </body>
 </html>
