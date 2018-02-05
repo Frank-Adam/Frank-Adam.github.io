@@ -29,9 +29,6 @@ article {
     flex-direction: column;
     width: 50%;
 }
-input {
-    font-size: 2em;
-}
 
 #box1 {
     border: 1px solid blue;
@@ -65,9 +62,6 @@ article {
     flex-direction: column;
     width: 50%;
 }
-input {
-    font-size: 5em;
-}
 
 #box1 {
     border: 1px solid blue;
@@ -96,9 +90,6 @@ input {
 main {
     justify-content: flex-end;
     padding: 10px;
-}
-input {
-    font-size: 8em;
 }
 #box1 {
     border: 1px solid blue;
