@@ -5,36 +5,42 @@ body {
     margin: 0;
     padding: 10px;
 }
+main {
+    display: flex;
+}
 
 h1 {
     color: grey;
 }
-#b1 {
-    display: inline-block;
-    width: 100px;
-    height: 100px;
-    background-color: grey;
-
+#box1,
+#box2 {
+    width: 450px;
+    height: 200px;
+    border: 1px solid grey;
+    padding: 20px;
 }
-#b2 {
-    display: inline-block;
-    width: 100px;
-    height: 100px;
-    background-color: grey;
 
-}
-#b3 {
-    display: inline-block;
-    width: 100px;
-    height: 100px;
-    background-color: grey;
-
-}
+#b1, 
+#b2,
+#b3,
 #b4 {
     display: inline-block;
     width: 100px;
     height: 100px;
     background-color: grey;
+
+}
+#spacer {
+    width: 100px;
+}
+#b5,
+#b6,
+#b7,
+#b8 {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border: 1px solid grey;
 
 }
 #btn1 {

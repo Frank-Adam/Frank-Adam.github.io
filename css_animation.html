@@ -10,13 +10,18 @@
         function doStuff() {
             var choice = document.getElementById("selector").value;
             var box = document.getElementById("b" + choice);
-            var x = Math.floor(Math.random() * 800) + 1;
-            var y = Math.floor(Math.random() * 500) + 1;
+            var y = 1000;
+            var newChoice = parseInt(choice) + 4;
+            var newBox = document.getElementById("b" + newChoice);
             
-            box.style.borderRadius="50%";
-            box.style.backgroundColor="red";
-            box.style.transition="all .8s ease-in-out 100ms";
-            box.style.transform="translate(" + x + "px, " + y + "px)";
+            
+            box.style.transition="all 1s ease-in-out 25ms";
+            box.style.transform="translate(0px, " + y + "px)";
+            newBox.style.transition="all .5s ease-in-out 5ms";
+            newBox.style.backgroundColor="grey";
+            box.style.transition="all .8s ease-in-out 50ms";
+            
+            
             document.getElementById("selector").style.display="none";
             document.getElementById("btn").style.display="none";
             document.getElementById("btn1").style.display="block";
@@ -24,15 +29,20 @@
         function doStuffMobile() {
             var choice = document.getElementById("selector").value;
             var box = document.getElementById("b" + choice);
-            var x = Math.floor(Math.random() * 75) + 1;
-            var y = Math.floor(Math.random() * 25) + 1;
+            var y = 1000;
+            var newChoice = parseInt(choice) + 4;
+            var newBox = document.getElementById("b" + newChoice);
             
-            box.style.borderRadius="50%";
-            box.style.backgroundColor="red";
-            box.style.transition="all .8s ease-in-out 100ms";
-            box.style.transform="translate(" + x + "px, " + y + "px)";
+            
+            box.style.transition="all 1s ease-in-out 25ms";
+            box.style.transform="translate(0px, " + y + "px)";
+            newBox.style.transition="all .5s ease-in-out 5ms";
+            newBox.style.backgroundColor="grey";
+            box.style.transition="all .8s ease-in-out 50ms";
+            
+            
             document.getElementById("selector").style.display="none";
-            document.getElementById("btnMobile").style.display="none";
+            document.getElementById("btn").style.display="none";
             document.getElementById("btn1").style.display="block";
         }
         function getFresh() {
@@ -44,11 +54,21 @@
         <header>
             <h1>Animation Using CSS</h1>
         </header>
-
-    <div id="b1"></div>
-    <div id="b2"></div>
-    <div id="b3"></div>
-    <div id="b4"></div>
+    <main>
+    <div id="box1">
+        <div id="b1"></div>
+        <div id="b2"></div>
+        <div id="b3"></div>
+        <div id="b4"></div>
+    </div>
+    <div id="spacer"></div>
+    <div id="box2">
+        <div id="b5"></div>
+        <div id="b6"></div>
+        <div id="b7"></div>
+        <div id="b8"></div>
+    </div>
+    </main>
     <br>
     <div>Choose a number:</div>
     <div>
