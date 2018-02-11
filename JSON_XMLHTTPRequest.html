@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="JSON_XMLHTTPRequest.css" rel="stylesheet">
+    <script>
+        //following D.Cenatiempo's group instruction
+        let getAPIData = function() {
+            var xmlHttp = new XMLHttpRequest();
+            
+            xmlHttp.onreadystatechange = function() {
+                if(this.readyState == 4 && this.status == 200) {
+                    //console.log(this.responseText);
+                    processJSON(this.responseText);
+                }
+            };
+            
+            //get the api data
+            xmlHttp.open("GET","https://forex.1forge.com/1.0.3/convert?from=USD&to=EUR&quantity=100&api_key=sjTn03IhIRiIcKLGIBRUjPJavekOUYSr",true);
+            xmlHttp.send();
+        }
+        
+        function processJSON(text) {
+            var data = JSON.parse(text);
+            var input = parseFloat(document.getElementById("input").value);
+            var USD = parseFloat(input).toFixed(2);
+            var EUR = ((parseFloat(data.value) / 100) * USD).toFixed(2);
+            var final = document.getElementById("output");
+            
+            if(isNaN(input)) {
+                final.innerHTML = "No USD Entered"
+            } else {
+                var output = "$" + USD + " converts to &euro;" + EUR;
+                var final = document.getElementById("output");
+                final.innerHTML = output;
+            }
+        }
+        
+    </script>
+</head>
+<body>
+        <header>
+            <h1>1Forge Real-Time Currency API Data</h1>
+        </header>
+    
+    <main>
+        <div id="box1">
+            <div><input id="input" type="text" placeholder="$0.00">&lt;--Input USD Amount</div>
+            <br>
+            <button id="btn" onclick="getAPIData();">Get Current Euro Conversion</button>
+            <br>
+            <div id="output"></div>
+        </div>
+        
+    </main>
+</body>
+</html>
