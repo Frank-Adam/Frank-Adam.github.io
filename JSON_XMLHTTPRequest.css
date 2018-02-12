@@ -1,31 +1,49 @@
 @import url('https://fonts.googleapis.com/css?family=Comfortaa');
-body {
-    font-family: "Comfortaa";
-    color: grey;
-    margin: 10px;
-}
-#output,
-#output2 {
-    padding-top: 20px;
-}
-main {
-    display: flex;
-}
-
-
+    body {
+        font-family: "Comfortaa";
+        color: grey;
+        margin: 10px;
+    }
+    #output {
+        padding-top: 20px;
+        color: red;
+    }    
+    main {
+        display: flex;
+    }
+    #source {
+        display: none;
+        height: 100px;
+        color: grey;
+        border-top: 1px solid grey;
+    }
+   #marketYes {
+       display: none;
+       width: 25%;
+       border-top: 3px solid grey;
+       color: green;
+    }
+    #marketNo {
+       display: none;
+       width: 25%;
+       border-top: 3px solid grey;
+       color: red;
+    }
 
 @media screen and (max-width: 600px) {
     main {
         flex-direction: column;
     }
-    #box1,
-    #box2 {
+    #box1 {
         
         width:90%;
         height: 200px;
         border: 1px solid grey;
         margin-top: 10px;
         padding: 10px;
+    }
+    #output {
+        width: 100%;
     }
 }
 
@@ -34,10 +52,13 @@ main {
 }
 
 @media screen and (min-width: 1024px) {
-#box1,
-#box2 {
+    #box1 {
     width:50%;
     border: 1px solid grey;
     padding: 10px;
-}
+    }
+    #output {
+        width: 50%;
+        font-size: 2em;
+    }
 }

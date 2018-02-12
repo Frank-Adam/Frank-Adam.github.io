@@ -10,6 +10,7 @@
         //following D.Cenatiempo's group instruction
         let getAPIData = function() {
             var xmlHttp = new XMLHttpRequest();
+            var xmlHttp2 = new XMLHttpRequest();
             
             xmlHttp.onreadystatechange = function() {
                 if(this.readyState == 4 && this.status == 200) {
@@ -21,6 +22,22 @@
             //get the api data
             xmlHttp.open("GET","https://forex.1forge.com/1.0.3/convert?from=USD&to=EUR&quantity=100&api_key=sjTn03IhIRiIcKLGIBRUjPJavekOUYSr",true);
             xmlHttp.send();
+            
+            getMarketData();
+        }
+        
+        let getMarketData = function() {
+            var xmlHttp2 = new XMLHttpRequest();
+            
+            xmlHttp2.onreadystatechange = function() {
+                if(this.readyState == 4 && this.status == 200) {
+                    console.log(this.responseText);
+                    processJSON2(this.responseText);
+                }
+            };
+            
+            xmlHttp2.open("GET","https://forex.1forge.com/1.0.3/market_status?api_key=sjTn03IhIRiIcKLGIBRUjPJavekOUYSr",true);
+            xmlHttp2.send();
         }
         
         function processJSON(text) {
@@ -33,11 +50,42 @@
             if(isNaN(input)) {
                 final.innerHTML = "No USD Entered"
             } else {
-                var output = "$" + USD + " converts to &euro;" + EUR;
+                var output = "$" + USD + " converts to: &euro;" + EUR;
                 var final = document.getElementById("output");
                 final.innerHTML = output;
+                
+                var source = document.getElementById("source");
+                var div1 = document.getElementById("1");
+                var div2 = document.getElementById("2");
+                var div3 = document.getElementById("3");
+                var myDate = new Date (parseInt(data.timestamp * 1000));
+                
+                source.style.display="block";
+                div1.style.display="block";
+                div2.style.display="block";
+                div3.style.display="block";
+                div1.innerHTML="API current Euro value: " + data.value;
+                div2.innerHTML="API current conversion text: " + data.text;
+                div3.innerHTML="API current epoch timestamp: " + data.timestamp + " (converted date: " + myDate.toLocaleString() + ")";
             }
         }
+            function processJSON2(text) {
+                var data = JSON.parse(text);
+                var marketY = document.getElementById("marketYes");
+                var marketN = document.getElementById("marketNo");
+                
+                if(data.market_is_open == true) {
+                    marketY.style.display="block";
+                    
+                } else {
+                    marketN.style.display="block";
+                    
+                }
+                
+                var div4 = document.getElementById("4");
+                div4.style.display="block";
+                div4.innerHTML="API current market 'is open' status: " + data.market_is_open;
+            }
         
     </script>
 </head>
@@ -53,6 +101,15 @@
             <button id="btn" onclick="getAPIData();">Get Current Euro Conversion</button>
             <br>
             <div id="output"></div>
+            <div id="marketYes">Market Open: &check;</div>
+            <div id="marketNo">Market Open: &cross;</div>
+            <br>
+            <div id="source">
+                <div id="1"></div>
+                <div id="2"></div>
+                <div id="3"></div>
+                <div id="4"></div>
+            </div>
         </div>
         
     </main>
