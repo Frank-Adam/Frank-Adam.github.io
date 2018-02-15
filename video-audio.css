@@ -42,6 +42,20 @@ nav {
 main {
     flex-direction: column;
 }
+    #video1,
+#video2 {
+    padding: 20px;
+    border: 1px solid grey;
+    width: 100%;
+    height: auto;
+}
+#audio {
+    padding: 20px;
+    width: 100%;
+    height: auto;
+    border: 1px solid grey;
+}
+    
 }
 
 @media screen and (min-width: 600px) and (max-width: 1024px) {
