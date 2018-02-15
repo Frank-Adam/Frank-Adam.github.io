@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="video-audio.css" rel="stylesheet">
+    <script>
+        function videoOne() {
+            var div = document.getElementById("video2");
+            div.style.display="none";
+            var div2 = document.getElementById("video1");
+            div2.style.display="initial";
+        }
+        
+        function videoTwo() {
+            var div = document.getElementById("video1");
+            div.style.display="none";
+            var div2 = document.getElementById("video2");
+            div2.style.display="block";
+        }
+    </script>
+</head>
+<body>
+        <header>
+            <h1>Video/Audio Examples</h1>
+        </header>
+    <nav>
+       <button id="btn1" onclick="videoOne();">Video 1</button>
+       <button id="btn2" onclick="videoTwo();">Video 2</button>
+    </nav>
+    <main>
+        <div id="video1">
+            <video width="600" height="300" controls>
+                <source src="vid1.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div id="video2">
+            <video width="600" height="300" controls>
+                <source src="vid2.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div id="audio">
+            <div>Audio Samples:</div>
+            <br>
+            <audio controls>
+                <source src="audio1.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="audio2.m4a" type="audio/mpeg">
+            </audio>
+        </div>
+    </main>
+    <div id="videoSource1"><a href="https://textinmotion.tv/help/samples">Sample Video 1 Source</a></div>
+    <div id="videoSource2"><a href="http://www.sample-videos.com/">Sample Video 2 Source</a></div>
+    <div id="audioSource1"><a href="http://www.sample-videos.com/download-sample-audio.php">Sample Audio 1 Source</a></div>
+    <div id="audioSource2"><a href="http://helpguide.sony.net/high-res/sample1/v1/en/index.html">Sample Audio 2 Source</a></div>
+</body>
+</html>
