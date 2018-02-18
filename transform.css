@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+body {
+    font-family: "Comfortaa";
+    color: grey;
+}
+main {
+    display: flex;
+}
+#e1:hover,#e2:hover,#e3:hover,
+#e4:hover,#e5:hover,#e6:hover,
+#e7:hover,#e8:hover,#e9:hover {
+    color: white;
+    background-color: teal;
+    animation: grow 1s infinite;
+}
+
+/* Keyframes */
+@keyframes grow {
+    0%, 100% {
+    font-size: 8em;
+    border-radius: 50%;
+  }
+  50% {
+    font-size: 15em;
+    border-radius: 50%;
+  }
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media screen and (max-width: 600px) {
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+
+}
+
+@media screen and (min-width: 1024px) {
+    #box1 {
+        display: flex;
+        flex-flow: wrap;
+        width: 310px;
+        padding: 10px;
+        border: 1px solid grey;
+    }
+    #e1,#e2,#e3,
+    #e4,#e5,#e6,
+    #e7,#e8,#e9 {
+        width: 100px;
+        height: 100px;
+        font-size: 6em;
+        text-align: center;
+        border: 1px solid grey;
+    }
+}
