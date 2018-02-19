@@ -1,35 +1,33 @@
-@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 body {
-    font-family: 'Comfortaa', cursive;
+    font-family: 'Roboto';
     padding: 5px;
     margin: 0;
-    }
-main {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: stretch;
-    overflow-y: auto;
-    word-wrap: break-word;
     }
 a {
     text-decoration: none;
     }
-tr:nth-child(odd) {
+td:hover {
     background-color: lightgrey;
+    text-decoration: bold;
 }
 table {
     padding: 10px;
 }
 th {
-    font-size: 2em;
-    border-bottom: 1px solid red;
+    text-align: left;
+    border-bottom: 1px solid blue;
+    text-decoration: bold;
+}
+td {
+    padding-bottom: 2px;
+    border-bottom: 1px solid lightgrey;
+}
+#code {
+    width: 42%;
 }
 @media screen and (max-width: 600px) {
-    body {
-        width: 100%;
-    }
     table {
     width: 100%;
     }
@@ -46,7 +44,6 @@ th {
 
     main {
         color: red;
-        border: 1px solid red;
         }
 }
 
@@ -67,29 +64,25 @@ th {
 
     main {
         color: orange;
-        border: 1px solid orange;
         }
 }
 
 @media screen and (min-width: 1024px) {
     
     table {
-    width: 75%;
+    width: 70%;
     }
     th {
     border-bottom: 3px solid blue;
     }
     header {
-        border: 1px solid blue;
         color: blue;
     } 
     h1 {
-        font-size: 5em;
         padding: 10px;
         }
     
     main {
-        border: 1px solid blue;
         color: blue;
         }
 }
