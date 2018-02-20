@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="DOM_createElements.css" rel="stylesheet">
+   
+    <script>
+        function addStudent() {
+            //with assistance from Josh Higgins
+            var studentName = document.getElementById("d1").value + " " + document.getElementById("d2").value;
+            var studentId = document.getElementById("d3").value;
+            var studentMajor = document.getElementById("d4").value;
+            
+            if (studentName !== " " && studentId !== "" && studentMajor !== ""){
+                var div = document.createElement('div');
+                div.className = "report"
+                div.innerHTML = '<div id="stdntName">' + studentName + '</div><div id="stdntId">' + studentId + '</div><div id="stdntMajor">' + studentMajor + '</div>';
+                document.getElementById("records").appendChild(div);
+                
+                addLocStor(studentName,studentId,studentMajor);
+            }
+        }
+    </script>
+</head>
+<body onload="loadData()">
+        <header>
+            <h1>DOM Create Elements Example</h1>
+        </header>
+    <nav></nav>
+    <h2>Local Student Database V2.0</h2>
+    <main>
+        <article>
+            Student First Name:
+            <br>
+            <input id="d1" type="text" placeholder="Adam" >
+            <br>
+            Student Last Name:
+            <br>
+            <input id="d2" type="text" placeholder="Frank">
+            <br>
+            Student ID #:
+            <br>
+            <input id="d3" type="text" placeholder="FRA123">
+            <br>
+            Student Declared Major:
+            <br>
+            <input id="d4" type="text" placeholder="Web Design">
+            <br>
+        </article>
+        <aside>
+            <div class="report1">
+                <div id="nameHdr">Student Name</div>
+                <div id="idHdr">Student ID</div>
+                <div id="majorHdr">Student Major</div>
+            </div>
+            <div id="records">
+            </div>
+        </aside>
+    </main>
+    <div>
+        <button id="btn" onClick="addStudent();">Click Here To Add Student Information</button>
+    </div>
+    
+    <!--allows user to hit enter key in the last input box (major)-->
+     <script>
+        var enterKey = document.getElementById("d4");
+            enterKey.addEventListener("keyup", function(event) {
+            event.preventDefault();
+        
+            if (event.keyCode === 13) {
+                document.getElementById("btn").click();
+            }
+        });
+    </script>
+   
+</body>
+</html>

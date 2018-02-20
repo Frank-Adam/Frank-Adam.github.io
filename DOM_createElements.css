@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+
+body {
+    font-family: "Comfortaa";
+    padding: 10px;
+    margin: 0;
+     color: grey;
+}
+
+@media screen and (max-width: 600px) {
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+
+}
+
+@media screen and (min-width: 1024px) {
+main {
+    display: flex;
+    height: auto;
+}
+article {
+    border: 1px solid grey;
+    width: 50%;
+    padding: 5px;
+}
+aside {
+    border-top: 1px solid grey;
+    border-right: 1px solid grey;
+    border-bottom: 1px solid grey;
+    width: 50%;
+    padding: 5px;
+}
+input {
+    width: 50%;
+    padding: 5px;
+}
+.report1 {
+    display: flex;
+    border-bottom: 1px solid grey;
+}
+.report {
+    display: flex;
+    padding-top: 10px;
+}
+#nameHdr, #idHdr, #majorHdr, #stdntName, #stdntId, #stdntMajor {
+    width: 100%;
+    flex: 1;
+}
+}
