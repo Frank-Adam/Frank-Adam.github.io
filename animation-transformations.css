@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+body {
+    font-family: "Roboto";
+    color: grey;
+}
+
+#bWand {
+    position: absolute;
+    margin-top: 200px;
+    margin-left: 200px;
+}
+#b1 {
+    position: absolute;
+    margin-top: 205px;
+    margin-left: 270px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    opacity: 0.6;
+    border: 2px solid grey;
+    animation: wobble1 4s linear infinite;
+}
+#b2 {
+    position: absolute;
+    margin-top: 205px;
+    margin-left: 270px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    opacity: 0.6;
+    border: 2px solid grey;
+    animation: wobble2 4s linear infinite;
+}
+#b5 {
+    position: absolute;
+    margin-top: 205px;
+    margin-left: 270px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    opacity: 0.6;
+    border: 2px solid grey;
+    animation: wobble3 4s linear infinite;
+}
+#b3 {
+    position: absolute;
+    margin-top: 205px;
+    margin-left: 270px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    opacity: 0.6;
+    border: 2px solid grey;
+    animation: wobble4 4s linear infinite;
+}
+#b10 {
+    position: absolute;
+    margin-top: 205px;
+    margin-left: 270px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    opacity: 0.6;
+    border: 2px solid grey;
+    animation: wobble5 4s linear infinite;
+}
+#b4 {
+    position: absolute;
+    margin-top: 205px;
+    margin-left: 270px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    opacity: 0.6;
+    border: 2px solid grey;
+    animation: wobble6 4s linear infinite;
+}
+#b7 {
+    position: absolute;
+    margin-top: 205px;
+    margin-left: 270px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    opacity: 0.6;
+    border: 2px solid grey;
+    animation: wobble7 4s linear infinite;
+}
+#b6 {
+    position: absolute;
+    margin-top: 205px;
+    margin-left: 270px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    opacity: 0.6;
+    border: 2px solid grey;
+    animation: wobble8 4s linear infinite;
+}
+#b9 {
+    position: absolute;
+    margin-top: 205px;
+    margin-left: 270px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    opacity: 0.6;
+    border: 2px solid grey;
+    animation: wobble9 4s linear infinite;
+}
+#b8 {
+    position: absolute;
+    margin-top: 205px;
+    margin-left: 270px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    opacity: 0.6;
+    border: 2px solid grey;
+    animation: wobble10 4s linear infinite;
+}
+
+@keyframes wobble1 {
+   0% {
+        margin-top: 250px;
+        margin-left:315px;
+        width: 5px;
+        height: 5px;
+   }
+   100% {
+        margin-top: -100px;
+        margin-left:670px;
+        width: 25px;
+        height: 25px;
+   }
+}
+@keyframes wobble2 {
+   0% {
+       margin-top: 150px;
+       margin-left:415px;
+       width: 45px;
+        height: 45px;
+   }
+   100% {
+       margin-top: 100px;
+       margin-left:670px;
+       width: 25px;
+        height: 25px;
+   }
+}
+@keyframes wobble3 {
+   0% {
+       margin-top: 400px;
+       margin-left:315px;
+       width: 5px;
+        height: 5px;
+   }
+   100% {
+       margin-top: 200px;
+       margin-left:670px;
+       width: 65px;
+        height: 65px;
+   }
+}
+@keyframes wobble4 {
+   0% {
+       margin-top: 150px;
+       margin-left:415px;
+       width: 25px;
+        height: 25px;
+   }
+   100% {
+       margin-top: 600px;
+       margin-left:370px;
+       width: 5px;
+        height: 5px;
+   }
+}
+@keyframes wobble5 {
+   0% {
+       margin-top: 250px;
+       margin-left:315px;
+       width: 55px;
+    height: 55px;
+   }
+   100% {
+       margin-top: 120px;
+       margin-left:222px;
+       width: 35px;
+        height: 35px;
+   }
+}
+@keyframes wobble6 {
+   0% {
+       margin-top: 250px;
+       margin-left:415px;
+       width: 5px;
+        height: 5px;
+   }
+   100% {
+       margin-top: 250px;
+       margin-left:643px;
+       width: 5px;
+        height: 5px;
+   }
+}
+@keyframes wobble7 {
+   0% {
+       margin-top: 250px;
+       margin-left:315px;
+       width: 15px;
+        height: 15px;
+   }
+   100% {
+       margin-top: -100px;
+       margin-left:123px;
+       width: 45px;
+    height: 45px;
+   }
+}
+@keyframes wobble8 {
+   0% {
+       margin-top: 250px;
+       margin-left:415px;
+       width: 35px;
+        height: 35px;
+   }
+   100% {
+       margin-top: -100px;
+       margin-left:533px;
+       width: 25px;
+    height: 25px;
+   }
+}
+@keyframes wobble9 {
+   0% {
+       margin-top: 250px;
+       margin-left:315px;
+       width: 65px;
+    height: 65px;
+   }
+   100% {
+       margin-top: -100px;
+       margin-left:611px;
+       width: 35px;
+    height: 35px;
+   }
+}
+@keyframes wobble10 {
+   0% {
+       margin-top: 250px;
+       margin-left:415px;
+       width: 95px;
+        height: 95px;
+   }
+   100% {
+       margin-top: -100px;
+       margin-left:434px;
+       width: 45px;
+        height: 45px;
+   }
+}
