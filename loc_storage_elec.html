@@ -21,29 +21,17 @@
                 function addIpod() {
                     var numIpod = document.getElementById("numIpod");
                     localStorage.setItem('ipod', numIpod.value);
-                    if(parseInt(localStorage.ipod) > 1) {
-                        alert("You've added " + localStorage.ipod + " Ipods to your cart");
-                    } else {
-                        alert("You've added " + localStorage.ipod + " Ipod to your cart");
-                    }
+                    
                 }
                 function addBeats() {
                     var numBeats = document.getElementById("numBeats");
                     localStorage.setItem('beats', numBeats.value);
-                    if(parseInt(localStorage.beats) > 1) {
-                        alert("You've added " + localStorage.beats + " Beats Headphones to your cart");
-                    } else {
-                        alert("You've added " + localStorage.beats + " Beats Headphone to your cart");
-                    }
+                    
                 }
                 function addFitbit() {
                     var numFitbit = document.getElementById("numFitbit");
                     localStorage.setItem('fitBit', numFitbit.value);
-                    if(parseInt(localStorage.fitBit) > 1) {
-                        alert("You've added " + localStorage.fitBit + " FitBits to your cart");
-                    } else {
-                        alert("You've added " + localStorage.fitBit + " FitBit to your cart");
-                    }
+                    
                 }
                 
                 function viewCart() {
