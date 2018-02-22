@@ -8,6 +8,7 @@ body {
     position: absolute;
     margin-top: 200px;
     margin-left: 200px;
+    animation: flick 4s infinite;
 }
 #b1 {
     position: absolute;
@@ -120,6 +121,13 @@ body {
     animation: wobble10 4s linear infinite;
 }
 
+@keyframes flick {
+    0%{
+        transform: rotate(10deg);
+    }
+    100% {transform: rotate(-10deg);
+    }
+}
 @keyframes wobble1 {
    0% {
         margin-top: 250px;
