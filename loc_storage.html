@@ -22,29 +22,17 @@
                 function addCarrot() {
                     var numCarrot = document.getElementById("numCarr");
                     localStorage.setItem('carrot', numCarrot.value);
-                    if(parseInt(localStorage.carrot) > 1) {
-                        alert("You've added " + localStorage.carrot + " carrots to your cart");
-                    } else {
-                        alert("You've added " + localStorage.carrot + " carrot to your cart");
-                    }
+               
                 }
                 function addLettuce() {
                     var numLettuce = document.getElementById("numLett");
                     localStorage.setItem('lettuce', numLettuce.value);
-                    if(parseInt(localStorage.lettuce) > 1) {
-                        alert("You've added " + localStorage.lettuce + " lettuce heads to your cart");
-                    } else {
-                        alert("You've added " + localStorage.lettuce + " lettuce to your cart");
-                    }
+                    
                 }
                 function addApple() {
                     var numApple = document.getElementById("numApp");
                     localStorage.setItem('apple', numApple.value);
-                    if(parseInt(localStorage.apple) > 1) {
-                        alert("You've added " + localStorage.apple + " apples to your cart");
-                    } else {
-                        alert("You've added " + localStorage.apple + " apple to your cart");
-                    }
+                    
                 }
                 
                 function viewCart() {
