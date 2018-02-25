@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="weather_final.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.14.2/math.min.js"></script>
+    
+</head>
+<body onLoad="getAPIData()">
+    <div id="weatherHeader"> Current Weather</div>
+    <div id="weatherDiv">
+        <div id="weather1"></div>
+        <br>
+        <div id="weather2"></div>
+        <br>
+        <div id="weather3"></div>
+    </div>
+<script>
+        let getAPIData = function() {
+            var xmlHttp = new XMLHttpRequest();
+            var xmlHttp2 = new XMLHttpRequest();
+            var xmlHttp3 = new XMLHttpRequest();
+            
+                xmlHttp.onreadystatechange = function() {
+                    if(this.readyState == 4 && this.status == 200) {
+                        processJSON(this.responseText);
+                }
+                };
+                xmlHttp2.onreadystatechange = function() {
+                    if(this.readyState == 4 && this.status == 200) {
+                        processJSON2(this.responseText);
+                }
+                };
+                xmlHttp3.onreadystatechange = function() {
+                    if(this.readyState == 4 && this.status == 200) {
+                        processJSON3(this.responseText);
+                }
+            };
+            //get the api data
+            xmlHttp.open("GET","http://api.wunderground.com/api/50e1cf137699800c/geolookup/conditions/q/NY/New_York.json",true);
+            xmlHttp.send();
+           
+            xmlHttp2.open("GET","http://api.wunderground.com/api/50e1cf137699800c/geolookup/conditions/q/ID/Rexburg.json",true);
+            xmlHttp2.send();
+            
+            xmlHttp3.open("GET","http://api.wunderground.com/api/50e1cf137699800c/geolookup/conditions/q/CA/Los_Angeles.json",true);
+            xmlHttp3.send();
+        }
+        
+        function processJSON(text) {
+            var data = JSON.parse(text);
+            console.log(data)
+            var weatherDiv = document.getElementById("weather1");
+            weatherDiv.innerHTML = 'New York' + '<br>' + 'Temps:' + '<br>' + data['current_observation']['temp_f'] + '&deg;F / ' + data['current_observation']['temp_c'] + '&deg;C';
+            var elem = document.createElement("img");
+            elem.setAttribute("src", data['current_observation']['icon_url']);
+            elem.setAttribute("height", "100px");
+            elem.setAttribute("width", "100px");
+            document.getElementById("weather1").appendChild(elem);
+        }
+        function processJSON2(text) {
+            var data = JSON.parse(text);
+            var weatherDiv = document.getElementById("weather2");
+            var weatherImg = document.getElementById("wthr2");
+            weatherDiv.innerHTML = 'Rexburg' + '<br>' + 'Temps:' + '<br>' + data['current_observation']['temp_f'] + '&deg;F / ' + data['current_observation']['temp_c'] + '&deg;C';
+            var elem = document.createElement("img");
+            elem.setAttribute("src", data['current_observation']['icon_url']);
+            elem.setAttribute("height", "100px");
+            elem.setAttribute("width", "100px");
+            document.getElementById("weather2").appendChild(elem);
+        }
+        function processJSON3(text) {
+            var data = JSON.parse(text);
+            var weatherDiv = document.getElementById("weather3");
+            var weatherImg = document.getElementById("wthr3");
+            weatherDiv.innerHTML = 'Los Angeles' + '<br>' + 'Temps:' + '<br>' + data['current_observation']['temp_f'] + '&deg;F / ' + data['current_observation']['temp_c'] + '&deg;C';
+            var elem = document.createElement("img");
+            elem.setAttribute("src", data['current_observation']['icon_url']);
+            elem.setAttribute("height", "100px");
+            elem.setAttribute("width", "100px");
+            document.getElementById("weather3").appendChild(elem);
+        }
+        
+       
+    </script>
+</body>
+</html>
