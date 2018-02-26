@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css?family=Comfortaa');
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
 body {
-    font-family: "Roboto";
-    color: grey;
     margin: 0;
     padding: 10px;
 }
@@ -11,36 +10,83 @@ body {
 #weather2,
 #weather3 {
     font-family: 'Comfortaa';
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid darkblue;
+    border-top-left-radius: 25%;
+    border-top-right-radius: 25%;
+    border-bottom-left-radius: 25%;
+    border-bottom-right-radius: 25%;
+    border-left: 1px solid darkblue;
+    border-right: 1px solid darkblue;
+    border-bottom: 1px solid darkblue;
 }
 
-#weatherHeader {
-    border-left: 6px solid red;
-    background-color: lightgrey;
-    color: red;
-    width: 50.5%;
-}
-#weatherDiv:hover {
-    height: auto;
+#weatherHeader,
+#timeHeader {
+    font-family: 'Roboto';
+    font-size: 2em;
+    border-bottom: 5px solid darkblue;
+    background-color: lightblue;
+    color: darkblue;
+    width: 50.1%;
+    animation: slide 2s ease-in-out;
 }
 #weatherDiv {
     display: flex;
-    width: 50%;
+    width: 48%;
     justify-content: space-between;
+    align-content: center;
     padding-left: 5px;
     padding-right: 5px;
-    border: 1px solid grey;
-    margin-top: 5px;
+    margin-top: 10px;
 }
-#weather2 {
-    text-align: center;
+#timeDiv {
+    display:flex;
+    align-content: stretch;
+    justify-content: center;
+    font-family: 'Orbitron';
+    text-shadow: 5px 2px lightgrey;
+    font-size: 4em;
+    color: darkblue;
+    padding: 10px;
+    width: 50%;
 }
-#weather3 {
-    text-align: right;
+#timeDivM {
+    display:none;
+}
+#secs {
+    margin-left: 410px;
+    margin-top: -50px;
+    font-family: 'Orbitron';
+    text-shadow: 5px 2px lightgrey;
+    font-size: 1em;
+    color: darkblue;
+    padding: 10px;
+    animation: shrink 1.8s infinite;
+}
+#btnTimes {
+    position: absolute;
+    margin-top:20px;
+    display: flex;
+    flex-direction: column;
+    width:10%;
 }
 img {
     display: flex;
 }
-
+@keyframes shrink {
+    50% {transform: -10px}
+    100% {transform: 10px}
+}
+@keyframes slide {
+    0% {margin-left: 1000px;}
+    0% {font-style: italic;}
+    33% {width: 225%;}
+    66% {width: 150%;}
+    80% {width: 90%;}
+    100% {margin-left: 5px;}
+}
 /*--------------------------------------------------*/
 /*--------------------------------------------------*/
 @media screen and (max-width: 600px) {
@@ -74,9 +120,6 @@ img {
     width: 25%;
     font-size: 2em;
 }
-#weatherHeader {
-    font-size: 2em;
-}
 #weather2 {
     text-align: left;
     border-top: 1px solid grey;
@@ -98,8 +141,6 @@ img {
     width: 25%;
     font-size: 2em;
 }
-#weatherHeader {
-    font-size: 2em;
-}
+
 
 }

@@ -6,10 +6,9 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="weather_final.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.14.2/math.min.js"></script>
     
 </head>
-<body onLoad="getAPIData()">
+<body onLoad="getAPIData(), startTime();">
     <div id="weatherHeader"> Current Weather</div>
     <div id="weatherDiv">
         <div id="weather1"></div>
@@ -18,6 +17,15 @@
         <br>
         <div id="weather3"></div>
     </div>
+    <br>
+    <div id="timeHeader">Local Time</div>
+    <div id="btnTimes">
+        <button id="bStd" onClick="timeStd();">Standard Time</button>
+        <button id="bStd" onClick="timeMil();">Military Time</button>
+    </div>
+    <div id="timeDiv"></div>
+    <div id="timeDivM"></div>
+    <div id="secs"></div>
 <script>
         let getAPIData = function() {
             var xmlHttp = new XMLHttpRequest();
@@ -40,13 +48,13 @@
                 }
             };
             //get the api data
-            xmlHttp.open("GET","https://api.wunderground.com/api/50e1cf137699800c/geolookup/conditions/q/NY/New_York.json",true);
+            xmlHttp.open("GET","http://api.wunderground.com/api/50e1cf137699800c/geolookup/conditions/q/NY/New_York.json",true);
             xmlHttp.send();
            
-            xmlHttp2.open("GET","https://api.wunderground.com/api/50e1cf137699800c/geolookup/conditions/q/ID/Rexburg.json",true);
+            xmlHttp2.open("GET","http://api.wunderground.com/api/50e1cf137699800c/geolookup/conditions/q/ID/Rexburg.json",true);
             xmlHttp2.send();
             
-            xmlHttp3.open("GET","https://api.wunderground.com/api/50e1cf137699800c/geolookup/conditions/q/CA/Los_Angeles.json",true);
+            xmlHttp3.open("GET","http://api.wunderground.com/api/50e1cf137699800c/geolookup/conditions/q/CA/Los_Angeles.json",true);
             xmlHttp3.send();
         }
         
@@ -54,7 +62,7 @@
             var data = JSON.parse(text);
             console.log(data)
             var weatherDiv = document.getElementById("weather1");
-            weatherDiv.innerHTML = 'New York' + '<br>' + 'Temps:' + '<br>' + data['current_observation']['temp_f'] + '&deg;F / ' + data['current_observation']['temp_c'] + '&deg;C';
+            weatherDiv.innerHTML = 'New York' + '<br>' + 'Temps:' + '<br>' + data['current_observation']['temp_f'] + '&deg;F (' + data['current_observation']['temp_c'] + '&deg;C)';
             var elem = document.createElement("img");
             elem.setAttribute("src", data['current_observation']['icon_url']);
             elem.setAttribute("height", "100px");
@@ -65,7 +73,7 @@
             var data = JSON.parse(text);
             var weatherDiv = document.getElementById("weather2");
             var weatherImg = document.getElementById("wthr2");
-            weatherDiv.innerHTML = 'Rexburg' + '<br>' + 'Temps:' + '<br>' + data['current_observation']['temp_f'] + '&deg;F / ' + data['current_observation']['temp_c'] + '&deg;C';
+            weatherDiv.innerHTML = 'Rexburg' + '<br>' + 'Temps:' + '<br>' + data['current_observation']['temp_f'] + '&deg;F (' + data['current_observation']['temp_c'] + '&deg;C)';
             var elem = document.createElement("img");
             elem.setAttribute("src", data['current_observation']['icon_url']);
             elem.setAttribute("height", "100px");
@@ -76,15 +84,72 @@
             var data = JSON.parse(text);
             var weatherDiv = document.getElementById("weather3");
             var weatherImg = document.getElementById("wthr3");
-            weatherDiv.innerHTML = 'Los Angeles' + '<br>' + 'Temps:' + '<br>' + data['current_observation']['temp_f'] + '&deg;F / ' + data['current_observation']['temp_c'] + '&deg;C';
+            weatherDiv.innerHTML = 'Los Angeles' + '<br>' + 'Temps:' + '<br>' + data['current_observation']['temp_f'] + '&deg;F (' + data['current_observation']['temp_c'] + '&deg;C)';
             var elem = document.createElement("img");
             elem.setAttribute("src", data['current_observation']['icon_url']);
             elem.setAttribute("height", "100px");
             elem.setAttribute("width", "100px");
             document.getElementById("weather3").appendChild(elem);
         }
-        
-       
     </script>
+<script>
+    function startTime() {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
+        if(h<12) {
+            document.getElementById('timeDiv').innerHTML =h + ":" + m;
+        } else {
+            document.getElementById('timeDiv').innerHTML =(h-12) + ":" + m;
+        }
+        
+        if(h<12) {
+            document.getElementById('timeDivM').innerHTML ="0" + h + ":" + m;
+        } else {
+            document.getElementById('timeDivM').innerHTML =h + ":" + m; 
+        }
+    
+        document.getElementById('secs').innerHTML = s;
+        var t = setTimeout(startTime, 500);
+    }
+    function checkTime(i) {
+        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+        return i;
+    }
+    </script>
+<script>
+    function timeStd() {
+        document.getElementById("timeDivM").style.display="none";
+        var stdDiv = document.getElementById("timeDiv");
+        var milSecs = document.getElementById("secs");
+        stdDiv.style.display="flex";
+        stdDiv.style.alignContent="stretch";
+        stdDiv.style.justifyContent="center";
+        stdDiv.style.fontFamily="Orbitron";
+        stdDiv.style.fontSize="4em";
+        stdDiv.style.color="darkblue";
+        stdDiv.style.padding="10px";
+        stdDiv.style.width="50%";
+        milSecs.style.marginLeft="410px";
+    }
+    function timeMil() {
+        document.getElementById("timeDiv").style.display="none";
+        var milDiv = document.getElementById("timeDivM");
+        var milSecs = document.getElementById("secs");
+        milDiv.style.display="flex";
+        milDiv.style.alignContent="stretch";
+        milDiv.style.justifyContent="center";
+        milDiv.style.fontFamily="Orbitron";
+        milDiv.style.fontSize="4em";
+        milDiv.style.color="darkblue";
+        milDiv.style.textShadow="5px 2px lightgrey";
+        milDiv.style.padding="10px";
+        milDiv.style.width="50%";
+        milSecs.style.marginLeft="430px";
+    }
+</script>
 </body>
 </html>
