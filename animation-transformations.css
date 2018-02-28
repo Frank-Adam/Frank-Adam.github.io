@@ -3,124 +3,20 @@ body {
     font-family: "Roboto";
     color: grey;
 }
-
+#btn1 {
+    display: none;
+}
 #bWand {
     position: absolute;
     margin-top: 200px;
     margin-left: 200px;
-    animation: flick 4s infinite;
 }
-#b1 {
-    position: absolute;
-    margin-top: 205px;
-    margin-left: 270px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    opacity: 0.6;
-    border: 2px solid grey;
-    animation: wobble1 4s linear infinite;
+#b1,#b2,
+#b3,#b4,#b5,
+#b6,#b7,#b8,
+#b9,#b10 {
+    border: 2px solid white;
 }
-#b2 {
-    position: absolute;
-    margin-top: 205px;
-    margin-left: 270px;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    opacity: 0.6;
-    border: 2px solid grey;
-    animation: wobble2 4s linear infinite;
-}
-#b5 {
-    position: absolute;
-    margin-top: 205px;
-    margin-left: 270px;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    opacity: 0.6;
-    border: 2px solid grey;
-    animation: wobble3 4s linear infinite;
-}
-#b3 {
-    position: absolute;
-    margin-top: 205px;
-    margin-left: 270px;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    opacity: 0.6;
-    border: 2px solid grey;
-    animation: wobble4 4s linear infinite;
-}
-#b10 {
-    position: absolute;
-    margin-top: 205px;
-    margin-left: 270px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    opacity: 0.6;
-    border: 2px solid grey;
-    animation: wobble5 4s linear infinite;
-}
-#b4 {
-    position: absolute;
-    margin-top: 205px;
-    margin-left: 270px;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    opacity: 0.6;
-    border: 2px solid grey;
-    animation: wobble6 4s linear infinite;
-}
-#b7 {
-    position: absolute;
-    margin-top: 205px;
-    margin-left: 270px;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    opacity: 0.6;
-    border: 2px solid grey;
-    animation: wobble7 4s linear infinite;
-}
-#b6 {
-    position: absolute;
-    margin-top: 205px;
-    margin-left: 270px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    opacity: 0.6;
-    border: 2px solid grey;
-    animation: wobble8 4s linear infinite;
-}
-#b9 {
-    position: absolute;
-    margin-top: 205px;
-    margin-left: 270px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    opacity: 0.6;
-    border: 2px solid grey;
-    animation: wobble9 4s linear infinite;
-}
-#b8 {
-    position: absolute;
-    margin-top: 205px;
-    margin-left: 270px;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    opacity: 0.6;
-    border: 2px solid grey;
-    animation: wobble10 4s linear infinite;
-}
-
 @keyframes flick {
     0%{
         transform: rotate(10deg);
