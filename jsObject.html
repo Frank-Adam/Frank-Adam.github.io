@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="jsObject.css" rel="stylesheet">
+    <script>
+        function Person(name, age, food){
+            this.name = name;
+            this.age = age;
+            this.food = food;
+            
+            var myAge = this.age;
+        
+            this.info = function(){
+                if(parseInt(myAge) < 10) {
+                    return "My name is " + this.name + " and for my birthday, the big 0 - " + myAge.substr(0,1) + ", I had " + this.food + " for dinner!"
+                } else if(parseInt(myAge) < 100) {
+                    return "My name is " + this.name + " and for my birthday, the big " + myAge.substr(0,1) + " - " + myAge.substr(1,2) + ", I had " + this.food + " for dinner!"
+                } else {
+                return "My name is " + this.name + " and for my birthday, the big " + myAge.substr(0,1) + " - " + myAge.substr(1,1) + " - " + myAge.substr(2,3) + ", I had " + this.food + " for dinner!"
+        }
+        }
+        }
+        
+        function getUser(){
+            var name = document.getElementById("name").value;
+            var age = document.getElementById("age").value;
+            var food = document.getElementById("food").value;
+            
+            var user = new Person(name, age, food);
+            
+            document.getElementById("output").innerHTML = user.info();
+            document.getElementById("btn1").style.display = "block";
+            document.getElementById("btn").style.display = "none";
+        }
+        
+        function restart() {
+            document.getElementById("output").innerHTML = '';
+            document.getElementById("btn").style.display = "initial";
+            document.getElementById("btn1").style.display = "none";
+        }
+        
+    </script>
+</head>
+<body>
+        <header>
+            <h1>JS Objects</h1>
+        </header>
+    <main>
+        <div>
+            <input id="name" onFocus="this.value=''"> Enter Full Name
+            <br>
+            <input id="age" onFocus="this.value=''"> Enter Your Age
+            <br>
+            <input id="food" onFocus="this.value=''"> Enter Your Favorite Food
+        </div>
+            <br>
+        <div>
+            <button id="btn" onClick="getUser();">Click Here</button>
+            <button id="btn1" onClick="restart();">Go Again</button>
+        </div>
+        <div id="output"></div>
+    </main>
+    
+    
+   
+</body>
+</html>

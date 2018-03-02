@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+body {
+    font-family: "Comfortaa";
+    color: grey;
+    margin: 0;
+    padding: 10px;
+}
+
+#btn1 {
+    display: none;
+}
+#name,
+#age,
+#food {
+    font-size: 2em;
+}
+
