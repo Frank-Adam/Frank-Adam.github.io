@@ -6,7 +6,7 @@ body {
 }
 #instruction {
     position: relative;
-    margin-top: 200px;
+    margin-top: 300px;
     margin-left: 30px;
     color: grey;
 }
@@ -25,9 +25,7 @@ body {
     height: 140px;
 }
 @-webkit-keyframes spin { 
-    100% { transform: rotate(-360deg); 
-    } 
-}
+    100% {transform: rotate(-360deg);} 
 }
 @-webkit-keyframes shoot {
     from {top: 0px;}
