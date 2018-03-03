@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="touchJS.css" rel="stylesheet">
+</head>
+<body>
+        <header>
+            <h1></h1>
+        </header>
+    <main>
+        <img id="hoop" src="hoop.png">
+        <img id="bball" src="bball.png">
+    </main>
+    
+<div id="instruction">Touch the basketball to shoot</div>
+<script>
+    window.onload = function () {
+    
+    var bball = document.getElementById('bball');
+    
+    bball.addEventListener('touchstart', function(e) {
+        
+    var fingerLoc = e.targetTouches[0];
+    e.preventDefault();
+    //bball.style.left = fingerLoc.pageX + "px";
+    //bball.style.top = fingerLoc.pageY + "px";
+    bball.style.animation="shoot 1s linear";
+    bball.style.WebkitAnimation="spin 3s linear";
+    bball.style.animation="spin 2.5s ease-in-out, shoot 2s linear";
+    
+    })
+    
+    
+    
+    
+    
+    
+}
+</script>
+   
+</body>
+</html>
