@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="touchJS2.css" rel="stylesheet">
+</head>
+<body>
+    <main id="mn" onclick="showArticle();">
+        <div id="landingPage">Touch To Start</div>
+    </main>
+    <article id="ae" onclick="hideArticle();">
+        <div id="newPg">Adam Frank CIT261</div>
+    </article>
+<script>
+    function showArticle() {
+    var main = document.getElementById("mn");
+    var lndPg = document.getElementById("landingPage");
+    
+    main.addEventListener('touchstart', function(e) {
+        var fingerLoc = e.targetTouches[0];
+        e.preventDefault();
+        
+        lndPg.style.animation="slide 2s ease-in-out";
+        lndPg.style.WebkitAnimation="slide 2s ease-in-out";
+        lndPg.style.display="none";
+        
+        mn.style.position="absolute";
+        mn.style.marginLeft="0";
+        mn.style.marginTop="-480px";
+        })
+    }
+</script>
+   
+</body>
+</html>

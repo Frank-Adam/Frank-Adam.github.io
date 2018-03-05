@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+body {
+    font-family: "Comfortaa";
+    padding: 0px;
+    margin: 0px;
+}
+#mn {
+    width: 330px;
+    height: 480px;
+    background-color: black;
+    color: white;
+    z-index: 1;
+}
+#ae {
+    width: 330px;
+    height: 480px;
+    background-color: teal;
+    color:white;
+    z-index: 0;
+}
+#landingPage {
+    position: absolute;
+    margin-left: 100px;
+    margin-top: 200px;
+}
+#newPg {
+    position: absolute;
+    margin-left: 100px;
+    margin-top: 200px;
+}
+
+@-webkit-keyframes 'slide' { 
+    from {left: 0px;}
+    to {left: -330px;}
+} 
+
+@keyframes 'slide' {
+    from {left: 0px;}
+    to {left: -330px;}
+}
+@-webkit-keyframes shrink {
+    0% {top:0px; opacity: 100%;}
+    100% {top: -480px; opacity: 0%;}
+}
+
+@keyframes shrink {
+    0% {top: 0px; opacity:100%;}
+    100% {top: -480px; opacity:0%;}
+}
