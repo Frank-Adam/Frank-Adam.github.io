@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="touchJS3.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Touch JS Example</h1>
+    <main id="mn">
+        <div id="landingPage">
+            <div id="l1"></div>
+            <div id="l2"></div>
+            <div id="l3"></div>
+            <div id="l4"></div>
+        </div>
+    </main>
+    <article id="ae">
+        <div id="newPage" onclick="f1();">
+            <div id="n1"></div>
+            <div id="n2"></div>
+            <div id="n3"></div>
+            <div id="n4"></div>
+        </div>
+    </article>
+<script>
+    function f1() {
+            var ev1 = document.getElementById('n1');
+            var ev2 = document.getElementById('n2');
+            var ev3 = document.getElementById('n3');
+            var ev4 = document.getElementById('n4');
+            
+            ev1.addEventListener('touchstart', function(e) {
+                e.preventDefault();
+                ev1.style.WebkitAnimation="spinner 2s infinite linear"
+                ev2.style.WebkitAnimation="spinner 2s infinite linear"
+                ev3.style.WebkitAnimation="spinner 2s infinite linear"
+                ev4.style.WebkitAnimation="spinner 2s infinite linear"
+                ev1.style.animation="spinner 2s infinite linear"
+                ev2.style.animation="spinner 2s infinite linear"
+                ev3.style.animation="spinner 2s infinite linear"
+                ev4.style.animation="spinner 2s infinite linear"
+            })
+    }
+    
+    /*function hideArticle() {
+    var main = document.getElementById("mn");
+    var lndPg = document.getElementById("landingPage");
+    
+    main.addEventListener('touchstart', function(e) {
+        var fingerLoc = e.targetTouches[1];
+        e.preventDefault();
+        
+        mn.style.animation="slide 2s ease-in-out";
+        mn.style.WebkitAnimation="slide 2s ease-in-out";
+        mn.style.display="none";
+        
+        lndPg.style.position="absolute";
+        lndPg.style.marginLeft="0";
+        lndPg.style.marginTop="-480px";
+        })
+    }*/
+</script>
+   
+</body>
+</html>

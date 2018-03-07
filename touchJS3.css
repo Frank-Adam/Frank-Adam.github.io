@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+body {
+    font-family: "Comfortaa";
+    padding: 10px;
+    margin: 10px;
+    color: grey;
+}
+
+#landingPage,
+#newPage {
+    display: flex;
+    flex-flow: row;
+}
+
+#l1,#l2,#l3,#l4,
+#n1,#n2,#n3,#n4 {
+    width: 50px;
+    height: 100px;
+    color: white;
+}
+
+#l1,#l2,#l3,#l4 {
+    background: teal;
+    border: 3px solid white;
+}
+
+#newPage {
+    position: absolute;
+    margin-top: -106px;
+    margin-left: 3px;
+}
+#n1,#n2,#n3,#n4 {
+    background: darkgrey;   
+    border: 3px solid white;
+}
+
+
+@-webkit-keyframes spinner {
+    0% { 
+       -webkit-transform: rotate3d(1, 1, 1, 0deg);
+       transform: rotate3d(1, 1, 1, 0deg);
+    }
+    50% { 
+       -webkit-transform: rotate3d(1, 1, 1, 180deg);
+       transform: rotate3d(1, 1, 1, 180deg);
+    }
+    100% { 
+        -webkit-transform: rotate3d(1, 1, 1, 360deg);
+       transform: rotate3d(1, 1, 1, 360deg);
+    }
+}
