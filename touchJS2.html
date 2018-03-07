@@ -12,7 +12,7 @@
         <div id="landingPage">Touch To Start</div>
     </main>
     <article id="ae" onclick="hideArticle();">
-        <div id="newPg">Adam Frank CIT261</div>
+        <div id="newPg">2-Finger Touch To Start</div>
     </article>
 <script>
     function showArticle() {
@@ -30,6 +30,24 @@
         mn.style.position="absolute";
         mn.style.marginLeft="0";
         mn.style.marginTop="-480px";
+        })
+    }
+    
+    function hideArticle() {
+    var main = document.getElementById("mn");
+    var lndPg = document.getElementById("landingPage");
+    
+    main.addEventListener('touchstart', function(e) {
+        var fingerLoc = e.targetTouches[1];
+        e.preventDefault();
+        
+        mn.style.animation="slide 2s ease-in-out";
+        mn.style.WebkitAnimation="slide 2s ease-in-out";
+        mn.style.display="none";
+        
+        lndPg.style.position="absolute";
+        lndPg.style.marginLeft="0";
+        lndPg.style.marginTop="-480px";
         })
     }
 </script>
