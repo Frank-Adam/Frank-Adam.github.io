@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="final_home.css" rel="stylesheet">
+    
+</head>
+<body>
+    <div id="icons">
+        <div id="i1"><img src="time.png" alt="time" onclick="setHome();"></div>
+        <div id="i2"><img src="calc.png" alt="calculator" onclick="setCalc();"></div>
+        <div id="i3"><img src="currency.png" alt="currency"></div>
+        <div id="i4"><img src="weather.png" alt="weather"></div>
+        <div id="i5"><img src="video.png" alt="video"></div>
+        <div id="i6"><img src="help.png" alt="help"></div>
+    </div> 
+    <script src="myScripts.js"></script>
+    <script>
+    function setHome() {
+        delHome();
+        createHome();
+    }
+    function setCalc() {
+        delHome();
+        createCalc();
+    }
+    </script>
+</body>
+</html>
