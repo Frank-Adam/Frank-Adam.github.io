@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+
+body {
+    font-family: "Comfortaa";
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+}
+#hme > img {
+    /*position: absolute;
+    margin-left: 350px;
+    margin-top: -300px;*/
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+/*icons on home screen*/
+#icons {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 15px;
+    height: 275px;
+}
+#icons:hover {
+    cursor: pointer;
+}
+#i1,#i2,#i3,#i4 {
+    height: 120px;
+    width: 120px;
+    border-left: 6px solid blue;
+    background-color: lightgrey;
+    border-radius: 15%;
+    animation: slide 1.5s linear;
+}
+img {
+    display: block;
+    margin: auto;
+    margin-top: 15px;
+    width:80px;
+    height: 80px;
+    transition: transform .2s; 
+}
+img:hover {
+    transform: scale(1.1);
+}
+
+
+/* weather */
+#header {
+    margin-top: 10px;
+    display: flex;
+    border-left: 6px solid blue;
+    background-color: lightgrey;
+    color: blue;
+    margin-bottom: 5px;
+    width: 335px;
+    
+}
+#weatherHeader {
+    border-left: 6px solid blue;
+    background-color: lightgrey;
+    color: blue;
+    width: 335px;
+    font-size: 2em;
+    animation: slideIn 2s ease-in-out;
+}
+#weatherDiv {
+    display: flex;
+    flex-direction: column;
+    width: 335px;
+    height: 250px;
+    justify-content: space-between;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 1px solid grey;
+    margin-top: 5px;
+}
+#weather1,
+#weather2,
+#weather3 {
+    color: blue;
+}
+#nyImg,
+#rxImg,
+#laImg {
+    width: 100px;
+    height: 100px;
+}
+
+
+/* calc */
+#header {
+    font-size: 2em;
+    animation: slideIn 2s ease-in-out;
+}
+nav > ul > li {
+    display: inline-block;
+    text-decoration: none;
+}
+.btnMode {
+    border: 1px solid grey;
+    text-align: center;
+    padding: 2px;
+}
+#display {
+    margin-top:20px;
+    width: 360px;
+    border: 1px solid grey;
+    font-size: 2em;
+}
+#box1 {
+        display: flex;
+        flex-flow: wrap;
+        width: 335px;
+        padding: 10px;
+        border: 1px solid grey;
+        margin-top: 5px;
+    }
+    #e1,#e2,#e3,#e4,#e5,#e6,
+    #e7,#e8,#e9,#e0,#ex,#edec,
+    #ep,#em,#eml,#ed,#ec,#eq {
+        width: 50px;
+        height: 50px;
+        font-size: 3em;
+        text-align: center;
+        border: 1px solid grey;
+        transition: transform .2s;
+    }
+    #e1:hover,#e2:hover,#e3:hover,#e4:hover,#e5:hover,#e6:hover,
+    #e7:hover,#e8:hover,#e9:hover,#e0:hover,#ex:hover,#edec:hover,
+    #ep:hover,#em:hover,#eml:hover,#ed:hover,#ec:hover,#eq:hover {
+        background-color: red;
+        color: white;
+        cursor: pointer;
+        transform: scale(1.1);
+        border-radius: 50%;
+    }
+
+/* Currency */
+#input {
+    font-size: 1.5em;
+}
+#output {
+    padding-top: 20px;
+    color: blue;
+    width: 300px;
+    font-size: 2em;
+    }    
+main {
+    display: flex;
+}
+#currHdr {
+    font-size: 1.5em;
+    width: 400px;
+    animation: slideIn 2s ease-in-out;
+    border-left: 6px solid blue;
+    background-color: lightgrey;
+}
+
+
+/* Time */
+
+/* keyframes */
+@keyframes shimmy{
+    0% {transform: rotate(-5deg);}
+    50% {transform: rotate(5deg);}
+    100% {transform: rotate(-5deg);}
+}
+@keyframes slide {
+  0% {
+      margin-top:1000px;
+  }
+  15% {
+      margin-top:900px;
+  }
+  30% {
+      margin-top:800px;
+  }
+  45% {
+      margin-top:700px;
+  }
+  60% {
+      margin-top:500px;
+  }
+  75% {
+      margin-top:250px;
+  }
+  90% {
+      margin-top:100px;
+  }
+  100% {
+      margin-top:0px;
+  }
+}
+@keyframes slideIn {
+    0% {margin-left: 1000px;}
+    0% {font-style: italic;}
+    33% {width: 225%;}
+    66% {width: 150%;}
+    80% {width: 90%;}
+    100% {margin-left: 5px;}
+}
+@keyframes down {
+    0% {margin-top: -800px;}
+    100% {margin-top: 5px;} 
+}
+@keyframes left {
+    0% {margin-left: -800px;}
+    100% {margin-left: 5px;} 
+}
+@keyframes right {
+    0% {margin-left: 1800px;}
+    100% {margin-left: 5px;} 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
