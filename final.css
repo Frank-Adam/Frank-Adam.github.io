@@ -9,9 +9,6 @@ body {
     width: 300px;
 }
 #hme > img {
-    /*position: absolute;
-    margin-left: 350px;
-    margin-top: -300px;*/
     height: 40px;
     width: 40px;
     cursor: pointer;
@@ -31,7 +28,7 @@ body {
     height: 120px;
     width: 120px;
     border-left: 6px solid blue;
-    background-color: lightgrey;
+    background-color: lightblue;
     border-radius: 15%;
     animation: slide 1.5s linear;
 }
@@ -53,7 +50,7 @@ img:hover {
     margin-top: 10px;
     display: flex;
     border-left: 6px solid blue;
-    background-color: lightgrey;
+    background-color: lightblue;
     color: blue;
     margin-bottom: 5px;
     width: 335px;
@@ -61,7 +58,7 @@ img:hover {
 }
 #weatherHeader {
     border-left: 6px solid blue;
-    background-color: lightgrey;
+    background-color: lightblue;
     color: blue;
     width: 335px;
     font-size: 2em;
@@ -93,6 +90,7 @@ img:hover {
 
 /* calc */
 #header {
+    color: blue;
     font-size: 2em;
     animation: slideIn 2s ease-in-out;
 }
@@ -153,15 +151,60 @@ main {
     display: flex;
 }
 #currHdr {
+    color: blue;
     font-size: 1.5em;
-    width: 400px;
+    width: 335px;
     animation: slideIn 2s ease-in-out;
     border-left: 6px solid blue;
-    background-color: lightgrey;
+    background-color: lightblue;
 }
 
 
 /* Time */
+#tFlex {
+    display: flex;
+    font-family: 'Roboto';
+    font-size: 2em;
+    border-left: 6px solid blue;
+    background-color: lightblue;
+    color: blue;
+    animation: slideIn 2s ease-in-out;
+}
+
+#timeDiv {
+    display:flex;
+    align-content: stretch;
+    justify-content: center;
+    font-family: 'Orbitron';
+    text-shadow: 5px 2px lightblue;
+    font-size: 4em;
+    color: darkblue;
+    padding: 10px;
+    width: 50%;
+}
+#timeDivM {
+    display:none;
+}
+#secs {
+    margin-left: 210px;
+    margin-top: -50px;
+    font-family: 'Orbitron';
+    text-shadow: 5px 2px lightblue;
+    font-size: 1em;
+    color: blue;
+}
+#btnTimes {
+    position: absolute;
+    margin-top:80px;
+    display: flex;
+    flex-direction: column;
+}
+#bStd {
+    width: 75%;
+}
+#bMil {
+    width: 75%;
+}
 
 /* keyframes */
 @keyframes shimmy{
@@ -205,6 +248,10 @@ main {
 }
 @keyframes down {
     0% {margin-top: -800px;}
+    100% {margin-top: 5px;} 
+}
+@keyframes up {
+    0% {margin-top: 1000px;}
     100% {margin-top: 5px;} 
 }
 @keyframes left {

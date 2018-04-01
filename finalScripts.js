@@ -1,28 +1,28 @@
 /* Initial Home Page */
-function setHome() {
+    function setHome() {
     var myDiv = "icons";
     delHome(myDiv);
     createHome(myDiv);
 }
-function setTime() {
+    function setTime() {
     var myDiv = "icons";
     delHome(myDiv);
     createTime();
     createHomeLinkTme();
 }
-function setCalc() {
+    function setCalc() {
     var myDiv = "icons";
     delHome(myDiv);
     createCalc();
     createHomeLinkCalc();
 }
-function setCurr() {
+    function setCurr() {
     var myDiv = "icons";
     delHome(myDiv);
     createCurrency();
     createHomeLinkCurr();
 }
-function setWeath() {
+    function setWeath() {
     var myDiv = "icons";
     delHome(myDiv);
     createWeather();
@@ -30,70 +30,76 @@ function setWeath() {
 }
 
 /* clear home page */
-function delHome(myDiv,myHmeDiv) {
+    function delHome(myDiv) {
     var node1 = document.getElementById(myDiv);
     node1.parentNode.removeChild(node1);
 }
 /* home link */
-function createHomeLinkTme() {
+    function createHomeLinkTme() {
     var existingNode = document.getElementById("1script");
     var parent = document.createElement("div"); //home button
     var homeImg = document.createElement("img");
     document.body.insertBefore(parent, existingNode);
     parent.id="hme";
     homeImg.src="house.png";
-    homeImg.width ="40px";
-    homeImg.height="40px";
+    homeImg.width ="30px";
+    homeImg.height="30px";
     homeImg.style.animation="shimmy 10s infinite";
-    homeImg.style.animationDelay="5s";
-    homeImg.onclick=function() {delHome("tme"); delHome("hme"); createHome();};
+    homeImg.style.animationDelay="25s";
+    homeImg.onclick=function() {delHome("tFlex");
+                                delHome("btnTimes");
+                                delHome("timeDiv");
+                                delHome("timeDivM");
+                                delHome("secs");
+                                delHome("hme");
+                                createHome();};
     parent.appendChild(homeImg);
 }
-function createHomeLinkCalc() {
+    function createHomeLinkCalc() {
     var existingNode = document.getElementById("1script");
     var parent = document.createElement("div"); //home button
     var homeImg = document.createElement("img");
     document.body.insertBefore(parent, existingNode);
     parent.id="hme";
     homeImg.src="house.png";
-    homeImg.width ="40px";
-    homeImg.height="40px";
-    homeImg.style.animation="shimmy 6s infinite";
-    homeImg.style.animationDelay="3s";
+    homeImg.width ="30px";
+    homeImg.height="30px";
+    homeImg.style.animation="shimmy 10s infinite";
+    homeImg.style.animationDelay="25s";
     homeImg.onclick=function() {delHome("clc"); delHome("hme"); createHome();};
     parent.appendChild(homeImg);
 }
-function createHomeLinkWth() {
+    function createHomeLinkWth() {
     var existingNode = document.getElementById("1script");
     var parent = document.createElement("div"); //home button
     var homeImg = document.createElement("img");
     document.body.insertBefore(parent, existingNode);
     parent.id="hme";
     homeImg.src="house.png";
-    homeImg.width ="40px";
-    homeImg.height="40px";
-    homeImg.style.animation="shimmy 6s infinite";
-    homeImg.style.animationDelay="3s";
+    homeImg.width ="30px";
+    homeImg.height="30px";
+    homeImg.style.animation="shimmy 10s infinite";
+    homeImg.style.animationDelay="25s";
     homeImg.onclick=function() {delHome("weatherHeader"); delHome("weatherDiv"); delHome("hme"); createHome();};
     parent.appendChild(homeImg);
 }
-function createHomeLinkCurr() {
+    function createHomeLinkCurr() {
     var existingNode = document.getElementById("1script");
     var parent = document.createElement("div"); //home button
     var homeImg = document.createElement("img");
     document.body.insertBefore(parent, existingNode);
     parent.id="hme";
     homeImg.src="house.png";
-    homeImg.width ="40px";
-    homeImg.height="40px";
-    homeImg.style.animation="shimmy 6s infinite";
-    homeImg.style.animationDelay="3s";
+    homeImg.width ="30px";
+    homeImg.height="30px";
+    homeImg.style.animation="shimmy 10s infinite";
+    homeImg.style.animationDelay="25s";
     homeImg.onclick=function() {delHome("curr"); delHome("hme"); createHome();};
     parent.appendChild(homeImg);
 }
 
 /* recreate home page */
-function createHome() {
+    function createHome() {
     var existingNode = document.getElementById("1script");
     var parent = document.createElement("div");
     var node1 = document.createElement("div");
@@ -144,7 +150,7 @@ function createHome() {
     
 }
 /*create calculator */
-function createCalc() { 
+    function createCalc() { 
     var parent = document.createElement("div");
     var node1 = document.createElement("div"); //header
     var node2 = document.createElement("nav"); //home link
@@ -301,7 +307,7 @@ function createCalc() {
         disp.id="display";
 }
 /* calc operations */
-function addNum(numb) {
+    function addNum(numb) {
     var display = document.getElementById("display");
     var currAnswer = display.innerHTML;
     currAnswer = currAnswer.substring(0,3);
@@ -315,7 +321,7 @@ function addNum(numb) {
         display.innerHTML = display.innerHTML + numb;
     }
 }
-function calcNum() {
+    function calcNum() {
     //do math
     var mathDiv = document.getElementById("display");
     var userMath = mathDiv.innerHTML;
@@ -326,7 +332,7 @@ function calcNum() {
 
 
 /* create currency */
-function createCurrency() {
+    function createCurrency() {
     //following D.Cenatiempo's group instruction
     let getAPIDataCurr = function() {
         var xmlHttp = new XMLHttpRequest();
@@ -394,8 +400,9 @@ var parent = document.createElement("div");
     node3.appendChild(node3Txt);
     
     node4.id="output";
-}//currency data
-function processJSONCurr(text) {
+}
+    //currency data
+    function processJSONCurr(text) {
     var data = JSON.parse(text);
     var input = parseFloat(document.getElementById("input").value);
     var USD = parseFloat(input).toFixed(2);
@@ -424,7 +431,7 @@ function processJSONCurr(text) {
         div3.innerHTML="API current epoch timestamp: " + data.timestamp + " (converted date: " + myDate.toLocaleString() + ")";
     }
 }
-function processJSON2Curr(text) {
+    function processJSON2Curr(text) {
     var data = JSON.parse(text);
     var marketY = document.getElementById("marketYes");
     var marketN = document.getElementById("marketNo");
@@ -443,7 +450,7 @@ function processJSON2Curr(text) {
     
 
 /* create weather */
-function getIds(header, weather1, weather2, weather3, weatherDiv, weatherHeader) {
+    function getIds(header, weather1, weather2, weather3, weatherDiv, weatherHeader) {
             var header = document.getElementById("header");
             var weather1 = document.getElementById("weather1");
             var weather2 = document.getElementById("weather2");
@@ -452,7 +459,7 @@ function getIds(header, weather1, weather2, weather3, weatherDiv, weatherHeader)
             var weatherHeader = document.getElementById("weatherHdr");
         }
         
-function createWeather() {
+    function createWeather() {
     //create the weather elements
     var existingNode = document.getElementById("1script");
     var node1 = document.createElement("div"); //weather Header
@@ -545,3 +552,103 @@ function createWeather() {
             weatherDiv.appendChild(elem);
             weatherDiv.innerHTML = 'Los Angeles' + '<br>' + 'Temps:' + '<br>' + data['current_observation']['temp_f'] + '&deg;F / ' + data['current_observation']['temp_c'] + '&deg;C';
         }
+        
+/* create time */
+    function checkTime(i) {
+        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+        return i;
+    }
+    function runTime() {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
+        if(h<12) {
+            document.getElementById('timeDiv').innerHTML =h + ":" + m;
+        } else {
+            document.getElementById('timeDiv').innerHTML =(h-12) + ":" + m;
+        }
+        
+        if(h<12) {
+            document.getElementById('timeDivM').innerHTML ="0" + h + ":" + m;
+        } else {
+            document.getElementById('timeDivM').innerHTML =h + ":" + m; 
+        }
+    
+        document.getElementById('secs').innerHTML = s;
+        var t = setTimeout(runTime, 500);
+    }
+    
+    function createTime() {
+    var parent = document.createElement("div");//tFlex
+    var parent1 = document.createElement("div");//btnTimes
+    var node1 = document.createElement("div"); //tHdr
+    var node2 = document.createElement("button"); //bStd
+    var node3 = document.createElement("button"); //bMil
+    var node4 = document.createElement("div"); //timeDiv
+    var node5 = document.createElement("div"); //timeDivM
+    var node6 = document.createElement("div"); //secs
+    var existingNode = document.getElementById("1script");
+    
+    
+    document.body.insertBefore(parent , existingNode);
+    document.body.insertBefore(parent1 , existingNode);
+    parent.id="tFlex";
+    parent1.id="btnTimes"
+    parent.appendChild(node1);
+    parent1.appendChild(node2);
+    parent1.appendChild(node3);
+    document.body.insertBefore(node4, existingNode);
+    document.body.insertBefore(node5, existingNode);
+    document.body.insertBefore(node6, existingNode);
+    var tFlexText = document.createTextNode("Current Time");
+    var bStdText = document.createTextNode("Standard Time");
+    var bMilText = document.createTextNode("Military Time");
+    parent.appendChild(tFlexText);
+    node2.appendChild(bStdText);
+    node3.appendChild(bMilText);
+    node2.onclick=function() {timeStd();};
+    node3.onclick=function() {timeMil();};
+    
+    node1.id="tHdr";
+    node2.id="bStd";
+    node3.id="bMil";
+    node4.id="timeDiv";
+    node5.id="timeDivM";
+    node6.id="secs";
+    
+    parent.style.animation="up 3s ease-in-out";
+    parent1.style.animation="up 3s ease-in-out";
+    
+        runTime();
+    }
+   
+    
+
+    function timeStd() {
+        document.getElementById("timeDivM").style.display="none";
+        var stdDiv = document.getElementById("timeDiv");
+        var milSecs = document.getElementById("secs");
+        stdDiv.style.display="flex";
+        stdDiv.style.alignContent="stretch";
+        stdDiv.style.fontFamily="Orbitron";
+        stdDiv.style.fontSize="4em";
+        stdDiv.style.color="darkblue";
+        stdDiv.style.padding="10px";
+        milSecs.style.marginLeft="210px";
+    }
+    function timeMil() {
+        document.getElementById("timeDiv").style.display="none";
+        var milDiv = document.getElementById("timeDivM");
+        var milSecs = document.getElementById("secs");
+        milDiv.style.display="flex";
+        milDiv.style.alignContent="stretch";
+        milDiv.style.fontFamily="Orbitron";
+        milDiv.style.fontSize="4em";
+        milDiv.style.color="darkblue";
+        milDiv.style.textShadow="5px 2px lightgrey";
+        milDiv.style.padding="10px";
+        milSecs.style.marginLeft="260px";
+    }
