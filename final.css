@@ -62,13 +62,12 @@ img:hover {
     color: blue;
     width: 335px;
     font-size: 2em;
-    animation: slideIn 2s ease-in-out;
+    animation: left 2s ease-in-out;
 }
 #weatherDiv {
     display: flex;
     flex-direction: column;
     width: 335px;
-    height: 250px;
     justify-content: space-between;
     padding-left: 5px;
     padding-right: 5px;
@@ -79,14 +78,8 @@ img:hover {
 #weather2,
 #weather3 {
     color: blue;
+    text-align: center;
 }
-#nyImg,
-#rxImg,
-#laImg {
-    width: 100px;
-    height: 100px;
-}
-
 
 /* calc */
 #header {
@@ -208,59 +201,45 @@ main {
 
 /* keyframes */
 @keyframes shimmy{
-    0% {transform: rotate(-5deg);}
+    0% {transform: rotate(-5deg); }
     50% {transform: rotate(5deg);}
+    50% {transform: scale(1.2);}
+    75% {transform: scale(.85);}
     100% {transform: rotate(-5deg);}
+    100% {transform: scale(1.0);}
 }
 @keyframes slide {
-  0% {
-      margin-top:1000px;
-  }
-  15% {
-      margin-top:900px;
-  }
-  30% {
-      margin-top:800px;
-  }
-  45% {
-      margin-top:700px;
-  }
-  60% {
-      margin-top:500px;
-  }
-  75% {
-      margin-top:250px;
-  }
-  90% {
-      margin-top:100px;
-  }
-  100% {
-      margin-top:0px;
-  }
+  0% {margin-top:1000px;}
+  15% {margin-top:900px;}
+  30% {margin-top:800px;}
+  45% {margin-top:700px;}
+  60% {margin-top:500px;}
+  75% {margin-top:250px;}
+  90% {margin-top:100px;}
+  100% {margin-top:0px; }
 }
 @keyframes slideIn {
-    0% {margin-left: 1000px;}
-    0% {font-style: italic;}
-    33% {width: 225%;}
-    66% {width: 150%;}
-    80% {width: 90%;}
+    0% {margin-left: 1000px; font-style: italic;}
+    33% {width: 225%; font-style: italic;}
+    66% {width: 150%; font-style: italic;}
+    80% {width: 90%; font-style: italic;}
     100% {margin-left: 5px;}
 }
 @keyframes down {
-    0% {margin-top: -800px;}
-    100% {margin-top: 5px;} 
+    0% {margin-top: -800px; font-style: italic;}
+    100% {margin-top: 5px; font-style: italic;} 
 }
 @keyframes up {
-    0% {margin-top: 1000px;}
-    100% {margin-top: 5px;} 
+    0% {margin-top: 1000px; font-style: italic;}
+    100% {margin-top: 5px; font-style: italic;} 
 }
 @keyframes left {
-    0% {margin-left: -800px;}
-    100% {margin-left: 5px;} 
+    0% {margin-left: -800px; font-style: italic;}
+    100% {margin-left: 5px; font-style: italic;} 
 }
 @keyframes right {
-    0% {margin-left: 1800px;}
-    100% {margin-left: 5px;} 
+    0% {margin-left: 1800px; font-style: italic;}
+    100% {margin-left: 5px; font-style: italic;} 
 }
 
 

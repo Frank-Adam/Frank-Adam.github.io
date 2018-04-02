@@ -191,6 +191,7 @@
     node1.id="header";
     var hdrText = document.createTextNode("Calculator");
     node1.appendChild(hdrText);
+    node1.style.animation="slideIn 4.5s ease-in-out";
     
     node3.appendChild(calcButtons); //create the calc buttons
     calcButtons.id="box1";
@@ -522,35 +523,29 @@ var parent = document.createElement("div");
         function processJSON(text) {
             var data = JSON.parse(text);
             var weatherDiv = document.getElementById("weather1");
+            weatherDiv.innerHTML = 'New York, NY' + '<br>' + 'Temps:' + '<br>' + data['current_observation']['temp_f'] + '&deg;F / ' + data['current_observation']['temp_c'] + '&deg;C';
             var elem = document.createElement("img");
             elem.setAttribute("src", data['current_observation']['icon_url']);
-            elem.setAttribute("height", "100px");
-            elem.setAttribute("width", "100px");
-            elem.id="nyImg";
-            weatherDiv.appendChild(elem);
-            weatherDiv.innerHTML = 'New York' + '<br>' + 'Temps:' + '<br>' + data['current_observation']['temp_f'] + '&deg;F / ' + data['current_observation']['temp_c'] + '&deg;C';
+            document.getElementById("weather1").appendChild(elem);
+            
         }
         function processJSON2(text) {
             var data = JSON.parse(text);
             var weatherDiv = document.getElementById("weather2");
+             weatherDiv.innerHTML = 'Rexburg, ID' + '<br>' + 'Temps:' + '<br>' + data['current_observation']['temp_f'] + '&deg;F / ' + data['current_observation']['temp_c'] + '&deg;C';
             var elem = document.createElement("img");
             elem.setAttribute("src", data['current_observation']['icon_url']);
-            elem.setAttribute("height", "100px");
-            elem.setAttribute("width", "100px");
-            elem.id="rxImg";
-            weatherDiv.appendChild(elem);
-            weatherDiv.innerHTML = 'Rexburg' + '<br>' + 'Temps:' + '<br>' + data['current_observation']['temp_f'] + '&deg;F / ' + data['current_observation']['temp_c'] + '&deg;C';
+            document.getElementById("weather2").appendChild(elem);
+           
         }
         function processJSON3(text) {
             var data = JSON.parse(text);
             var weatherDiv = document.getElementById("weather3");
+             weatherDiv.innerHTML = 'Los Angeles, CA' + '<br>' + 'Temps:' + '<br>' + data['current_observation']['temp_f'] + '&deg;F / ' + data['current_observation']['temp_c'] + '&deg;C';
             var elem = document.createElement("img");
             elem.setAttribute("src", data['current_observation']['icon_url']);
-            elem.setAttribute("height", "100px");
-            elem.setAttribute("width", "100px");
-            elem.id="laImg";
-            weatherDiv.appendChild(elem);
-            weatherDiv.innerHTML = 'Los Angeles' + '<br>' + 'Temps:' + '<br>' + data['current_observation']['temp_f'] + '&deg;F / ' + data['current_observation']['temp_c'] + '&deg;C';
+            document.getElementById("weather3").appendChild(elem);
+           
         }
         
 /* create time */
@@ -620,7 +615,7 @@ var parent = document.createElement("div");
     node6.id="secs";
     
     parent.style.animation="up 3s ease-in-out";
-    parent1.style.animation="up 3s ease-in-out";
+    parent1.style.animation="up 1.5s ease-in-out";
     
         runTime();
     }
