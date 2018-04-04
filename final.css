@@ -21,14 +21,17 @@ body {
     padding: 15px;
     height: 275px;
 }
-#icons:hover {
+#i1:hover,
+#i2:hover,
+#i3:hover,
+#i4:hover {
     cursor: pointer;
+    background-color: lightblue;
 }
 #i1,#i2,#i3,#i4 {
     height: 120px;
     width: 120px;
     border-left: 6px solid blue;
-    background-color: lightblue;
     border-radius: 15%;
     animation: slide 1.5s linear;
 }
@@ -40,6 +43,7 @@ img {
     height: 80px;
     transition: transform .2s; 
 }
+
 img:hover {
     transform: scale(1.1);
 }
@@ -105,9 +109,10 @@ nav > ul > li {
 #box1 {
         display: flex;
         flex-flow: wrap;
-        width: 335px;
+        width: 160px;
         padding: 10px;
         border: 1px solid grey;
+        border-radius: 5%;
         margin-top: 5px;
     }
     #e1,#e2,#e3,#e4,#e5,#e6,
@@ -118,16 +123,16 @@ nav > ul > li {
         font-size: 3em;
         text-align: center;
         border: 1px solid grey;
+        border-radius: 10%;
         transition: transform .2s;
     }
     #e1:hover,#e2:hover,#e3:hover,#e4:hover,#e5:hover,#e6:hover,
     #e7:hover,#e8:hover,#e9:hover,#e0:hover,#ex:hover,#edec:hover,
     #ep:hover,#em:hover,#eml:hover,#ed:hover,#ec:hover,#eq:hover {
-        background-color: red;
+        background-color: darkblue;
         color: white;
         cursor: pointer;
         transform: scale(1.1);
-        border-radius: 50%;
     }
 
 /* Currency */
@@ -184,7 +189,7 @@ main {
     font-family: 'Orbitron';
     text-shadow: 5px 2px lightblue;
     font-size: 1em;
-    color: blue;
+    color: darkblue;
 }
 #btnTimes {
     position: absolute;
@@ -200,12 +205,24 @@ main {
 }
 
 /* keyframes */
-@keyframes shimmy{
-    0% {transform: rotate(-5deg); }
-    50% {transform: rotate(5deg);}
-    50% {transform: scale(1.2);}
-    75% {transform: scale(.85);}
-    100% {transform: rotate(-5deg);}
+@keyframes shimmy1{
+    50% {transform: scale(0.95);}
+    75% {transform: scale(1.0);}
+    100% {transform: scale(0.95);}
+}
+@keyframes shimmy2{
+    50% {transform: scale(1.0);}
+    75% {transform: scale(0.95);}
+    100% {transform: scale(1.0);}
+}
+@keyframes shimmy3{
+    50% {transform: scale(0.95);}
+    75% {transform: scale(1.0);}
+    100% {transform: scale(0.95);}
+}
+@keyframes shimmy4{
+    50% {transform: scale(1.0);}
+    75% {transform: scale(0.95);}
     100% {transform: scale(1.0);}
 }
 @keyframes slide {
@@ -219,14 +236,14 @@ main {
   100% {margin-top:0px; }
 }
 @keyframes slideIn {
-    0% {margin-left: 1000px; font-style: italic;}
+    0% {margin-left: 1800px; font-style: italic;}
     33% {width: 225%; font-style: italic;}
     66% {width: 150%; font-style: italic;}
     80% {width: 90%; font-style: italic;}
     100% {margin-left: 5px;}
 }
 @keyframes down {
-    0% {margin-top: -800px; font-style: italic;}
+    0% {margin-top: -1800px; font-style: italic;}
     100% {margin-top: 5px; font-style: italic;} 
 }
 @keyframes up {
@@ -234,14 +251,17 @@ main {
     100% {margin-top: 5px; font-style: italic;} 
 }
 @keyframes left {
-    0% {margin-left: -800px; font-style: italic;}
+    0% {margin-left: -1800px; font-style: italic;}
     100% {margin-left: 5px; font-style: italic;} 
 }
 @keyframes right {
     0% {margin-left: 1800px; font-style: italic;}
     100% {margin-left: 5px; font-style: italic;} 
 }
-
+@keyframes spin {
+    0% {transform: rotateX(180deg);}
+    100%{transform: rotateX(180deg);}
+}
 
 
 

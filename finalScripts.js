@@ -1,30 +1,25 @@
 /* Initial Home Page */
     function setHome() {
-    var myDiv = "icons";
-    delHome(myDiv);
+    delHome("icons");
     createHome(myDiv);
 }
     function setTime() {
-    var myDiv = "icons";
-    delHome(myDiv);
+    delHome("icons");
     createTime();
     createHomeLinkTme();
 }
     function setCalc() {
-    var myDiv = "icons";
-    delHome(myDiv);
+    delHome("icons");
     createCalc();
     createHomeLinkCalc();
 }
     function setCurr() {
-    var myDiv = "icons";
-    delHome(myDiv);
+    delHome("icons");
     createCurrency();
     createHomeLinkCurr();
 }
     function setWeath() {
-    var myDiv = "icons";
-    delHome(myDiv);
+    delHome("icons");
     createWeather();
     createHomeLinkWth();
 }
@@ -44,7 +39,7 @@
     homeImg.src="house.png";
     homeImg.width ="30px";
     homeImg.height="30px";
-    homeImg.style.animation="shimmy 10s infinite";
+    homeImg.style.animation="shimmy 5s infinite";
     homeImg.style.animationDelay="25s";
     homeImg.onclick=function() {delHome("tFlex");
                                 delHome("btnTimes");
@@ -68,6 +63,7 @@
     homeImg.style.animationDelay="25s";
     homeImg.onclick=function() {delHome("clc"); delHome("hme"); createHome();};
     parent.appendChild(homeImg);
+    parent.style.animation="slideIn 1.5s linear";
 }
     function createHomeLinkWth() {
     var existingNode = document.getElementById("1script");
@@ -82,6 +78,7 @@
     homeImg.style.animationDelay="25s";
     homeImg.onclick=function() {delHome("weatherHeader"); delHome("weatherDiv"); delHome("hme"); createHome();};
     parent.appendChild(homeImg);
+    parent.style.animation="up 3s linear";
 }
     function createHomeLinkCurr() {
     var existingNode = document.getElementById("1script");
@@ -96,6 +93,7 @@
     homeImg.style.animationDelay="25s";
     homeImg.onclick=function() {delHome("curr"); delHome("hme"); createHome();};
     parent.appendChild(homeImg);
+    parent.style.animation="left 3s linear";
 }
 
 /* recreate home page */
@@ -113,6 +111,7 @@
     parent.appendChild(node2);
     parent.appendChild(node3);
     parent.appendChild(node4);
+    parent.style.animation="spin 1s ease-in-out";
     
     var img1 = document.createElement("img");
     var img2 = document.createElement("img");
@@ -139,14 +138,14 @@
     img3.onclick=function() {setCurr();};
     img4.onclick=function() {setWeath();};
 
-    node1.style.animation="shimmy 2s infinite";
+    node1.style.animation="shimmy1 1s infinite";
     node1.style.animationDelay="3s";
-    node2.style.animation="shimmy 2s infinite";
-    node2.style.animationDelay="5s";
-    node3.style.animation="shimmy 2s infinite";
-    node3.style.animationDelay="7s";
-    node4.style.animation="shimmy 2s infinite";
-    node4.style.animationDelay="9s";
+    node2.style.animation="shimmy2 1s infinite";
+    node2.style.animationDelay="5.5s";
+    node3.style.animation="shimmy3 1s infinite";
+    node3.style.animationDelay="9s";
+    node4.style.animation="shimmy4 1s infinite";
+    node4.style.animationDelay="10s";
     
 }
 /*create calculator */
@@ -185,13 +184,12 @@
     parent.appendChild(node2);
     parent.appendChild(node3);
     parent.appendChild(node4);
-    parent.style.animation="down 3s ease-in-out";
-    document.body.animation="downBG 3s ease-in-out";
+    parent.style.animation="down 2.5s ease-in-out";
     
     node1.id="header";
     var hdrText = document.createTextNode("Calculator");
     node1.appendChild(hdrText);
-    node1.style.animation="slideIn 4.5s ease-in-out";
+    node1.style.animation="down .25s ease-in-out";
     
     node3.appendChild(calcButtons); //create the calc buttons
     calcButtons.id="box1";
@@ -328,7 +326,7 @@
     var userMath = mathDiv.innerHTML;
     console.log(userMath);
     var answer = math.eval(userMath);
-    mathDiv.innerHTML = 'Answer: ' + answer;
+    mathDiv.innerHTML = 'Answer: ' + answer.toLocaleString();
 }
 
 
@@ -383,25 +381,29 @@ var parent = document.createElement("div");
     parent.appendChild(node3);
     parent.appendChild(node4);
     
-    parent.style.animation="left 3s ease-in-out";
-    document.body.animation="leftBG 3s ease-in-out";
+    
     
     node1.id="currHdr";
     var hdrText = document.createTextNode("Euro Currency Converter");
     node1.appendChild(hdrText);
+    node1.style.animation="left 2.5s ease-in-out";
     
     node2a.id="input";
     node2a.setAttribute("type", "text");
     node2a.placeholder="$0.00";
     var node2Txt = document.createTextNode(">> Input USD Amount");
     node2a.appendChild(node2Txt);
+    node2a.style.animation="right 2.5s ease-in-out";
     
     node3.onclick=function() {getAPIDataCurr();};
     var node3Txt = document.createTextNode("Get Current Euro Conversion");
     node3.appendChild(node3Txt);
+    node3.style.animation="left 2.5s ease-in-out";
     
     node4.id="output";
-}
+    node4.style.animation="right 2.5s ease-in-out";
+}   
+
     //currency data
     function processJSONCurr(text) {
     var data = JSON.parse(text);
@@ -478,7 +480,6 @@ var parent = document.createElement("div");
     parent.appendChild(node3);
     parent.appendChild(node4);
     parent.style.animation="right 3s ease-in-out";
-    document.body.animation="rightBG 3s ease-in-out";
     
     node2.id="weather1";
     node3.id="weather2";
@@ -615,7 +616,7 @@ var parent = document.createElement("div");
     node6.id="secs";
     
     parent.style.animation="up 3s ease-in-out";
-    parent1.style.animation="up 1.5s ease-in-out";
+    parent1.style.animation="down 1.5s ease-in-out";
     
         runTime();
     }
@@ -643,7 +644,7 @@ var parent = document.createElement("div");
         milDiv.style.fontFamily="Orbitron";
         milDiv.style.fontSize="4em";
         milDiv.style.color="darkblue";
-        milDiv.style.textShadow="5px 2px lightgrey";
+        milDiv.style.textShadow="5px 2px lightblue";
         milDiv.style.padding="10px";
         milSecs.style.marginLeft="260px";
     }
