@@ -9,8 +9,8 @@ body {
     width: 300px;
 }
 #hme > img {
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
     cursor: pointer;
 }
 /*icons on home screen*/
@@ -84,6 +84,16 @@ img:hover {
     color: blue;
     text-align: center;
 }
+#weather2 {
+    border-top: 2px solid lightblue;
+    border-bottom: 2px solid lightblue;
+}
+
+#weather1 > img,
+#weather2 > img,
+#weather3 > img {
+    margin-top: -10px;
+}
 
 /* calc */
 #header {
@@ -109,7 +119,7 @@ nav > ul > li {
 #box1 {
         display: flex;
         flex-flow: wrap;
-        width: 160px;
+        width: 220px;
         padding: 10px;
         border: 1px solid grey;
         border-radius: 5%;
@@ -118,8 +128,8 @@ nav > ul > li {
     #e1,#e2,#e3,#e4,#e5,#e6,
     #e7,#e8,#e9,#e0,#ex,#edec,
     #ep,#em,#eml,#ed,#ec,#eq {
-        width: 50px;
-        height: 50px;
+        width: 70px;
+        height: 70px;
         font-size: 3em;
         text-align: center;
         border: 1px solid grey;
