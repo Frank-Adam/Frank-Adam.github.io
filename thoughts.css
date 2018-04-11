@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee Shade');
+@import url('https://fonts.googleapis.com/css?family=Nanum Gothic');
+body {
+    font-family: "Nanum Gothic";
+    background-color: #ecf5f6;
+    padding: 10px;
+    margin: 0px; 
+    width: 75%;
+}
+
+#head {
+    font-size: 4em;
+    font-family: "Bungee Shade";
+    color: #FF00B9;
+    text-align: center;
+    border-bottom: 6px solid #CC0094;
+}
+#deep {
+    color: #00CC6C;
+}
+#container {
+    height: 400px;
+}
+#txtContainer {
+    border-top: 6px solid #CC0094;
+    border-left: 1px solid #CC0094;
+    border-right: 1px solid #CC0094;
+    border-bottom: 1px solid #CC0094;
+    padding: 20px;
+    overflow: scroll;
+    color: darkblue;
+}
+#w0 {
+    font-size: 2em;
+    font-style: italic;
+    text-shadow: 12px 12px 32px #00FF86;
+    height: auto;
+    animation: text 12s infinite;
+    animation-delay: 4s;
+    color: #00CC6C;
+    position: absolute;
+    margin-left: -700px;
+    margin-top: 100px;
+}
+#w1 {
+    font-size: 8em;
+    font-style: italic;
+    text-shadow: 12px 12px 32px #00FF86;
+    height: auto;
+    animation: text 13s infinite;
+    animation-delay: 2s;
+    color: #00CC6C;
+    position: absolute;
+    margin-left: -700px;
+    margin-top: 110px;
+}
+#w2 {
+    font-size: 1.75em;
+    font-style: italic;
+    text-shadow: 12px 12px 32px #00FF86;
+    height: auto;
+    animation: text 8.5s infinite;
+    animation-delay: 7s;
+    color: #00CC6C;
+    position: absolute;
+    margin-left: -700px;
+    margin-top: 225px;
+}
+#w3 {
+    font-size: 1.3em;
+    font-style: italic;
+    text-shadow: 12px 12px 32px #00FF86;
+    height: auto;
+    animation: text 12s infinite;
+    animation-delay: 11s;
+    color: #00CC6C;
+    position: absolute;
+    margin-left: -700px;
+    margin-top: 20px;
+}
+#w4 {
+    font-size: 2.5em;
+    font-style: italic;
+    text-shadow: 12px 12px 32px #00FF86;
+    height: auto;
+    animation: text 14s infinite;
+    animation-delay: 4s;
+    color: #00CC6C;
+    position: absolute;
+    margin-left: -700px;
+    margin-top: 169px;
+}
+#w5 {
+    font-size: 1.2em;
+    font-style: italic;
+    text-shadow: 12px 12px 32px #00FF86;
+    height: auto;
+    animation: text 15s infinite;
+    animation-delay: 6.5s;
+    color: #00CC6C;
+    position: absolute;
+    margin-left: -700px;
+    margin-top: 75px;
+}
+#w6 {
+    font-size: 4em;
+    font-style: italic;
+    text-shadow: 12px 12px 32px #00FF86;
+    height: auto;
+    animation: text 10s infinite;
+    animation-delay: 3s;
+    color: #00CC6C;
+    position: absolute;
+    margin-left: -700px;
+    margin-top: 20px;
+}
+#w7 {
+    font-size: 7.5em;
+    font-style: italic;
+    text-shadow: 12px 12px 32px #00FF86;
+    height: auto;
+    animation: text 12s infinite;
+    animation-delay: 12s;
+    color: #00CC6C;
+    position: absolute;
+    margin-left: -700px;
+    margin-top: 45px;
+}
+#w8 {
+    font-size: 6em;
+    font-style: italic;
+    text-shadow: 12px 12px 32px #00FF86;
+    height: auto;
+    animation: text 9s infinite;
+    animation-delay: 6s;
+    color: #00CC6C;
+    position: absolute;
+    margin-left: -700px;
+    margin-top: 300px;
+}
+#w9 {
+    font-size: 3em;
+    font-style: italic;
+    text-shadow: 12px 12px 32px #00FF86;
+    height: auto;
+    animation: text 10s infinite;
+    animation-delay: 10s;
+    color: #00CC6C;
+    position: absolute;
+    margin-left: -700px;
+    margin-top: 185px;
+}
+
+@keyframes text {
+    100% {margin-left: 1600px;}
+}
+
