@@ -1,0 +1,281 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="Reflection Blog">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="jeopardy.css" rel="stylesheet">
+    <script>
+        function flipCard(myCard, myText) {
+            var thisCard = document.getElementById(myCard);
+            thisCard.style.fontSize="1em";
+            thisCard.style.animation="flipMe 2s ease-in-out";
+            thisCard.innerHTML = myText;
+            thisCard.style.color="white";
+            thisCard.style.backgroundColor="red";
+        }
+        
+        function b1clk() {
+            var myDiv = 'b1';
+            flipCard(myDiv,'I will go and do the things the Lord commands.');
+            var thisCard = document.getElementById(myDiv);
+            thisCard.onclick = function() {
+            flipCard(myDiv,"Nephi");}
+        }
+        function b2clk() {
+            var myDiv = 'b2';
+            flipCard(myDiv,'Denied Jesus 3 times.');
+            var thisCard = document.getElementById(myDiv);
+            thisCard.onclick = function() {
+            flipCard(myDiv,"Peter");}
+        }
+        function b3clk() {
+            var myDiv = 'b3';
+            flipCard(myDiv,'Joseph dug the plates out of this hill');
+            var thisCard = document.getElementById(myDiv);
+            thisCard.onclick = function() {
+            flipCard(myDiv,"Hill Cumorah");}
+        }
+        function b4clk() {
+            var myDiv = 'b4';
+            flipCard(myDiv,'Hot box!');
+            var thisCard = document.getElementById(myDiv);
+            thisCard.onclick = function() {
+            flipCard(myDiv,"Foxy");}
+        }
+        function b5clk() {
+            var myDiv = 'b5';
+            flipCard(myDiv,'Stood on the wall of a Lamanite city.');
+            var thisCard = document.getElementById(myDiv);
+            thisCard.onclick = function() {
+            flipCard(myDiv,"Samuel the Lamanite");}
+        }
+        function b6clk() {
+            var myDiv = 'b6';
+            flipCard(myDiv,'Betrayed Jesus.');
+            var thisCard = document.getElementById(myDiv);
+            thisCard.onclick = function() {
+            flipCard(myDiv,"Judas");}
+        }
+        function b7clk() {
+            var myDiv = 'b7';
+            flipCard(myDiv,'Name of the prophet when Mom was baptized.');
+            var thisCard = document.getElementById(myDiv);
+            thisCard.onclick = function() {
+            flipCard(myDiv,"Gordon B. Hinkley");}
+        }
+        function b8clk() {
+            var myDiv = 'b8';
+            flipCard(myDiv,'Can I come to the outside now?');
+            var thisCard = document.getElementById(myDiv);
+            thisCard.onclick = function() {
+            flipCard(myDiv,"Purple guy from HOME");}
+        }
+        function b9clk() {
+            var myDiv = 'b9';
+            flipCard(myDiv,'Saved a Lamanite kings sheep from robbers.');
+            var thisCard = document.getElementById(myDiv);
+            thisCard.onclick = function() {
+            flipCard(myDiv,"Ammon");}
+        }
+        function b10clk() {
+            var myDiv = 'b10';
+            flipCard(myDiv,'Wrote to the Ephesians.');
+            var thisCard = document.getElementById(myDiv);
+            thisCard.onclick = function() {
+            flipCard(myDiv,"Paul");}
+        }
+        function b11clk() {
+            var myDiv = 'b11';
+            flipCard(myDiv,'This book contains modern-day revelation.');
+            var thisCard = document.getElementById(myDiv);
+            thisCard.onclick = function() {
+            flipCard(myDiv,"Doctrine and Covenants");}
+        }
+        function b12clk() {
+            var myDiv = 'b12';
+            flipCard(myDiv,'Get back in the room!');
+            var thisCard = document.getElementById(myDiv);
+            thisCard.onclick = function() {
+            flipCard(myDiv,"Oscar!");}
+        }
+        function b13clk() {
+            var myDiv = 'b13';
+            flipCard(myDiv,'Spoke from a tower.');
+            var thisCard = document.getElementById(myDiv);
+            thisCard.onclick = function() {
+            flipCard(myDiv,"King Mosiah");}
+        }
+        function b14clk() {
+            var myDiv = 'b14';
+            flipCard(myDiv,'Is credited with doubting.');
+            var thisCard = document.getElementById(myDiv);
+            thisCard.onclick = function() {
+            flipCard(myDiv,"Thomas");}
+        }
+        function b15clk() {
+            var myDiv = 'b15';
+            flipCard(myDiv,'The first temple in these last days was dedicated here.');
+            var thisCard = document.getElementById(myDiv);
+            thisCard.onclick = function() {
+            flipCard(myDiv,"Kirtland, OH");}
+        }
+        function b16clk() {
+            var myDiv = 'b16';
+            flipCard(myDiv,'Look after my kids Donald.');
+            var thisCard = document.getElementById(myDiv);
+            thisCard.onclick = function() {
+            flipCard(myDiv,"Interstellar");}
+        } 
+    </script>
+</head>
+<body onLoad="setScore();">
+    <header>Jeopardy Round 1</header>
+    <div id="container">
+        <div id="h1">Book Of Mormon Prophets</div>
+        <div id="h2">Apostles</div>
+        <div id="h3">This Dispensation</div>
+        <div id="h4">Movie Quotes</div>
+        
+        <div id="b1" onclick="b1clk()">$100</div>
+        <div id="b2" onclick="b2clk()">$100</div>
+        <div id="b3" onclick="b3clk()">$100</div>
+        <div id="b4" onclick="b4clk()">$100</div>
+        
+        <div id="b5" onclick="b5clk()">$200</div>
+        <div id="b6" onclick="b6clk()">$200</div>
+        <div id="b7" onclick="b7clk()">$200</div>
+        <div id="b8" onclick="b8clk()">$200</div>
+        
+        <div id="b9" onclick="b9clk()">$300</div>
+        <div id="b10" onclick="b10clk()">$300</div>
+        <div id="b11" onclick="b11clk()">$300</div>
+        <div id="b12" onclick="b12clk()">$300</div>
+        
+        <div id="b13" onclick="b13clk()">$400</div>
+        <div id="b14" onclick="b14clk()">$400</div>
+        <div id="b15" onclick="b15clk()">$400</div>
+        <div id="b16" onclick="b16clk()">$400</div>
+    </div>
+    <br>
+    <div id="scoreContainer">
+		<div id="team1">
+			<button id="b1Clear" onClick="Clear1();">Clear Score</button>
+			<button id="b1Add100" onClick="A1001();">+ 100</button>
+			<button id="b1Add200" onClick="A2001();">+ 200</button>
+			<button id="b1Rem100" onClick="R1001();">- 100</button>
+			<button id="b1Rem200" onClick="R2001();">- 200</button>
+			<br>
+			<div id="header1">Team 1 Score</div>
+			<div id="team1Score">-</div>
+		</div>
+		<div id="spacer"></div>
+		<div id="team2">
+			<button id="b2Clear" onClick="Clear2();">Clear Score</button>
+			<button id="b2Add100" onClick="A1002();">+ 100</button>
+			<button id="b2Add200" onClick="A2002();">+ 200</button>
+			<button id="b2Rem100" onClick="R1002();">- 100</button>
+			<button id="b2Rem200" onClick="R2002();">- 200</button>
+			<br>
+			<div id="header2">Team 2 Score</div>
+			<div id="team2Score">-</div>
+		</div>
+	   <div id="spacer"></div>
+	    <div id="pages">
+	        <ul>
+	        <li><a id="p1" href = "jeopardy.html">Jeopardy Round 1 | </a></li>
+	        <li><a id="p2" href = "jeopardy2.html">Jeopardy Round 2 | </a></li>
+	        <li><a id="p3" href = "jeopardyFinal.html">Final Jeopardy</a></li>
+	        </ul>
+	    </div>
+	</div>
+	<script>
+	function setScore() {
+		var t1 = parseInt(localStorage.getItem("t1"));
+		var t2 = parseInt(localStorage.getItem("t2"));
+		var t1Score = document.getElementById("team1Score");		
+		var t2Score = document.getElementById("team2Score");
+
+		if(isNaN(t1)) {
+			t1Score.innerHTML = 0;
+			localStorage.setItem("t1",0);
+		} else {
+			t1Score.innerHTML = t1.toLocaleString();
+			localStorage.setItem("t1",t1);
+		}
+		
+		if(isNaN(t2)) {
+			t2Score.innerHTML = 0;
+			localStorage.setItem("t2",0);		
+		} else {
+			t2Score.innerHTML = t2.toLocaleString();
+			localStorage.setItem("t2",t2);	
+		}
+	}
+/****************************************************/
+	function Clear1() {
+		var t1Score = document.getElementById("team1Score");
+		t1Score.innerHTML = 0;
+		localStorage.setItem("t1",0);		
+	}
+	function Clear2() {		
+		var t2Score = document.getElementById("team2Score");
+		t2Score.innerHTML = 0;
+		localStorage.setItem("t2",0);
+	}
+/****************************************************/
+	function A1001() {
+		var t1Score = document.getElementById("team1Score");
+		var t1 = parseInt(localStorage.getItem("t1"));
+		t1Score.innerHTML = (t1 + 100).toLocaleString();
+		localStorage.setItem("t1",t1 + 100);
+
+	}
+	function A2001() {
+		var t1Score = document.getElementById("team1Score");
+		var t1 = parseInt(localStorage.getItem("t1"));
+		t1Score.innerHTML = (t1 + 200).toLocaleString();
+		localStorage.setItem("t1",t1 + 200);
+	}
+	function R1001() {
+		var t1Score = document.getElementById("team1Score");
+		var t1 = parseInt(localStorage.getItem("t1"));
+		t1Score.innerHTML = (t1 - 100).toLocaleString();
+		localStorage.setItem("t1",t1 - 100);
+	}
+	function R2001() {
+		var t1Score = document.getElementById("team1Score");
+		var t1 = parseInt(localStorage.getItem("t1"));
+		t1Score.innerHTML = (t1 - 200).toLocaleString();
+		localStorage.setItem("t1",t1 - 200);
+	}
+/****************************************************/
+	function A1002() {
+		var t2Score = document.getElementById("team2Score");
+		var t2 = parseInt(localStorage.getItem("t2"));
+		t2Score.innerHTML = (t2 + 100).toLocaleString();
+		localStorage.setItem("t2",t2 + 100);
+
+	}
+	function A2002() {
+		var t2Score = document.getElementById("team2Score");
+		var t2 = parseInt(localStorage.getItem("t2"));
+		t2Score.innerHTML = (t2 + 200).toLocaleString();
+		localStorage.setItem("t2",t2 + 200);
+	}
+	function R1002() {
+		var t2Score = document.getElementById("team2Score");
+		var t2 = parseInt(localStorage.getItem("t2"));
+		t2Score.innerHTML = (t2 - 100).toLocaleString();
+		localStorage.setItem("t2",t2 - 100);
+	}
+	function R2002() {
+		var t2Score = document.getElementById("team2Score");
+		var t2 = parseInt(localStorage.getItem("t2"));
+		t2Score.innerHTML = (t2 - 200).toLocaleString();
+		localStorage.setItem("t2",t2 - 200);
+	}
+</script>
+</body>
+</html>

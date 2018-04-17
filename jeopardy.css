@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee Shade');
+@import url('https://fonts.googleapis.com/css?family=Nanum Gothic');
+@import url('https://fonts.googleapis.com/css?family=Vast+Shadow');
+body {
+    font-family: "Nanum Gothic";
+    background-color: #ecf5f6;
+    padding: 10px;
+    margin: 0px; 
+}
+header {
+    font-family: "Bungee Shade";
+    color: rgba(100, 50, 255, .8);
+    animation: rainbow 3s infinite;
+    text-align: center;
+    font-size: 3em;
+}
+#container {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    background-color: #2196F3;
+    padding: 10px;
+}
+#containerF {
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    background-color: #2196F3;
+    padding: 10px;
+}
+#h1,#h2,#h3,#h4{
+    text-align: center;
+    font-size: 2em;
+    color: white;
+    border: 2px solid white;
+}
+#b1,#b2,#b3,#b4,
+#b5,#b6,#b7,#b8,
+#b9,#b10,#b11,#b12,
+#b13,#b14,#b15,#b16 {
+    background-color: rgba(41,200,224,1);
+    border: 1px solid white;
+    padding: 50px;
+    font-size: 1.5em;
+    text-align: center;
+    align-content: center;
+}
+#b2f {
+    background-color: rgba(41,200,224,1);
+    border: 1px solid white;
+    padding: 50px;
+    font-size: 4em;
+    text-align: center;
+    align-content: center;
+}
+#b1:hover,#b2:hover,#b3:hover,#b4:hover,
+#b5:hover,#b6:hover,#b7:hover,#b8:hover,
+#b9:hover,#b10:hover,#b11:hover,#b12:hover,
+#b13:hover,#b14:hover,#b15:hover,#b16:hover {
+    background-color: rgba(224,65,40,1);
+    color: white;
+}
+#b2f:hover {
+    background-color: rgba(224,65,40,1);
+    color: white;
+}
+#scoreContainer {
+	display: flex;
+	width: 75%;
+}
+#team1,
+#team2 {
+    font-family: 'vast shadow';
+	width: 50%;
+	border-left: 6px solid red;
+	border-right: 1px solid red;
+	border-top: 1px solid red;
+	border-bottom: 1px solid red;
+	padding: 10px;
+}
+#spacer {
+	width: 10px;
+}
+#header1,
+#header2 {
+    font-family: 'vast shadow';
+	font-size: 3em;
+	color: red;
+	text-align: center;
+}
+#team1Score,
+#team2Score {
+    font-family: 'vast shadow';
+	font-size: 5em;
+	color: blue;
+	text-align: center;
+}
+#pages {
+    width:25%;
+}
+ul > li {
+    list-style-type: none;
+}
+#p1,
+#p2,
+#p3 {
+    font-size: 1.5em;
+    color: red;
+    flex-direction: column;
+    
+}
+@keyframes flipMe {
+    0% {color: rgba(224,65,40,1);}
+    100% {transform: rotateY(1080deg); color: white;}
+}
+@keyframes rainbow{
+	5%{color: red;}
+	35%{color: yellow;}
+	65%{color: green;}
+	85%{color: blue;}
+	0%{color: orange;}	
+}
