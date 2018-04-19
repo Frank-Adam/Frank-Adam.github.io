@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Special Elite');
+body {
+    font-family: "Special Elite";
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    background-image: url("middle.png");
+    color: white;
+    background-repeat: no-repeat;
+}
+
+#the {
+    font-size: 3em;
+    animation: ltr 3s ease-in-out;
+    position: absolute;
+    margin-top: 300px;
+    margin-left: 600px;
+}
+
+#middle {
+    font-size: 3em;
+    animation: rtl 3s ease-in-out;
+    position: absolute;
+    margin-top: 300px;
+    margin-left: 700px;
+}
+
+@keyframes ltr {
+    0% {margin-left: -1200px;}
+    100% {margin-left:600px;}
+}
+
+@keyframes rtl {
+    0% {margin-left: 1800px;}
+    100% {margin-left:700px;}
+}
