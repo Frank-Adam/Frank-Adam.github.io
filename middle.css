@@ -12,6 +12,7 @@ body {
 #the {
     font-size: 3em;
     animation: ltr 3s ease-in-out;
+    animation-delay: 5s;
     position: absolute;
     margin-top: 300px;
     margin-left: 600px;
@@ -20,6 +21,7 @@ body {
 #middle {
     font-size: 3em;
     animation: rtl 3s ease-in-out;
+    animation-delay: 5s;
     position: absolute;
     margin-top: 300px;
     margin-left: 700px;
