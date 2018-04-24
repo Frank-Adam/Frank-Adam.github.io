@@ -1,88 +1,37 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-
 body {
-    font-family: 'Roboto';
-    padding: 20px;
-    margin: 0;
-    }
-a {
-    text-decoration: none;
-    }
-td:hover {
-    background-color: lightgrey;
-    text-decoration: bold;
+	font-family: 'Roboto';
 }
-table {
-    padding: 10px;
+#scoreContainer {
+	display: flex;
+	width: 500px;
 }
-th {
-    text-align: left;
-    border-bottom: 1px solid blue;
-    text-decoration: bold;
+#one,
+#two,
+#three;
+#four {
+	width: 200px;
+	height: 250px;
+	border: 1px solid darkblue;
+	border-radius: 5%;
 }
-td {
-    padding-bottom: 2px;
-    border-bottom: 1px solid lightgrey;
+.texts {
+	display: block;
+	text-align: center;
+	margin-top: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	
 }
-#code {
-    width: 42%;
+#fluffy {
+	width: 150px;
+	height: 200px;
+	display: block;
+	margin-top: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 5%;
 }
-@media screen and (max-width: 600px) {
-    table {
-    width: 100%;
-    }
-    th {
-    border-bottom: 3px solid red;
-    }
-    header {
-        border: 1px solid red;
-        color: red;
-    } 
-    h1 {
-        padding: 5px;
-        }
-
-    main {
-        color: red;
-        }
-}
-
-@media screen and (min-width: 600px) and (max-width: 1024px) {
-    table {
-    width: 75%;
-    }
-    th {
-    border-bottom: 3px solid orange;
-    }
-    header {
-        border: 1px solid orange;
-        color: orange;
-    } 
-    h1 {
-        padding: 5px;
-        }
-
-    main {
-        color: orange;
-        }
-}
-
-@media screen and (min-width: 1024px) {
-    
-    table {
-    width: 70%;
-    }
-    th {
-    border-bottom: 3px solid blue;
-    }
-    header {
-        color: blue;
-    } 
-    h1 {
-        padding: 10px;
-        }
-    
-    main {
-        color: blue;
-        }
+.spacer {
+	width: 20px;
 }
