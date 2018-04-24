@@ -5,7 +5,8 @@ body {
     margin: 0px;
     overflow: hidden;
     background-image: url("middle.png");
-    color: white;
+    color: lightgrey;
+    text-shadow: 5px 5px black;
     background-repeat: no-repeat;
 }
 
