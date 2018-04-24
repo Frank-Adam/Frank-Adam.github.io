@@ -17,9 +17,7 @@ body {
 .texts {
 	display: block;
 	text-align: center;
-	margin-top: 125px;
-	margin-left: auto;
-	margin-right: auto;
+	margin: auto auto auto auto;
 }
 a:link {
 	text-decoration: none;	
@@ -28,7 +26,7 @@ a:link {
 	width: 275px;
 	height: 275px;
 	display: block;
-	margin: auto;
+	margin: auto auto auto auto;
 	border-radius: 5%;
 }
 .spacer {
