@@ -4,14 +4,13 @@ body {
 }
 #scoreContainer {
 	display: flex;
-	width: 500px;
 }
 #one,
 #two,
 #three,
 #four {
-	width: 200px;
-	height: 250px;
+	width: 300px;
+	height: 350px;
 	border: 1px solid darkblue;
 	border-radius: 5%;
 }
