@@ -21,11 +21,11 @@ body {
 	margin-top: 25px;
 	margin-left: auto;
 	margin-right: auto;
-	
+	list-style-type: none;
 }
 #fluffy {
 	width: 150px;
-	height: 200px;
+	height: 175px;
 	display: block;
 	margin-top: 25px;
 	margin-left: auto;
