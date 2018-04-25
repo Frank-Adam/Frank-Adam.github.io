@@ -15,8 +15,8 @@ body {
     animation: ltr 3s ease-in-out;
     animation-delay: 5s;
     position: absolute;
-    margin-top: 300px;
-    margin-left: 600px;
+    margin-top: 100px;
+    margin-left: 400px;
 }
 
 #middle {
@@ -24,16 +24,16 @@ body {
     animation: rtl 3s ease-in-out;
     animation-delay: 5s;
     position: absolute;
-    margin-top: 300px;
-    margin-left: 700px;
+    margin-top: 100px;
+    margin-left: 500px;
 }
 
 @keyframes ltr {
     0% {margin-left: -1200px;}
-    100% {margin-left:600px;}
+    100% {margin-left:400px;}
 }
 
 @keyframes rtl {
     0% {margin-left: 1800px;}
-    100% {margin-left:700px;}
+    100% {margin-left:500px;}
 }
