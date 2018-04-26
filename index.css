@@ -30,8 +30,11 @@ ul {
 a:link {
 	text-decoration: none;	
 }
+#imgs {
+    width: 275;
+    margin-left: 20px;
+}
 .gifs {
-	display: flex;
 	margin-top: 25px;
 	margin-left: auto;
 	margin-right: auto;
