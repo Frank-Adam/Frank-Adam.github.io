@@ -5,46 +5,138 @@ body {
 #scoreContainer {
 	display: flex;
 }
-#one,
-#two,
-#three,
-#four {
-	width: 300px;
-	height: 350px;
-	border: 1px solid darkblue;
-	border-radius: 5%;
+@media screen and (max-width: 600px) {
+	#one,
+	#two,
+	#three,
+	#four {
+		width: 100px;
+		height: 150px;
+		border: 1px solid darkblue;
+		border-radius: 5%;
+	}
+	.texts {
+		display: block;
+		text-align: center;
+		margin-top: 125px;
+	}
+	.texts1 {
+		display: block;
+		text-align: left;
+	}
+	ul {
+		list-style-type: none;
+		margin-top: 50px;
+	}
+	a:link {
+		text-decoration: none;	
+	}
+	#imgs {
+		width: 75px;
+	        margin-left: 10px;
+	}
+	.gifs {
+		margin-top: 25px;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius: 5%;
+		height: 25px;
+		width: 25px;
+	}
+	.gifs:hover {
+		transform: scale(1.5);
+	}
+	.spacer {
+		width: 10px;
+	}
 }
-.texts {
-	display: block;
-	text-align: center;
-	margin-top: 125px;
+@media screen and (max-width: 900px) and (min-width: 600px) {
+	#one,
+	#two,
+	#three,
+	#four {
+		width: 200px;
+		height: 250px;
+		border: 1px solid darkblue;
+		border-radius: 5%;
+	}
+	.texts {
+		display: block;
+		text-align: center;
+		margin-top: 125px;
+	}
+	.texts1 {
+		display: block;
+		text-align: left;
+	}
+	ul {
+		list-style-type: none;
+		margin-top: 50px;
+	}
+	a:link {
+		text-decoration: none;	
+	}
+	#imgs {
+		width: 175px;
+	        margin-left: 20px;
+	}
+	.gifs {
+		margin-top: 25px;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius: 5%;
+		height: 75px;
+		width: 75px;
+	}
+	.gifs:hover {
+		transform: scale(1.5);
+	}
+	.spacer {
+		width: 20px;
+	}
 }
-.texts1 {
-	display: block;
-	text-align: left;
-}
-ul {
-	list-style-type: none;
-	margin-top: 50px;
-}
-a:link {
-	text-decoration: none;	
-}
-#imgs {
-    width: 275;
-    margin-left: 20px;
-}
-.gifs {
-	margin-top: 25px;
-	margin-left: auto;
-	margin-right: auto;
-	border-radius: 5%;
-	height: 125px;
-	width: 125px;
-}
-.gifs:hover {
-	transform: scale(2.0);
-}
-.spacer {
-	width: 20px;
+@media screen and (min-width: 900px) {
+	#one,
+	#two,
+	#three,
+	#four {
+		width: 300px;
+		height: 350px;
+		border: 1px solid darkblue;
+		border-radius: 5%;
+	}
+	.texts {
+		display: block;
+		text-align: center;
+		margin-top: 125px;
+	}
+	.texts1 {
+		display: block;
+		text-align: left;
+	}
+	ul {
+		list-style-type: none;
+		margin-top: 50px;
+	}
+	a:link {
+		text-decoration: none;	
+	}
+	#imgs {
+		width: 275;
+	        margin-left: 20px;
+	}
+	.gifs {
+		margin-top: 25px;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius: 5%;
+		height: 125px;
+		width: 125px;
+	}
+	.gifs:hover {
+		transform: scale(1.5);
+	}
+	.spacer {
+		width: 20px;
+	}
 }
