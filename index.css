@@ -30,14 +30,16 @@ ul {
 a:link {
 	text-decoration: none;	
 }
-#fluffy {
-	width: 275px;
-	height: 275px;
+#imgs {
 	display: block;
 	margin-top: 25px;
 	margin-left: auto;
 	margin-right: auto;
 	border-radius: 5%;
+}
+.gifs {
+	height: 100px;
+	width: 100px;
 }
 .spacer {
 	width: 20px;
