@@ -30,16 +30,17 @@ ul {
 a:link {
 	text-decoration: none;	
 }
-#imgs {
+.gifs {
 	display: block;
 	margin-top: 25px;
 	margin-left: auto;
 	margin-right: auto;
 	border-radius: 5%;
-}
-.gifs {
 	height: 100px;
 	width: 100px;
+}
+.gifs:hover {
+	transform: scale(2.0);	
 }
 .spacer {
 	width: 20px;
