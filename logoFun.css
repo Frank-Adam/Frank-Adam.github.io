@@ -4,6 +4,7 @@ body {
 	padding: 5px;
 	margin: 5px;
 	background-color: #3cc0c9;
+	overflow: none;
 }
 #one {
 	height: 400px;
@@ -82,19 +83,19 @@ body {
 }
 @keyframes spinOne {
 	0% {margin-top: 1800px;}
-	100% {margin-top: 0px;transform: rotate(1080deg);}
+	100% {margin-top: 0px; transform: rotate(1080deg);}
 }
 @keyframes spinTwo {
 	0% {margin-left: -1800px;}
 	100% {margin-left: 0px;transform: rotate(-720deg);}
 }
 @keyframes spinThree {
-	0% {margin-right: 1800px;}
-	100% {margin-right: 0px;transform: rotate(2160deg);}
+	0% {margin-left: 1800px;}
+	100% {margin-left: 0px;transform: rotate(2160deg);}
 }
 @keyframes spinFour {
-	0% {margin-bottom: -1800px;}
-	100% {margin-bottom: 0px;transform: rotate(-1080deg);}
+	0% {margin-top: -1800px;}
+	100% {margin-top: 0px;transform: rotate(-1080deg);}
 }
 
 
