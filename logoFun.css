@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+body {
+	padding: 5px;
+	margin: 5px;
+	background-color: #3cc0c9;
+}
+#one {
+	height: 400px;
+	width: 20px;
+	background-color: white;
+	position: absolute;
+	margin-left: 300px;
+	margin-top: 30px;
+	animation: spinOne 2s ease-in-out;
+}
+#two {
+	height: 400px;
+	width: 20px;
+	background-color: white;
+	position: absolute;
+	margin-left: 500px;
+	margin-top: 30px;
+	animation: spinTwo 2s ease-in-out;
+}
+#three {
+	height: 20px;
+	width: 400px;
+	background-color: white;
+	position: absolute;
+	margin-left: 350px;
+	margin-top: 150px;
+	transform: rotate(-15deg);
+	animation: spinThree 2s ease-in-out;
+}
+#four {
+	height: 20px;
+	width: 400px;
+	background-color: white;
+	position: absolute;
+	margin-left: 200px;
+	margin-top: 300px;
+	animation: spinFour 2s ease-in-out;
+}
+
+#ones {
+	height: 400px;
+	width: 20px;
+	background-color: black;
+	position: absolute;
+	margin-left: 310px;
+	margin-top: 40px;
+	animation: spinOnes 2s ease-in-out;
+}
+#twos {
+	height: 400px;
+	width: 20px;
+	background-color: black;
+	position: absolute;
+	margin-left: 510px;
+	margin-top: 40px;
+	animation: spinTwos 2s ease-in-out;
+}
+#threes {
+	height: 20px;
+	width: 400px;
+	background-color: black;
+	position: absolute;
+	margin-left: 360px;
+	margin-top: 155px;
+	transform: rotate(-15deg);
+	animation: spinThrees 2s ease-in-out;
+}
+#fours {
+	height: 20px;
+	width: 400px;
+	background-color: black;
+	position: absolute;
+	margin-left: 210px;
+	margin-top: 310px;
+	animation: spinFours 2s ease-in-out;
+}
+@keyframes spinOne {
+	0% {margin-top: 1800px;}
+	100% {margin-top: 0px;transform: rotate(1080deg);}
+}
+@keyframes spinTwo {
+	0% {margin-left: -1800px;}
+	100% {margin-left: 0px;transform: rotate(-720deg);}
+}
+@keyframes spinThree {
+	0% {margin-right: 1800px;}
+	100% {margin-right: 0px;transform: rotate(2160deg);}
+}
+@keyframes spinFour {
+	0% {margin-bottom: -1800px;}
+	100% {margin-bottom: 0px;transform: rotate(-1080deg);}
+}
+
+
+@keyframes spinOnes {
+	0% {margin-left: 1800px;}
+	100% {margin-left: 0px;transform: rotate(1080deg);}
+}
+@keyframes spinTwos {
+	0% {margin-top: -1800px;}
+	100% {margin-top: 0px;transform: rotate(-720deg);}
+}
+@keyframes spinThrees {
+	0% {margin-top: 1800px;}
+	100% {margin-top: 0px;transform: rotate(2160deg);}
+}
+@keyframes spinFours {
+	0% {margin-left: -1800px;}
+	100% {margin-left: 0px;transform: rotate(-1080deg);}
+}
