@@ -4,15 +4,14 @@ body {
 	padding: 5px;
 	margin: 5px;
 	background-color: #3cc0c9;
-	overflow: none;
 }
 #one {
-	height: 400px;
+	height: 250px;
 	width: 20px;
 	background-color: white;
 	position: absolute;
-	margin-left: 300px;
-	margin-top: 30px;
+	margin-left: 30px;
+	margin-top: 180px;
 	animation: spinOne 2s ease-in-out;
 }
 #two {
@@ -20,18 +19,18 @@ body {
 	width: 20px;
 	background-color: white;
 	position: absolute;
-	margin-left: 500px;
+	margin-left: 140px;
 	margin-top: 30px;
 	animation: spinTwo 2s ease-in-out;
 }
 #three {
 	height: 20px;
-	width: 400px;
+	width: 200px;
 	background-color: white;
 	position: absolute;
-	margin-left: 350px;
-	margin-top: 150px;
-	transform: rotate(-15deg);
+	margin-left: 55px;
+	margin-top: 265px;
+	transform: rotate(-25deg);
 	animation: spinThree 2s ease-in-out;
 }
 #four {
@@ -39,18 +38,18 @@ body {
 	width: 400px;
 	background-color: white;
 	position: absolute;
-	margin-left: 200px;
-	margin-top: 300px;
+	margin-left: 5px;
+	margin-top: 365px;
 	animation: spinFour 2s ease-in-out;
 }
 
 #ones {
-	height: 400px;
+	height: 250px;
 	width: 20px;
 	background-color: black;
 	position: absolute;
-	margin-left: 310px;
-	margin-top: 40px;
+	margin-left: 35px;
+	margin-top: 185px;
 	animation: spinOnes 2s ease-in-out;
 }
 #twos {
@@ -58,18 +57,18 @@ body {
 	width: 20px;
 	background-color: black;
 	position: absolute;
-	margin-left: 510px;
-	margin-top: 40px;
+	margin-left: 145px;
+	margin-top: 35px;
 	animation: spinTwos 2s ease-in-out;
 }
 #threes {
 	height: 20px;
-	width: 400px;
+	width: 200px;
 	background-color: black;
 	position: absolute;
-	margin-left: 360px;
-	margin-top: 155px;
-	transform: rotate(-15deg);
+	margin-left: 60px;
+	margin-top: 270px;
+	transform: rotate(-25deg);
 	animation: spinThrees 2s ease-in-out;
 }
 #fours {
@@ -77,41 +76,41 @@ body {
 	width: 400px;
 	background-color: black;
 	position: absolute;
-	margin-left: 210px;
-	margin-top: 310px;
+	margin-left: 10px;
+	margin-top: 370px;
 	animation: spinFours 2s ease-in-out;
 }
 @keyframes spinOne {
-	0% {margin-top: 1800px;}
-	100% {margin-top: 0px; transform: rotate(1080deg);}
+	0% {margin-left: 1800px;}
+	100% {margin-left: 0px;transform: rotate(1080deg);}
 }
 @keyframes spinTwo {
-	0% {margin-left: -1800px;}
-	100% {margin-left: 0px;transform: rotate(-720deg);}
+	0% {margin-top: -1800px;}
+	100% {margin-top: 0px;transform: rotate(-720deg);}
 }
 @keyframes spinThree {
-	0% {margin-left: 1800px;}
-	100% {margin-left: 0px;transform: rotate(2160deg);}
+	0% {margin-top: 1800px;}
+	100% {margin-top: 0px;transform: rotate(2160deg);}
 }
 @keyframes spinFour {
-	0% {margin-top: -1800px;}
-	100% {margin-top: 0px;transform: rotate(-1080deg);}
+	0% {margin-left: -1800px;}
+	100% {margin-left: 0px;transform: rotate(-1080deg);}
 }
 
 
 @keyframes spinOnes {
-	0% {margin-left: 1800px;}
-	100% {margin-left: 0px;transform: rotate(1080deg);}
+	0% {margin-top: 1800px;}
+	100% {margin-top: 0px;transform: rotate(1080deg);}
 }
 @keyframes spinTwos {
-	0% {margin-top: -1800px;}
-	100% {margin-top: 0px;transform: rotate(-720deg);}
+	0% {margin-left: -1800px;}
+	100% {margin-left: 0px;transform: rotate(-720deg);}
 }
 @keyframes spinThrees {
-	0% {margin-top: 1800px;}
-	100% {margin-top: 0px;transform: rotate(2160deg);}
+	0% {margin-left: 1800px;}
+	100% {margin-left: 0px;transform: rotate(2160deg);}
 }
 @keyframes spinFours {
-	0% {margin-left: -1800px;}
-	100% {margin-left: 0px;transform: rotate(-1080deg);}
+	0% {margin-top: -1800px;}
+	100% {margin-top: 0px;transform: rotate(-1080deg);}
 }
