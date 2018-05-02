@@ -1,10 +1,10 @@
 <?php
-echo " <header class='navs'>
-	<ul>
-		<li><a href=#>Apps</a></li>
-		<li><a href=#>Images</a></li>
-		<li><a href=#>For Fun</a></li>
-		<li><a href=#>Home</a></li>
-	</ul
-	</header>";
+echo "<header class='navs'>";
+echo "<ul>";
+echo "<li><a href=#>Apps</a></li>";
+echo "<li><a href=#>Images</a></li>";
+echo "<li><a href=#>For Fun</a></li>";
+echo "<li><a href=#>Home</a></li>";
+echo "</ul";
+echo "</header>";
 ?>
