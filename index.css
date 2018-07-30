@@ -10,6 +10,7 @@ header {
     background-color: #00AEFF;
     color: white;
     text-align: center;
+    
 }
 #allContainers {
     display: flex;
@@ -39,17 +40,23 @@ span {
     border-top: 20px solid #00577F;
     border-left: 1px solid #00577F;
     width: 33%;
-    background-color: lightgrey;
+}
+.projectContainer {
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid #00577F;
+    margin-top: 20px;
+    padding: 10px;
+    width: 15%;
+    height: 15%;
 }
 .projs {
     display: inline-block;
-    border: 1px solid #00577F;
     vertical-align: middle;
     margin-top: 20px;
     padding: 10px;
     width: 15%;
     height: 15%;
-    overflow: auto;
 }
 #container3 {
     border-top: 20px solid #002B40;
