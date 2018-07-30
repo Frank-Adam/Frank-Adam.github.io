@@ -29,7 +29,7 @@ header {
 }
 #h1,#h2,#h3,#h4{
     text-align: center;
-    font-size: 2em;
+    font-size: 200%;
     color: white;
     border: 2px solid white;
 }
@@ -39,7 +39,7 @@ header {
 #b13,#b14,#b15,#b16 {
     background-color: #096192;
     border: 1px solid white;
-    padding: 50px;
+    padding: 10%;
     font-size: 1.5em;
     text-align: center;
     align-content: center;
@@ -47,7 +47,7 @@ header {
 #b2f {
     background-color: #096192;
     border: 1px solid white;
-    padding: 50px;
+    padding: 10%;
     font-size: 4em;
     text-align: center;
     align-content: center;
@@ -104,7 +104,7 @@ ul > li {
 #p1,
 #p2,
 #p3 {
-    font-size: 1.5em;
+    font-size: 150%;
     color: red;
     flex-direction: column;
     
