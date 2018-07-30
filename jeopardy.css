@@ -83,14 +83,14 @@ header {
 }
 #header1,
 #header2 {
-    font-family: 'vast shadow';
+    font-family: 'Nanum Gothic';
 	font-size: 3em;
 	color: red;
 	text-align: center;
 }
 #team1Score,
 #team2Score {
-    font-family: 'vast shadow';
+    font-family: 'Nanum Gothic';
 	font-size: 5em;
 	color: blue;
 	text-align: center;
