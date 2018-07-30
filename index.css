@@ -34,6 +34,7 @@ span {
     border-left: 1px solid #0082BF;
     width: 33%;
     color: #0082BF;
+    padding: 10px;
 }
 
 #container2 {
@@ -55,8 +56,8 @@ span {
     vertical-align: middle;
     margin-top: 20px;
     padding: 10px;
-    width: 15%;
-    height: 15%;
+    width: 50%;
+    height: 50%;
 }
 #container3 {
     border-top: 20px solid #002B40;
