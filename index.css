@@ -44,6 +44,7 @@ span {
 }
 .projectContainer {
     display: inline-block;
+    background-color: #FFE0F0;
     vertical-align: middle;
     border: 1px solid #00577F;
     margin-top: 20px;
