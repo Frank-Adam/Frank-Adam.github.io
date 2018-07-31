@@ -55,6 +55,7 @@ span {
 .projs {
     display: inline-block;
     vertical-align: middle;
+    margin-top: 20px;
     width: 75%;
     height: 65%;
 }
