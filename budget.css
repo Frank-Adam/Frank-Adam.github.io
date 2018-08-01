@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+body {
+    font-family: "Ubuntu";
+    padding: 20px;
+    margin: 50px;
+}
+header {
+    width: 100%;
+    font-size: 400%;
+    background-color: #00AEFF;
+    color: white;
+    text-align: center;
+}
+#containers {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 100%;
+}
+.vertSpacer {
+    height:20px;
+}
+.vertSpacerShort {
+    height: 10px;
+}
+.spacer {
+    width: 30px;
+}
+span {
+    font-size: 125%;
+    color: #FF0000;
+}
+.lineBreak {
+    border-top: 3px solid #00AEFF;
+}
+#monthValues {
+    flex-direction: column;
+    width: 33%;
+}
+#yearValues {
+    flex-direction: column;
+    width: 33%;
+}
+#resultSection {
+    height: 175px;
+    border: 2px solid #00AEFF;
+    color: #00AEFF;
+    padding-right: 20px;
+    font-size: 300%;
+    text-align: center;
+}
+footer {
+    margin-top: 300px;
+    border-top: 1px solid #FF0DFF;
+    color: #00AEFF;
+    text-align: center;
+}

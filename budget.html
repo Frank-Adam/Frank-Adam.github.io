@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="budget planner">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="budget.css" rel="stylesheet">
+    <script>
+        function calcNumbers() {
+            var inputRentVal = Number(document.getElementById("inputRent").value);
+            var inputUtilVal = Number(document.getElementById("inputUtilities").value);
+            var inputCellVal = Number(document.getElementById("inputCell").value);
+            var inputInternetVal = Number(document.getElementById("inputInternetTV").value);
+            var inputMiscVal = Number(document.getElementById("inputMisc").value);
+            var inputRentValYr = Number(document.getElementById("inputRent").value) * 12;
+            var inputUtilValYr = Number(document.getElementById("inputUtilities").value) * 12;
+            var inputCellValYr = Number(document.getElementById("inputCell").value) * 12;
+            var inputInternetValYr = Number(document.getElementById("inputInternetTV").value) * 12;
+            var inputMiscValYr = Number(document.getElementById("inputMisc").value) * 12;
+            var inputSavings = Number(document.getElementById("inputTotalCash").value);
+            var totalDollars = (inputRentVal + inputUtilVal + inputInternetVal + inputCellVal + inputMiscVal);
+            var totalYearDollars = (inputRentValYr + inputUtilValYr + inputInternetValYr + inputCellValYr + inputMiscValYr);
+            var monthRent = document.getElementById("monthRent");
+            var monthUtil = document.getElementById("monthUtilities");
+            var monthInternet = document.getElementById("monthInternet");
+            var monthCell = document.getElementById("monthCell");
+            var monthMisc = document.getElementById("monthMisc");
+            var monthTotals = document.getElementById("monthTotal");
+            var yearRt = document.getElementById("yearRent");
+            var yearUl = document.getElementById("yearUtilities");
+            var yearIt = document.getElementById("yearInternet");
+            var yearCl = document.getElementById("yearCell");
+            var yearMsc = document.getElementById("yearMisc");
+            var yearTotals = document.getElementById("yearTotal");
+            var yearsMoney = inputSavings / totalYearDollars;
+            
+            monthRent.value = inputRentVal.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            monthUtil.value = inputUtilVal.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            monthInternet.value = inputInternetVal.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            monthCell.value = inputCellVal.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            monthMisc.value = inputMiscVal.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            monthTotals.value = '$' + totalDollars.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            yearRt.value = inputRentValYr.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            yearUl.value = inputUtilValYr.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            yearIt.value = inputInternetValYr.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            yearCl.value = inputCellValYr.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            yearMsc.value = inputMiscValYr.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            yearTotals.value = '$' + totalYearDollars.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            
+            document.getElementById("resultSection").innerHTML = yearsMoney.toFixed(2) + " years before the $" + inputSavings.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " runs out."
+        }
+        function resetForm() {
+            document.getElementById("inputTotalCash").value=""
+            document.getElementById("inputRent").value=""
+            document.getElementById("inputUtilities").value=""
+            document.getElementById("inputCell").value=""
+            document.getElementById("inputInternetTV").value=""
+            document.getElementById("inputMisc").value=""
+            document.getElementById("monthRent").value=""
+            document.getElementById("monthUtilities").value=""
+            document.getElementById("monthCell").value=""
+            document.getElementById("monthInternet").value=""
+            document.getElementById("monthMisc").value=""
+            document.getElementById("monthTotal").value=""
+            document.getElementById("yearRent").value=""
+            document.getElementById("yearUtilities").value=""
+            document.getElementById("yearCell").value=""
+            document.getElementById("yearInternet").value=""
+            document.getElementById("yearMisc").value=""
+            document.getElementById("yearTotal").value=""
+            document.getElementById("resultSection").innerHTML=""
+        }
+    </script>
+</head>
+<body>
+    <header>Expense Lifespan</header>
+    <div class="vertSpacerShort"></div>
+        <div id="totalCash">
+            $<input id="inputTotalCash" type="number" step="10" onFocus="this.value=''"> Enter Total Savings
+        </div>
+    <div class="vertSpacerShort"></div>
+    <div class="lineBreak"></div>
+    <div class="vertSpacerShort"></div>
+        <div id="rent">
+            $<input id="inputRent" type="number" onFocus="this.value=''"> Enter Monthly Rent Dollars
+        </div>
+    <div class="vertSpacerShort"></div>
+        <div id="utilities">
+            $<input id="inputUtilities" type="number" onFocus="this.value=''"> Enter Monthly Utilities Bill (all bills)
+        </div>
+    <div class="vertSpacerShort"></div>
+        <div id="cell">
+            $<input id="inputCell" type="number" onFocus="this.value=''"> Enter Monthly Cell Phone Bill
+        </div>
+    <div class="vertSpacerShort"></div>
+        <div id="internetTV">
+            $<input id="inputInternetTV" type="number" onFocus="this.value=''"> Enter Monthly Internet & TV Bill
+        </div>
+    <div class="vertSpacerShort"></div>
+        <div id="misc">
+            $<input id="inputMisc" type="number" onFocus="this.value=''"> Enter Additional Monthly Miscellaneous Bill(s)
+        </div>
+    
+    <div class="vertSpacerShort"></div>
+    <div class="lineBreak"></div>
+    <div class="vertSpacerShort"></div>
+    
+    <div id="btnDiv">
+        <button id="btn" onClick="calcNumbers();">Click Here To Calculate</button>
+        <button id="btn" onClick="resetForm();">Click Here To Reset</button>
+    </div>
+    
+    <div class="vertSpacerShort"></div>
+    <div class="lineBreak"></div>
+    <div class="vertSpacerShort"></div>
+    
+    <div id="containers">
+        <div id="monthValues">
+            <span>Monthly Dollars</span>
+                <div class="vertSpacerShort"></div>
+            $<input id="monthRent">Rent
+                <div class="vertSpacerShort"></div>
+            $<input id="monthUtilities">Utilities
+                <div class="vertSpacerShort"></div>
+            $<input id="monthCell">Cell Phone
+                <div class="vertSpacerShort"></div>
+            $<input id="monthInternet">Internet/TV
+                <div class="vertSpacerShort"></div>
+            $<input id="monthMisc">Miscellaneous
+                <div class="vertSpacer"></div>
+            <div><span>Monthly Dollars Total</span></div>
+            $<input id="monthTotal">
+        </div>
+        <div class="spacer"></div>
+        <div id="yearValues">
+            <span>Yearly Dollars</span>
+                <div class="vertSpacerShort"></div>
+            $<input id="yearRent">Rent
+                <div class="vertSpacerShort"></div>
+            $<input id="yearUtilities">Utilities
+                <div class="vertSpacerShort"></div>
+            $<input id="yearCell">Cell Phone
+                <div class="vertSpacerShort"></div>
+            $<input id="yearInternet">Internet/TV
+                <div class="vertSpacerShort"></div>
+            $<input id="yearMisc">Miscellaneous
+                <div class="vertSpacer"></div>
+            <div><span>Yearly Dollars Total</span></div>
+            $<input id="yearTotal">
+        </div>
+        <div>
+            <span>Years Until Total Savings Is Exhausted</span>
+            <div id = "resultSection"></div>
+        </div>
+    </div>
+    
+    
+    <footer>&copy;Fran2018</footer>
+</body>
+</html>
