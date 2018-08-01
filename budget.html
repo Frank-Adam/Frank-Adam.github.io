@@ -21,12 +21,7 @@
             var inputSavings = Number(document.getElementById("inputTotalCash").value);
             var totalDollars = (inputRentVal + inputUtilVal + inputInternetVal + inputCellVal + inputMiscVal);
             var totalYearDollars = (inputRentValYr + inputUtilValYr + inputInternetValYr + inputCellValYr + inputMiscValYr);
-            var monthRent = document.getElementById("monthRent");
-            var monthUtil = document.getElementById("monthUtilities");
-            var monthInternet = document.getElementById("monthInternet");
-            var monthCell = document.getElementById("monthCell");
-            var monthMisc = document.getElementById("monthMisc");
-            var monthTotals = document.getElementById("monthTotal");
+            
             var yearRt = document.getElementById("yearRent");
             var yearUl = document.getElementById("yearUtilities");
             var yearIt = document.getElementById("yearInternet");
@@ -35,12 +30,6 @@
             var yearTotals = document.getElementById("yearTotal");
             var yearsMoney = inputSavings / totalYearDollars;
             
-            monthRent.value = inputRentVal.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-            monthUtil.value = inputUtilVal.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-            monthInternet.value = inputInternetVal.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-            monthCell.value = inputCellVal.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-            monthMisc.value = inputMiscVal.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-            monthTotals.value = '$' + totalDollars.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
             yearRt.value = inputRentValYr.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
             yearUl.value = inputUtilValYr.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
             yearIt.value = inputInternetValYr.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -57,12 +46,7 @@
             document.getElementById("inputCell").value=""
             document.getElementById("inputInternetTV").value=""
             document.getElementById("inputMisc").value=""
-            document.getElementById("monthRent").value=""
-            document.getElementById("monthUtilities").value=""
-            document.getElementById("monthCell").value=""
-            document.getElementById("monthInternet").value=""
-            document.getElementById("monthMisc").value=""
-            document.getElementById("monthTotal").value=""
+            
             document.getElementById("yearRent").value=""
             document.getElementById("yearUtilities").value=""
             document.getElementById("yearCell").value=""
@@ -116,23 +100,6 @@
     <div class="vertSpacerShort"></div>
     
     <div id="containers">
-        <div id="monthValues">
-            <span>Monthly Dollars</span>
-                <div class="vertSpacerShort"></div>
-            $<input id="monthRent">Rent
-                <div class="vertSpacerShort"></div>
-            $<input id="monthUtilities">Utilities
-                <div class="vertSpacerShort"></div>
-            $<input id="monthCell">Cell Phone
-                <div class="vertSpacerShort"></div>
-            $<input id="monthInternet">Internet/TV
-                <div class="vertSpacerShort"></div>
-            $<input id="monthMisc">Miscellaneous
-                <div class="vertSpacer"></div>
-            <div><span>Monthly Dollars Total</span></div>
-            $<input id="monthTotal">
-        </div>
-        <div class="spacer"></div>
         <div id="yearValues">
             <span>Yearly Dollars</span>
                 <div class="vertSpacerShort"></div>
