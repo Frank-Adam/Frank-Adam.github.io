@@ -18,9 +18,15 @@
             var inputCellValYr = Number(document.getElementById("inputCell").value) * 12;
             var inputInternetValYr = Number(document.getElementById("inputInternetTV").value) * 12;
             var inputMiscValYr = Number(document.getElementById("inputMisc").value) * 12;
-            var inputSavings = Number(document.getElementById("inputTotalCash").value);
-            var totalDollars = (inputRentVal + inputUtilVal + inputInternetVal + inputCellVal + inputMiscVal);
-            var totalYearDollars = (inputRentValYr + inputUtilValYr + inputInternetValYr + inputCellValYr + inputMiscValYr);
+            var inputIncomeYr = Number(document.getElementById("inputAddIncome").value) * 12;
+            var inputSavings = Number(document.getElementById("inputTotalCash").value) + (Number(document.getElementById
+
+("inputAddIncome").value) * 12);
+            var inputIncome = Number(document.getElementById("inputAddIncome").value);
+            var totalDollars = (inputRentVal + inputIncome + inputUtilVal + inputInternetVal + inputCellVal + inputMiscVal);
+            var totalYearDollars = (inputRentValYr + inputIncomeYr + inputUtilValYr + inputInternetValYr + inputCellValYr + 
+
+inputMiscValYr);
             
             var yearRt = document.getElementById("yearRent");
             var yearUl = document.getElementById("yearUtilities");
@@ -28,7 +34,7 @@
             var yearCl = document.getElementById("yearCell");
             var yearMsc = document.getElementById("yearMisc");
             var yearTotals = document.getElementById("yearTotal");
-            var yearsMoney = inputSavings / totalYearDollars;
+            var yearsMoney = ((inputSavings + inputIncomeYr) / totalYearDollars);
             
             yearRt.value = inputRentValYr.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
             yearUl.value = inputUtilValYr.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -37,7 +43,9 @@
             yearMsc.value = inputMiscValYr.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
             yearTotals.value = '$' + totalYearDollars.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
             
-            document.getElementById("resultSection").innerHTML = yearsMoney.toFixed(2) + " years before the $" + inputSavings.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " runs out."
+            document.getElementById("resultSection").innerHTML = yearsMoney.toFixed(2) + " years before the $" + 
+
+inputSavings.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " runs out."
         }
         function resetForm() {
             document.getElementById("inputTotalCash").value=""
@@ -62,6 +70,8 @@
     <div class="vertSpacerShort"></div>
         <div id="totalCash">
             $<input id="inputTotalCash" type="number" step="10" onFocus="this.value=''"> Enter Total Savings
+	<div class="vertSpacerShort"></div>
+            $<input id="inputAddIncome" type="number" step="10" onFocus="this.value=''"> Enter Additional Income
         </div>
     <div class="vertSpacerShort"></div>
     <div class="lineBreak"></div>
@@ -71,7 +81,7 @@
         </div>
     <div class="vertSpacerShort"></div>
         <div id="utilities">
-            $<input id="inputUtilities" type="number" onFocus="this.value=''"> Enter Monthly Utilities Bill (all bills)
+            $<input id="inputUtilities" type="number" onFocus="this.value=''"> Enter Monthly Utility Bills (all bills)
         </div>
     <div class="vertSpacerShort"></div>
         <div id="cell">
