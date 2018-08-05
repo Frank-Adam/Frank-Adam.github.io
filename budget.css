@@ -2,56 +2,58 @@
 body {
     font-family: "Ubuntu";
     padding: 20px;
-    margin: 50px;
+    margin: 20px;
 }
 header {
     width: 100%;
-    font-size: 400%;
+    font-size: 200%;
     background-color: #00AEFF;
     color: white;
     text-align: center;
+    margin-bottom: 20px;
 }
-#containers {
+#headerContainer {
     display: flex;
-    align-items: stretch;
-    justify-content: space-between;
-    width: 65%;
 }
-.vertSpacer {
-    height:20px;
+#cont1, #cont3, #cont4 {
+    width: 25%;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #FF0000;
 }
-.vertSpacerShort {
-    height: 10px;
+#overallContainer {
+    display: flex;
 }
-.spacer {
-    width: 30px;
+#savingsContainer {
+    display: flex;
+    width: 25%;
+    flex-direction: column;
+}
+#monthContainer,
+#yearContainer,
+#yearIncomeTotals {
+    display: flex;
+    width: 25%;
+    flex-direction: column;
+    margin-left: 20px;
+}
+input {
+    display: flex;
+    width: 50%;
+    font-size: 1.25em;
+}
+.inputBoxes {
+    margin-bottom: 20px;
 }
 span {
     font-size: 125%;
     color: #FF0000;
 }
-.lineBreak {
-    border-top: 3px solid #00AEFF;
+#btnDiv {
+    border-bottom: 4px solid #FF0000;
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 50px;
 }
-#monthValues {
-    flex-direction: column;
-    width: 33%;
-}
-#yearValues {
-    flex-direction: column;
-    width: 33%;
-}
-#resultSection {
-    height: 175px;
-    border: 2px solid #00AEFF;
-    color: #00AEFF;
-    padding-right: 20px;
-    font-size: 200%;
-    text-align: center;
-}
-footer {
-    margin-top: 300px;
-    border-top: 1px solid #FF0DFF;
-    color: #00AEFF;
-    text-align: center;
+#lineBreak {
+    border-top: 6px solid #00AEFF;
 }
