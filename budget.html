@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Retirement Can Happen</title>
     <meta name="description" content="budget planner">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="budget.css" rel="stylesheet">
@@ -39,6 +39,7 @@
             //write monthly and yearly column Totals
             document.getElementById("monthTotes").value = (Number(mRent) + Number(mUtil) + Number(mCell) + Number(mTV) + Number(mMisc)).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
             document.getElementById("yearTotes").value = (Number(yRent) + Number(yUtil) + Number(yCell) + Number(yTV) + Number(yMisc)).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            document.getElementById("yearTotes1").value = (Number(yRent) + Number(yUtil) + Number(yCell) + Number(yTV) + Number(yMisc)).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
             document.getElementById("yearIncome").value = finalYIncome.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
             
             
@@ -75,6 +76,7 @@
             document.getElementById("yearTV").value=""
             document.getElementById("yearMisc").value=""
             document.getElementById("yearTotes").value=""
+            document.getElementById("yearTotes1").value=""
             
             document.getElementById("yearIncome").value=""
             document.getElementById("yearDelta").value=""
@@ -116,7 +118,7 @@
             <span>Annual Expenses Total</span><input class="inputBoxes" placeholder="$" id="yearTotes">
         </div>
         <div id="yearIncomeTotals">
-            Annual Expenses Total<input class="inputBoxes" placeholder="$" id="yearTotes">
+            Annual Expenses Total<input class="inputBoxes" placeholder="$" id="yearTotes1">
             Yearly Income<input class="inputBoxes" placeholder="$" id="yearIncome">
             Annual Expenses Minus Income<input class="inputBoxes" placeholder="$" id="yearDelta">
             % Savings Required Annually To Balance Budget<input class="inputBoxes" placeholder="%" id="totalYPerc">
