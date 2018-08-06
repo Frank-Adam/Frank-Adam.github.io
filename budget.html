@@ -94,14 +94,14 @@
     </div>
     <div id="overallContainer">
         <div id="savingsContainer">
-            Enter Your Savings<input class="inputBoxes" placeholder="$" id="inputSavings">
+            Enter Your Savings<input class="inputBoxes" type="number" step="100" placeholder="$" id="inputSavings">
             Enter Your Monthly Income (i.e. SS)<input class="inputBoxes" type="number" step="100" placeholder="$" id="inputIncome">
         <div id="cont2"><span>Monthly Expenses</span></div>
-            Enter Your Rent<input class="inputBoxes" placeholder="$" id="monthRent">
-            Enter Your Utilites<input class="inputBoxes" placeholder="$" id="monthUtilities">
-            Enter Your Cell Phone<input class="inputBoxes" placeholder="$" id="monthCell">
-            Enter Your Internet/TV<input class="inputBoxes" placeholder="$" id="monthTV">
-            Enter Your Misc (OOP medical, etc.)<input class="inputBoxes" placeholder="$" id="monthMisc">
+            Enter Your Rent<input class="inputBoxes" type="number" step="100" placeholder="$" id="monthRent">
+            Enter Your Utilites<input class="inputBoxes" type="number" step="10" placeholder="$" id="monthUtilities">
+            Enter Your Cell Phone<input class="inputBoxes" type="number" step="10" placeholder="$" id="monthCell">
+            Enter Your Internet/TV<input class="inputBoxes" type="number" step="10" placeholder="$" id="monthTV">
+            Enter Your Misc (OOP medical, etc.)<input class="inputBoxes" type="number" step="10" placeholder="$" id="monthMisc">
             <div id="btnDiv">
                 <button id="btn" type="button" onClick="calcNumbers();">Click Here To Calculate</button>
                 <br>
