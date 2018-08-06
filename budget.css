@@ -36,7 +36,8 @@ header {
 #monthCell,
 #monthTv,
 #monthMisc {
-    border: 1px solid #B7FFB9;
+    background-color: #B7FFB9;
+}
 #monthContainer,
 #yearContainer {
     display: flex;
