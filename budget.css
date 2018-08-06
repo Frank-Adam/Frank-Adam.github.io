@@ -2,22 +2,22 @@
 body {
     font-family: "Ubuntu";
     padding: 20px;
-    margin: 20px;
+    margin: 10px;
+    font-size: 125%
 }
 header {
-    width: 100%;
     font-size: 200%;
-    background-color: #00AEFF;
+    background-color: #6D7B7F;
     color: white;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 #headerContainer {
     display: flex;
 }
 #cont1, #cont3, #cont4 {
-    width: 25%;
-    margin-bottom: 20px;
+    width: 33%;
+    margin-bottom: 10px;
     border-bottom: 1px solid #FF0000;
 }
 #overallContainer {
@@ -25,16 +25,22 @@ header {
 }
 #savingsContainer {
     display: flex;
-    width: 25%;
+    width: 33%;
     flex-direction: column;
+    background-color: #DBF7FF; 
 }
 #monthContainer,
-#yearContainer,
+#yearContainer {
+    display: flex;
+    width: 33%;
+    flex-direction: column;
+    background-color: #B1EEFF; 
+}
 #yearIncomeTotals {
     display: flex;
-    width: 25%;
+    width: 33%;
     flex-direction: column;
-    margin-left: 20px;
+    background-color: #AFC6CC; 
 }
 input {
     display: flex;
@@ -42,17 +48,19 @@ input {
     font-size: 1.25em;
 }
 .inputBoxes {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 span {
-    font-size: 125%;
+    font-size: 150%;
     color: #FF0000;
 }
 #btnDiv {
-    border-bottom: 4px solid #FF0000;
-    width: 50%;
+    border-left: 10px solid #FF0000;
+    width: 75%;
+    font-size: 110%;
     padding: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
+    background-color: #159FCC;
 }
 #lineBreak {
     border-top: 6px solid #00AEFF;

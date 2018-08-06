@@ -10,13 +10,10 @@
         function calcNumbers() {
             var userSavings = document.getElementById("inputSavings").value;
             var userIncome = document.getElementById("inputIncome").value;
-            var userYIncome = document.getElementById("yearIncome");
-            var user2Perc = document.getElementById("yearTwoPerc");
-            var user3Perc = document.getElementById("yearThreePerc");
-            var user4Perc = document.getElementById("yearFourPerc");
-            var userTotalIncome2 = document.getElementById("totalYIncome2");
-            var userTotalIncome3 = document.getElementById("totalYIncome3");
-            var userTotalIncome4 = document.getElementById("totalYIncome4");
+            var userYearIncome = document.getElementById("totalYIncome");
+            var userYearDelta = document.getElementById("yearDelta");
+            var userTotalYPerc = document.getElementById("totalYPerc");
+            var userTotalYYears = document.getElementById("totalYYears");
             
             var mRent = Number(document.getElementById("monthRent").value);
             var mUtil = Number(document.getElementById("monthUtilities").value);
@@ -31,21 +28,6 @@
             var yMisc = Number(document.getElementById("monthMisc").value) * 12;
             
             var finalYIncome = Number((userIncome * 12));
-            var final2Perc = Number((userSavings * .02));
-            var final3Perc = Number((userSavings * .03));
-            var final4Perc = Number((userSavings * .04));
-            var finalTotalIncome2 = Number(finalYIncome) + Number(final2Perc);
-            var finalTotalIncome3 = Number(finalYIncome) + Number(final3Perc);
-            var finalTotalIncome4 = Number(finalYIncome) + Number(final4Perc);
-            
-            //write yearly income, 4% of savings per year and total income
-            userYIncome.value = finalYIncome.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-            user2Perc.value = final2Perc.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-            user3Perc.value = final3Perc.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-            user4Perc.value = final4Perc.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-            totalYIncome2.value = finalTotalIncome2.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-            totalYIncome3.value = finalTotalIncome3.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-            totalYIncome4.value = finalTotalIncome4.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
             
             //write yearly Expenses
             document.getElementById("yearRent").value = yRent.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -57,11 +39,21 @@
             //write monthly and yearly column Totals
             document.getElementById("monthTotes").value = (Number(mRent) + Number(mUtil) + Number(mCell) + Number(mTV) + Number(mMisc)).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
             document.getElementById("yearTotes").value = (Number(yRent) + Number(yUtil) + Number(yCell) + Number(yTV) + Number(yMisc)).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            document.getElementById("yearIncome").value = finalYIncome.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
             
-            var numbYears = document.getElementById("yearsLeft");
+            
+            var numbYears = document.getElementById("totalYYears");
             var yearTotalExpenses = (Number(yRent) + Number(yUtil) + Number(yCell) + Number(yTV) + Number(yMisc));
-            var yearTotalLeft = (Number(userSavings) / (Number(yearTotalExpenses) - Number(finalYIncome)))
+            var yearTotalLeft = (Number(userSavings) / (Number(yearTotalExpenses) - Number(finalYIncome)));
             numbYears.value = yearTotalLeft.toFixed(1);
+            
+            var dollarsDelta = (Number(yearTotalExpenses) - Number(finalYIncome));
+            var percNeeded = ((Number(dollarsDelta) / Number(userSavings)) * 100);
+            var yearsSupport = (Number(userSavings) / Number(dollarsDelta));
+            
+            userYearDelta.value = dollarsDelta.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            userTotalYPerc.value = percNeeded.toFixed(1) + "%";
+            userTotalYYears.value = yearsSupport.toFixed(1);
             
             
         }
@@ -69,7 +61,6 @@
             document.getElementById("inputSavings").value=""
             document.getElementById("inputIncome").value=""
             document.getElementById("yearIncome").value=""
-            document.getElementById("yearFourPerc").value=""
             
             document.getElementById("monthRent").value=""
             document.getElementById("monthUtilities").value=""
@@ -83,17 +74,12 @@
             document.getElementById("yearCell").value=""
             document.getElementById("yearTV").value=""
             document.getElementById("yearMisc").value=""
-            document.getElementById("yearTotal").value=""
-            document.getElementById("totalYIncome").value=""
             document.getElementById("yearTotes").value=""
-            document.getElementById("yearsLeft").value=""
             
-            document.getElementById("yearTwoPerc").value=""
-            document.getElementById("yearThreePerc").value=""
-            document.getElementById("yearFourPerc").value=""
-            document.getElementById("totalYIncome2").value=""
-            document.getElementById("totalYIncome3").value=""
-            document.getElementById("totalYIncome4").value=""
+            document.getElementById("yearIncome").value=""
+            document.getElementById("yearDelta").value=""
+            document.getElementById("totalYPerc").value=""
+            document.getElementById("totalYYears").value=""
         }
     </script>
 </head>
@@ -102,18 +88,18 @@
     <div id="headerContainer">
         <div id="cont1"><span>Income/Savings</span></div>
         <div id="cont3"><span>Yearly Expenses</span></div>
-        <div id="cont4"><span>Yearly Income</span></div>
+        <div id="cont4"><span>The Bottom Line</span></div>
     </div>
     <div id="overallContainer">
         <div id="savingsContainer">
-            Savings<input class="inputBoxes" placeholder="$" id="inputSavings">
-            Monthly Income (i.e. Social Security)<input class="inputBoxes" placeholder="$" id="inputIncome">
+            Enter Your Savings<input class="inputBoxes" placeholder="$" id="inputSavings">
+            Enter Your Monthly Income (i.e. SS)<input class="inputBoxes" placeholder="$" id="inputIncome">
         <div id="cont2"><span>Monthly Expenses</span></div>
-            Rent<input class="inputBoxes" placeholder="$" id="monthRent">
-            Utilites<input class="inputBoxes" placeholder="$" id="monthUtilities">
-            Cell Phone<input class="inputBoxes" placeholder="$" id="monthCell">
-            Internet/TV<input class="inputBoxes" placeholder="$" id="monthTV">
-            Misc (out of pocket medical, etc.)<input class="inputBoxes" placeholder="$" id="monthMisc">
+            Enter Your Rent<input class="inputBoxes" placeholder="$" id="monthRent">
+            Enter Your Utilites<input class="inputBoxes" placeholder="$" id="monthUtilities">
+            Enter Your Cell Phone<input class="inputBoxes" placeholder="$" id="monthCell">
+            Enter Your Internet/TV<input class="inputBoxes" placeholder="$" id="monthTV">
+            Enter Your Misc (OOP medical, etc.)<input class="inputBoxes" placeholder="$" id="monthMisc">
             <div id="btnDiv">
                 <button id="btn" type="button" onClick="calcNumbers();">Click Here To Calculate</button>
                 <br>
@@ -127,18 +113,13 @@
             Year Cell Phone<input class="inputBoxes" placeholder="$" id="yearCell">
             Year Internet/TV<input class="inputBoxes" placeholder="$" id="yearTV">
             Year Misc<input class="inputBoxes" placeholder="$" id="yearMisc">
-            <span>Yearly Totals</span><input class="inputBoxes" placeholder="$" id="yearTotes">
-            <span>Years To Spend Savings</span><input class="inputBoxes" placeholder="$" id="yearsLeft">
+            <span>Annual Expenses Total</span><input class="inputBoxes" placeholder="$" id="yearTotes">
         </div>
         <div id="yearIncomeTotals">
             Yearly Income<input class="inputBoxes" placeholder="$" id="yearIncome">
-            2% Of Savings (per year)<input class="inputBoxes" placeholder="$" id="yearTwoPerc">
-            3% Of Savings (per year)<input class="inputBoxes" placeholder="$" id="yearThreePerc">
-            4% Of Savings (per year)<input class="inputBoxes" placeholder="$" id="yearFourPerc">
-            <span>Yearly Income Totals</span>
-            Total Income Each Year (+2% Savings)<input class="inputBoxes" placeholder="$" id="totalYIncome2">
-            Total Income Each Year (+3% Savings)<input class="inputBoxes" placeholder="$" id="totalYIncome3">
-            Total Income Each Year (+4% Savings)<input class="inputBoxes" placeholder="$" id="totalYIncome4">
+            Annual Expenses Minus Income<input class="inputBoxes" placeholder="$" id="yearDelta">
+            % Savings Required Annually To Balance Budget<input class="inputBoxes" placeholder="%" id="totalYPerc">
+            # Years Savings Will Support<input class="inputBoxes"  id="totalYYears">
         </div>
     </div>
     <div id="lineBreak"></div>
