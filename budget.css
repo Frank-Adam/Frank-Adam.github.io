@@ -29,6 +29,14 @@ header {
     flex-direction: column;
     background-color: #DBF7FF; 
 }
+#inputSavings,
+#inputIncome,
+#monthRent,
+#monthUtilities,
+#monthCell,
+#monthTv,
+#monthMisc {
+    border: 1px solid #B7FFB9;
 #monthContainer,
 #yearContainer {
     display: flex;
