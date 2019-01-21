@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Happy Birthday Mom!</title>
+    <meta name="description" content="brithday card from Chels and Alec">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="birthday.css" rel="stylesheet">
+    <script>
+        function flip() {
+            var divOne = document.getElementById("card1");
+            var divTwo = document.getElementById("card2");
+            
+            divOne.style.display="none";
+            divTwo.style.display="block";
+        }
+        function flipBack() {
+            var divOne = document.getElementById("card1");
+            var divTwo = document.getElementById("card2");
+            
+            divOne.style.display="block";
+            divTwo.style.display="none";
+        }
+        
+        
+    </script>
+</head>
+<body>
+    <div id="card1" onclick="flip();"><img src="mama_card_outside.jpg" alt="moms card outside view"></div>
+    <div id="card2" onclick="flipBack();"><img src="mama_card_inside.jpg" alt="moms card outside view"></div>
+</body>
+</html>
