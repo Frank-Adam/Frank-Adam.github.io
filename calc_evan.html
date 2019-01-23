@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Paycheck Calculator</title>
+    <meta name="description" content="calculator">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="calc_evan.css" rel="stylesheet">
+    <script>
+    	function calcDollars() {
+        	var gross = document.getElementById("inputGross").value;
+	        var net = document.getElementById("inputNet").value;
+		var bxTithing = document.getElementById("tithingOwed");        	    	
+		var bxSavings = document.getElementById("savingsPaid");        	
+		var bxForYou = document.getElementById("dollarsForYou");        	
+
+		var tithing = gross * 0.1
+		var remain = net - tithing;
+		var savings = remain * 0.8;
+		var forYou = remain - savings;
+
+		var clnTithing = tithing.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+		var clnSavings = savings.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+		var clnForYou = forYou.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+		bxTithing.value = '$' + clnTithing
+		bxSavings.value = '$' + clnSavings
+		bxForYou.value = '$' + clnForYou
+        }
+	
+	function resetPage() {
+		document.getElementById("inputGross").value="";
+		document.getElementById("inputNet").value="";
+		document.getElementById("tithingOwed").value="";
+		document.getElementById("savingsPaid").value="";
+		document.getElementById("dollarsForYou").value="";
+	}
+        
+        
+        
+    </script>
+</head>
+<body>
+	  Enter Gross Dollars Earned:<br>
+	  <input type="number" id="inputGross" placeholder="$0.00">
+	  <br>
+	  Enter Net Dollars Earned:<br>
+	  <input type="number" id="inputNet" placeholder="$0.00">
+	  <br><br>
+	  <button type="button" onClick="calcDollars();">Click To Calculate</button>
+	<div id="spacer"></div>
+	  Tithing To Pay:<br>
+	  <input type="text" id="tithingOwed" placeholder="$0.00">
+	  <br>
+	  Savings To Transfer:<br>
+	  <input type="text" id="savingsPaid" placeholder="$0.00">
+	  <br>
+	  Dollars You Can Spend:<br>
+	  <input type="text" id="dollarsForYou" placeholder="$0.00">
+	  <div id="spacer"></div>
+	  <button type="button" onClick="resetPage();">Click To Reset</button>
+
+</body>
+</html>
