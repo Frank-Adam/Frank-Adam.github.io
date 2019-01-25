@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html>
 <head>
@@ -14,12 +15,13 @@
 		var bxSavings = document.getElementById("savingsPaid");        	
 		var bxForYou = document.getElementById("dollarsForYou");        	
 
-		var tithing = gross * 0.1
+		var tithing = (gross * 0.1)
+		tithing=tithing.toFixed(0);
 		var remain = net - tithing;
 		var savings = remain * 0.8;
 		var forYou = remain - savings;
 
-		var clnTithing = tithing.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+		var clnTithing = tithing + '.00';
 		var clnSavings = savings.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 		var clnForYou = forYou.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
