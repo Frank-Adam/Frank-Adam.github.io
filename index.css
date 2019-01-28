@@ -5,42 +5,30 @@ body {
     margin: 20px;
 }
 header {
-    width: 100%;
-    font-size: 400%;
     background-color: #00AEFF;
     color: white;
     text-align: center;
-    
 }
 #allContainers {
     display: flex;
-    height: 550px;
+    width: 100%;
     align-items: stretch;
     justify-content: space-between;
     text-align: center;
 }
-.vertSpacer {
-    height:10px;
-}
-.spacer {
-    width: 10px;
-}
 span {
-    font-size: 150%;
     color: #FF0000;
 }
 #container1 {
     border-top: 20px solid #0082BF;
     border-left: 1px solid #0082BF;
-    width: 33%;
     color: #0082BF;
     padding: 10px;
 }
-
 #container2 {
     border-top: 20px solid #00577F;
     border-left: 1px solid #00577F;
-    width: 33%;
+    margin-bottom: 20px;
 }
 .projectContainer {
     display: inline-block;
@@ -49,23 +37,15 @@ span {
     border: 1px solid #00577F;
     margin-top: 20px;
     padding: 10px;
-    width: 15%;
-    height: 15%;
 }
 .projs {
     display: inline-block;
     vertical-align: middle;
     padding: 10px;
-    width: 75%;
-    height: 55%;
-}
-.projs:hover {
-    transform: scale(1.3);   
 }
 #container3 {
     border-top: 20px solid #002B40;
     border-left: 1px solid #002B40;
-    width: 33%;
 }
 #map {
     vertical-align: middle;
@@ -73,8 +53,116 @@ span {
     padding: 10px;
 }
 footer {
-    margin-top: 70px;
     border-top: 1px solid #00AEFF;
     color: #00AEFF;
     text-align: center;
+    margin-top: 20px;
+}
+
+
+
+@media screen and (max-width: 480px) {
+header {
+    width: 100%;
+    font-size: 3em;  
+}
+#allContainers {
+    flex-direction: column;
+    width: 100%;
+}
+.vertSpacer {
+    height:30px;
+}
+.spacer {
+    width: 10px;
+}
+span {
+    font-size: 150%;
+}
+
+.projectContainer {
+    width: 45px;
+    height: 45px;
+}
+.projs {
+    width: 35px;
+    height: 35px;
+}
+.projs:hover {
+    transform: scale(1.3);   
+}
+}
+
+@media screen and (min-width: 480px) and (max-width: 800px) {
+header {
+    font-size: 3em;  
+}
+#allContainers {
+    height: auto;
+}
+.vertSpacer {
+    height:10px;
+}
+.spacer {
+    width: 10px;
+}
+span {
+    font-size: 1.5em;
+}
+#container1, 
+#container2, 
+#container3 {
+    width: 33%;
+}
+.projectContainer {
+    width: 60px;
+    height: 60px;
+}
+.projs {
+    width: 50px;
+    height: 50px;
+}
+.projs:hover {
+    transform: scale(1.3);   
+}
+footer {
+    margin-top: 70px;
+}
+}
+
+@media screen and (min-width: 800px) {
+header {
+    font-size: 4em;  
+}
+#allContainers {
+    height: auto;
+}
+.vertSpacer {
+    height:10px;
+}
+.spacer {
+    width: 10px;
+}
+span {
+    font-size: 1.5em;
+}
+#container1, 
+#container2, 
+#container3 {
+    width: 33%;
+}
+.projectContainer {
+    width: 60px;
+    height: 60px;
+}
+.projs {
+    width: 50px;
+    height: 50px;
+}
+.projs:hover {
+    transform: scale(1.3);   
+}
+footer {
+    margin-top: 70px;
+}
 }
