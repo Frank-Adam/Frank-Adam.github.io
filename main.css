@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+body {
+	padding: 10px;
+	margin: 50px;
+	font-family: 'Montserrat';
+	background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+}
+h3 {
+    margin-top: -20px;
+    font-style: italic;
+    color: #fff;
+}
+#headContainer {
+    display: flex;
+}
+#container {
+	display: flex;
+	flex-basis: 100%;
+	flex: 1;
+	flex-wrap: wrap;
+}
+span {
+    line-height: -50px;
+    color: red;
+}
+footer {
+    display: flex;
+    flex-wrap: wrap;
+}
+footer > ul, li, a {
+	list-style-type: none;
+	text-decoration: none;
+	color: #fff;
+	font-style: italic;
+}
+ul {
+    justify-content: space-between;
+}
+li > a:hover {
+    color: red;
+}
+#span2 {
+    font-size: 3em;
+    color: darkblue;
+    
+}
+.imgs {
+    padding-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
+.imgs2 {
+    padding-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+.sp {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: blue;
+}
+.sp1 {
+	display: flex;
+	align-self: flex-end;
+	color: blue;
+}
+#d1, #d2, #d3, #d4, #d5, #d6, #d7, #d8, #d9, #d10, 
+#d11, #d12, #d13, #d14, #d15, #d16, #d17, #d18, #d19, #d20,
+#d21, #d22, #d23, #d24, #d25, #d26, #d27, #d28, #d29, #d30,
+#d31, #d32, #d33, #d34, #d35, #d36, #d37, #d38, #d39, #d40 {
+    display: flex;
+	border: 1px solid grey;
+	box-shadow: .25px .25px 2px grey;
+	width: 200px;
+	margin-left: 5px;
+	margin-top: 10px;
+	transition: all .2s ease-in-out;
+	background-color: #fff;
+	overflow: auto;
+	text-align: center;
+	justify-content: space-evenly;
+	flex-direction: column;
+}
+hr {
+    margin-top: 50px;
+}
+@media screen and (max-width: 760px) {
+    #headContainer {flex-direction: column;}
+    #container {width: 750;}    
+}
+@media screen and (min-width: 760px) {
+    #container, #headerContainer {width: 1200px;}
+    #d1:hover, #d2:hover, #d3:hover, #d4:hover, #d5:hover, #d6:hover, #d7:hover, #d8:hover, #d9:hover, #d10:hover, 
+#d11:hover, #d12:hover, #d13:hover, #d14:hover, #d15:hover, #d16:hover, #d17:hover, #d18:hover, #d19:hover, #d20:hover,
+#d21:hover, #d22:hover, #d23:hover, #d24:hover, #d25:hover, #d26:hover, #d27:hover, #d28:hover, #d29:hover, #d30:hover,
+#d31:hover, #d32:hover, #d33:hover, #d34:hover, #d35:hover, #d36:hover, #d37:hover, #d38:hover, #d39:hover, #d40:hover 
+    {
+	    transform: scale(1.2);	
+    }
+    
+}
