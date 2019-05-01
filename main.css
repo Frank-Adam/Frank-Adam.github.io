@@ -89,6 +89,9 @@ li > a:hover {
 .da {
 	text-align: center;
 	width: 200px;
+	padding: 10px;
+	align-items: flex-end;
+	align-self: flex-end;
 }
 hr {
     margin-top: 50px;
