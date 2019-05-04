@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+	font-family: 'open sans',sans-serif;
+	padding: 0;
+	margin: 0;
+	background-color: #FAF9F7;
+	color: #2087C8;
+}
+#msgs {
+	height: 20px;
+	background-color: #F9D53F;
+	margin-bottom: 20px;
+}
+header {
+	display: flex;
+	background-color: #FAF9F7;
+}
+hr.line-header {
+	border-top: 1px solid #63656A;
+}
+#centura-logo {
+	width: 30%;
+	justify-content: flex-end;
+}
+nav {
+	display: flex;
+	width: 70%;
+}
+nav ul, nav li {
+	display: inline;
+}
+nav li, nav a{
+	align-items: flex-end;
+	justify-content: space-around;
+	color: #63656A;
+	text-decoration: none;
+	list-style-type: none;
+}
+#btns {
+	display: flex;
+	float: right;
+	background-color: #FAF9F7;
+}
+#btns > img {
+	width: 45%;
+	height: 65%;
+}
+#btns {
+	height: 50px;
+}
+em {
+	text-align: center;
+	color: #2087C8;
+	font-size: 125%;
+	text-decoration: underline;
+}
+span {
+	color: #198FDB;
+	color: #63656A;
+}
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 50px;
+}
+.container-supervisor-nameplate {
+	border: 1px solid #CFCFCD;
+	background-color: #fff;
+	box-shadow: .5px .5px 1px  #88898C;
+	padding: 20px;
+}
+table {s
+	table-layout: fixed;
+	width: 90%;
+}
+tr {
+	align-items: center;
+}
+img.emp-image {
+	width: 20%;
+	float: right;
+	margin-top: -60px;
+}
+img.sup-images {
+	width: 20%;
+	margin-top: -110px;
+	float: right;
+}
+.arrow {
+	font-size: 2em;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color: #88898C; 
+}
+.table-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+td {
+	border: 1px solid #CFCFCD;
+	padding: 10px;
+	background-color: #fff;
+	box-shadow: .5px .5px 1px  #88898C;
+}
+td:hover {
+	transform: scale(1.2);
+}
+.footer-div {
+	display: flex;
+	height: 200px;
+	background-color: #EBEBEB;
+}
+.footer-div1 {
+	display: flex;
+	height: 200px;
+	background-color: #63656A;
+	align-items: center;
+	justify-content: space-between;
+	color: #fff;
+}
+.medium-6 large-3 column li {
+	color: #fff;
+	justiy-content: center;
+}
+ul.copyright-links li{
+	display: inline;
+	color: #fff;
+}
+ul.footer-links, ul.copyright-links {
+	text-decoration: none;
+	list-style-type: none;
+	color: #fff;
+}
+.footer-heading {
+	color: #2087C8;
+}
