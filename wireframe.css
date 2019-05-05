@@ -137,3 +137,8 @@ ul.footer-links, ul.copyright-links {
 .footer-heading {
 	color: #2087C8;
 }
+@media screen and (max-width: 480px) {
+	.container {
+		flex-direction: column;	
+	}
+}
