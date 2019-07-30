@@ -158,6 +158,8 @@ span {
 .projs {
     width: 50px;
     height: 50px;
+    margin-left: -10px;
+    margin-top: -10px;
 }
 .projs:hover {
     transform: scale(1.3);   
