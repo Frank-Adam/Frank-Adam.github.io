@@ -1,0 +1,272 @@
+$color1: rgba(232, 229, 222, 1); //plantinum
+$color2: rgba(147, 183, 190, 1); //powderblue
+$color3: rgba(147, 130, 127, 1); //brown
+$color4: rgba(171, 163, 97, 1); //green yellow
+$color5: rgba(140, 12, 37, 1); //ruby
+@import url('https://fonts.googleapis.com/css?family=Bangers|Nunito+Sans&display=swap');
+body {
+    padding: 10px;
+    margin: 0px;
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: $color1;
+}
+
+header {
+    height: 500px;
+    color: #fff;
+    text-align: center;
+    background-image: url("guitar-header-large.jpg");
+    background-size: cover;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    margin-top: 10px;
+    padding: 20px;
+}
+
+.section {
+    width: 70%;
+    border-right: 3px solid $color5;
+    margin-left: 20px;
+    padding-right: 10px;
+}
+
+.aside {
+    padding-top: 15px;
+    padding-left: 10px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.aside a {
+    text-decoration: none;
+    color: $color5;
+    float: right;
+}
+
+.weeks a {
+    text-decoration: none;
+    color: #fff;
+}
+
+h1 {
+    font-size: 6em;
+    font-family: 'Bangers', sans-serif;
+    text-shadow: 3px 7px $color5;
+    margin-top: -100px;
+}
+
+.header-bar {
+    margin-top: 20px;
+    height: 100px;
+    background-color: $color1;
+    opacity: .3;
+}
+
+h2 {
+    margin-top: -100px;
+}
+
+nav {
+    display: flex;
+    overflow: hidden;
+    background-color: $color5;
+    justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    float: left;
+    font-size: 16px;
+    color: $color1;
+    text-align: center;
+    padding: 14px 16px;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background-color: $color5;
+    color: $color1;
+    padding: 14px 16px;
+}
+
+nav a:hover,
+.dropdown:hover .dropbtn {
+    background-color: $color2;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: $color2;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: $color5;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: $color1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.page-desc {
+    height: 50px;
+    background-color: $color2;
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+}
+
+.weeks {
+    flex-wrap: wrap;
+    text-align: center;
+    margin-left: 42.5%;
+    font-size: 2.5em;
+}
+
+.wk1:hover,
+.wk2:hover,
+.wk3:hover,
+.wk4:hover,
+.wk5:hover,
+.wk6:hover {
+    background-color: $color2;
+    color: $color5;
+    cursor: pointer;
+}
+
+.wk1,
+.wk2,
+.wk3,
+.wk4,
+.wk5,
+.wk6 {
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: $color5;
+    color: $color1;
+    border: 2px solid $color1;
+}
+
+table {
+    table-layout: fixed;
+    margin-top: 20px;
+    width: 97%;
+    margin-left: 20px;
+    border: 1px solid $color5;
+    text-align: center;
+}
+
+th {
+    background-color: $color5;
+    color: #fff;
+    font-size: 2em;
+}
+
+table img {
+    margin-top: 30px;
+    width: 120%;
+}
+
+.tuning-guitar-self,
+.tuning-guitar-piano,
+.read-chords {
+    margin-top: 30px;
+    margin-left: 100px;
+}
+
+.chord-chart {
+    margin-top: 30px;
+    margin-left: 100px;
+}
+
+img {
+    width: 50%;
+}
+
+span {
+    padding: 10px;
+    color: $color5;
+    font-size: 1.5em;
+}
+
+.homework {
+    margin-top: 30px;
+    margin-left: 100px;
+}
+
+.homework li {
+    font-size: 2em;
+    list-style-type: none;
+    color: $color5;
+}
+
+.section-card {
+    margin-left: 20px;
+    margin-top: 30px;
+    width: 97%;
+    border: 1px solid $color5;
+}
+
+.section-header {
+    text-align: center;
+    font-size: 2em;
+    background-color: $color5;
+    color: #fff;
+}
+
+.contact-card {
+    margin-left: 20px;
+    margin-top: 30px;
+    width: 97%;
+    border: 1px solid $color5;
+}
+
+.contact-logo {
+    width: 30%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 130px;
+    padding-right: 45px;
+}
+.contact-flex {
+    display: flex;
+    justify-content: space-around;
+}
+.about-staff {
+    display: flex;
+    flex-wrap: wrap;
+}
+.about-staff-img {
+    width: 20%;
+}
+.staff-name {
+    background-color: $color5;
+    color: #fff;
+    border-right: 3px solid $color1;
+}
