@@ -43,16 +43,16 @@ p {
     animation-delay: -1s;
 }
 .logotop2 {
-    -webkit-animation-delay: -13s;
-    animation-delay: -13s;
+    -webkit-animation-delay: -5s;
+    animation-delay: -5s;
 }
 .logotop3 {
     -webkit-animation-delay: -9s;
     animation-delay: -9s;
 }
 .logotop4 {
-    -webkit-animation-delay: -5s;
-    animation-delay: -5s
+    -webkit-animation-delay: -13s;
+    animation-delay: -13s
 }
 </style>
 </head>
@@ -67,7 +67,7 @@ p {
 </div>
 <script>
 // Set the date we're counting down to
-var countDownDate = new Date("June 1, 2020").getTime();
+var countDownDate = new Date("June 1, 2020 10:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -91,7 +91,7 @@ var x = setInterval(function() {
   // If the count down is over, write some text 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
+    document.getElementById("demo").innerHTML = "It's Time!";
   }
 }, 1000);
 </script>
