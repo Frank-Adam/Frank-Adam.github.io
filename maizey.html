@@ -15,51 +15,30 @@ p {
     display: flex;
     justify-content: center;
 }
-@-webkit-keyframes fade {
-    0% {opacity: 0;}
-    20% {opacity: 1;}
-    33% {opacity: 1;}
-    63% {opacity: 1;}
-    83% {opacity: 0;}
-    100% {opacity: 0;}
-}
 @keyframes fade {
     0% {opacity: 0;}
-    20% {opacity: 1;}
-    33% {opacity: 1;}
-    63% {opacity: 1;}
-    83% {opacity: 0;}
+    50% {opacity: 1;}
     100% {opacity: 0;}
 }
 
 .dogPics img {
     position: absolute;
-    -webkit-animation-name: fade;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-duration: 6s;
-    animation-name: fade;
-    animation-iteration-count: infinite;
-    animation-duration: 6s;
+    animation: fade 6s ease-in-out;
 }
 
 .logotop1 {
-    -webkit-animation-delay: -1s;
     animation-delay: -1s;
 }
 .logotop2 {
-    -webkit-animation-delay: -4s;
     animation-delay: -4s;
 }
 .logotop3 {
-    -webkit-animation-delay: -9s;
     animation-delay: -9s;
 }
 .logotop4 {
-    -webkit-animation-delay: -15s;
     animation-delay: -15s
 }
 .logotop5 {
-    -webkit-animation-delay: -19s;
     animation-delay: -19s
 }
 </style>
