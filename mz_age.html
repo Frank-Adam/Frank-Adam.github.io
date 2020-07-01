@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Let's See How Old Maizey Is...</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body onLoad="getAge();">
+	<div>Maizey Is: </div>
+	<div id="dysDiv"></div>
+	<div id="wksDiv"></div>
+	<div id="yrsDiv"></div>
+	
+	<script>
+	function getAge() 
+	{
+		var today = new Date();
+		var birthDate = new Date("4/5/2020");
+		var age = today.getTime() - birthDate.getTime();
+		var dys = age / (1000*3600*24);
+		var wks = (age / (1000*3600*24)) / 7;
+		var yrs = (age / (1000*3600*24)) / 365.25;
+		dys = dys.toFixed(1);
+		wks = wks.toFixed(1);
+		yrs = yrs.toFixed(2);
+	console.log(dys);
+	console.log(wks);
+		document.getElementById("dysDiv").innerHTML = dys + ' days old';
+		document.getElementById("wksDiv").innerHTML = wks + ' weeks old';
+		document.getElementById("yrsDiv").innerHTML = yrs + ' years old';
+	}
+</script>
+</body>
+</html>
