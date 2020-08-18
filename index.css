@@ -11,8 +11,6 @@ header {
 }
 #allContainers {
     display: flex;
-    width: 100%;
-    align-items: stretch;
     justify-content: space-between;
     text-align: center;
 }
@@ -24,11 +22,11 @@ span {
     border-left: 1px solid #0082BF;
     color: #0082BF;
     padding: 10px;
+	width: 120%
 }
 #container2 {
     border-top: 20px solid #00577F;
     border-left: 1px solid #00577F;
-    margin-bottom: 20px;
 }
 .projectContainer {
     display: inline-block;
@@ -36,27 +34,6 @@ span {
     margin-top: 20px;
     padding: 10px;
 }
-.projs {
-    display: inline-block;
-    vertical-align: middle;
-    padding: 10px;
-}
-#container3 {
-    border-top: 20px solid #002B40;
-    border-left: 1px solid #002B40;
-}
-#map {
-    vertical-align: middle;
-    margin-top: 20px;
-    padding: 10px;
-}
-footer {
-    border-top: 1px solid #00AEFF;
-    color: #00AEFF;
-    text-align: center;
-    margin-top: 20px;
-}
-
 
 
 @media screen and (max-width: 480px) {
@@ -66,7 +43,7 @@ header {
 }
 #allContainers {
     flex-direction: column;
-    width: 100%;
+    
 }
 .vertSpacer {
     height:30px;
@@ -76,18 +53,6 @@ header {
 }
 span {
     font-size: 150%;
-}
-
-.projectContainer {
-    width: 45px;
-    height: 45px;
-}
-.projs {
-    width: 35px;
-    height: 35px;
-}
-.projs:hover {
-    transform: scale(1.3);   
 }
 }
 
