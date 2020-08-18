@@ -32,9 +32,7 @@ span {
 }
 .projectContainer {
     display: inline-block;
-    background-color: #b3c3ea;
     vertical-align: middle;
-    border: 1px solid #00577F;
     margin-top: 20px;
     padding: 10px;
 }
