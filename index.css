@@ -17,6 +17,9 @@ header {
 span {
     color: #FF0000;
 }
+#reduceMe {
+	width: 50%;	
+}
 #container1 {
     border-top: 20px solid #0082BF;
     border-left: 1px solid #0082BF;
