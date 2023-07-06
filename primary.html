@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WH Primary</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <style>
+        body {
+            font-family: "Roboto", sans-serif;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section-header {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #f0f0f0;
+            padding: 10px;
+        }
+
+            .section-header:hover {
+                background-color: #e0e0e0;
+            }
+
+            .section-header span {
+                font-weight: bold;
+            }
+
+        .section-content {
+            display: none;
+            padding: 10px;
+            background-color: #f8f8f8;
+        }
+
+            .section-content p {
+                margin: 0;
+            }
+
+        .pink-text {
+            color: pink;
+        }
+
+        .arrow {
+            width: 10px;
+            height: 10px;
+            border-top: 2px solid black;
+            border-right: 2px solid black;
+            transform: rotate(-45deg);
+        }
+
+        @media only screen and (max-width: 600px) {
+            /* Adjust styles for screens up to 600px wide */
+            .section-header {
+                padding: 5px;
+            }
+        }
+
+        .expanded .arrow {
+            transform: rotate(135deg);
+        }
+    </style>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const sectionHeaders = document.querySelectorAll('.section-header');
+
+            sectionHeaders.forEach((header) => {
+                header.addEventListener('click', () => {
+                    header.parentNode.classList.toggle('expanded');
+                    const content = header.nextElementSibling;
+                    content.style.display = content.style.display === 'none' ? 'block' : 'none';
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="section">
+        <div class="section-header">
+            <span>Sunbeam</span>
+            <div class="arrow"></div>
+        </div>
+        <div class="section-content">
+            <p>S Hunt</p>
+            <p></p>
+            <p>Class Members: 3</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header">
+            <span>CTR 4</span>
+            <div class="arrow"></div>
+        </div>
+        <div class="section-content">
+            <p>S Hunt</p>
+            <p></p>
+            <p>Class Members: 5</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header">
+            <span>CTR 5</span>
+            <div class="arrow"></div>
+        </div>
+        <div class="section-content">
+            <p>A Staples</p>
+            <p>J Staples</p>
+            <p>Class Members: 6</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header">
+            <span>CTR 6</span>
+            <div class="arrow"></div>
+        </div>
+        <div class="section-content">
+            <p>S Carroll</p>
+            <p>A Van Biljon</p>
+            <p>Class Members: 7</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header">
+            <span>CTR 7</span>
+            <div class="arrow"></div>
+        </div>
+        <div class="section-content">
+            <p>C Fairall</p>
+            <p>B Halliday</p>
+            <p>Class Members: 8</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header">
+            <span>Valiant 8</span>
+            <div class="arrow"></div>
+        </div>
+        <div class="section-content">
+            <p>S Carroll</p>
+            <p>A Van Biljon</p>
+            <p>Class Members: 8</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header">
+            <span>Valiant 9</span>
+            <div class="arrow"></div>
+        </div>
+        <div class="section-content">
+            <p>R LaRance</p>
+            <p>T Rogers</p>
+            <p>Class Members: 11</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header">
+            <span>Valiant 10</span>
+            <div class="arrow"></div>
+        </div>
+        <div class="section-content">
+            <p>A Seeman</p>
+            <p></p>
+            <p>Class Members: 8</p>
+        </div>
+    </div>
+</body>
+</html>  
